@@ -8,12 +8,36 @@
 <%= render "shared/header"%>
 
 <header class="w-full bg-home bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center">
-  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
-      <h1 class="font-semibold font-header text-5xl lg:text-8xl lg:px-20 text-center">PILOT TRAINING. <br>MADE SIMPLE</h1>
-
-      <h2 class="font-bold text-xl lg:text-3xl italic text-center py-5 lg:py-10">Accelerated and Flexible Programs in Mesa, AZ and Spanish Fork, UT</h2>
-      <!--Hide button for now-->
-      <%#= link_to "LEARN HOW TODAY", airline_pilot_courses_path, data: { turbo: false }, class: "btn-primary" %>
+  <div class="flex flex-col-reverse lg:flex-row w-full">
+    <div class="lg:w-3/4">
+      <%= image_tag "sun-city-team-in-front-of-seaplane.webp", alt: "Sun City Team In Front of Sea Plane"%>
+    </div>
+    <div class="lg:w-1/4">
+      <div
+        class="flex flex-col items-center justify-center h-full"
+        x-data=""
+      >
+        <hr
+          class="bg-custom-50 h-1 w-3/4 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+          x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+        />
+        <h2 class="text-4xl font-bold text-center pb-10">Become a <span class="text-custom-50">Professional</span> Pilot</h2>
+        <p class="px-5 lg:px-10 text-center font-crimson">
+          Your path to becoming a professional pilot starts here. Our experienced instructors will help you achieve your aviation goals. Join the family at Sun City.
+        </p>
+        <div class="relative flex mt-5">
+          <span class="animate-ping-1 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
+          <span class="animate-ping-2 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
+          <span class="animate-ping-3 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
+          <%= link_to "START TODAY", root_path, class: "btn-primary" %>
+        </div>
+        
+        <hr
+          class="bg-custom-50 h-1 w-3/4 mt-10 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+          x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+        />
+      </div>
+    </div>
   </div>
 </header>
 
