@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <!--JS for drops-->
-  <div class="hidden lg:flex flex-row gap-10 items-center font-bold text-xl xl:text-2xl mt-10 mr-10" 
+  <div class="hidden lg:flex flex-row gap-5 xl:gap-10 items-center font-bold text-lg xl:text-xl mt-10 mr-5" 
     x-data="{ 
       fly_drop: false, 
       pilot_drop: false, 
@@ -283,6 +283,15 @@
         </div>
       </div>
     </div>
+    <span class="relative flex">
+      <span class="animate-[ping_2s_ease-in-out_infinite] absolute inline-flex h-full w-full rounded-xl bg-custom-50 opacity-30 z-0"></span>
+      <span class="animate-[ping_3s_ease-in-out_infinite] absolute inline-flex h-full w-full rounded-xl bg-custom-50 opacity-30 z-0"></span>
+      <span class="animate-[ping_4s_ease-in-out_infinite] absolute inline-flex h-full w-full rounded-xl bg-custom-50 opacity-30 z-0"></span>
+      <span class="text-xl bg-custom-50 px-3 py-2 rounded-xl text-neutral-900 border-2 border-white z-50 hover:scale-105 transition-all duration-300">
+        START TODAY
+      </span>
+      
+    </span>
   </div>
   <div class="lg:hidden mr-5 mt-5" x-data="{ open: false }">
     <%= render "shared/header_nav_mobile_menu"%>
