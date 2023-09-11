@@ -15,19 +15,49 @@
  */
 
  .link-underline {
-  border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#FFFFFF, #FFFFFF);
-  background-size: 0 3px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size .2s ease-in-out;
+  display: inline-block; /* Ensure the container only takes the width of its content */
+  position: relative;
 }
 
-
-.link-underline:hover {
-  background-size: 100% 3px;
-  background-position: 0 100%
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFBB59;
+  height: 3px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 }
+
+.link-underline:hover::after {
+  opacity: 1;
+  transform: translateY(-175%);
+}
+
+.link-overline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-overline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #FFBB59;
+  height: 3px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.link-overline:hover::before {
+  opacity: 1;
+  transform: translateY(175%);
+}
+
 
 .outline-letters {
   color: transparent;
@@ -117,3 +147,4 @@
   .bg-sky-500 {
     --tw-bg-opacity: 1;
     background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+  }

@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <!--JS for drops-->
-  <div class="hidden lg:flex flex-row gap-5 xl:gap-10 items-center font-bold text-lg xl:text-xl mt-10 mr-5" 
+  <div class="hidden lg:flex flex-row gap-5 xl:gap-10 items-center font-bold text-lg xl:text-xl mt-8 mr-5" 
     x-data="{ 
       fly_drop: false, 
       pilot_drop: false, 
@@ -24,10 +24,10 @@
 
     <!--HOW TO-->
     <div class="">
-      <%= link_to "HOME", root_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
+      <%= link_to "HOME", root_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
     </div>
     <div class="" x-on:mouseover="fly_drop = true">
-      <%= link_to "PILOT TRAINING GUIDE", root_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
+      <%= link_to "PILOT TRAINING GUIDE", root_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
       <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[40.25rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -94,7 +94,7 @@
     </div>
     <!--AIRLINE PILOT COURSES-->
     <div class="" x-on:mouseover="pilot_drop = true">
-      <%= link_to "TRAINING COURSES" , airline_pilot_courses_path, data: { turbo: false }, class: "hover:text-white link-underline"%>
+      <%= link_to "TRAINING COURSES" , airline_pilot_courses_path, data: { turbo: false }, class: "link-underline link-overline py-3"%>
       <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[18.5rem]" x-cloak x-show="pilot_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -163,7 +163,7 @@
     
     <!--FINANCING-->
     <div class="" x-on:mouseover="financing_drop = true">
-      <%= link_to "ABOUT US", financing_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
+      <%= link_to "ABOUT US", financing_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
       <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[2.5rem]" x-cloak x-show="financing_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -205,7 +205,7 @@
 
     <!--SIMPLIFLY-->
     <div class="" x-on:mouseover="about_drop = true">
-      <%= link_to "BLOG", why_simplifly_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
+      <%= link_to "BLOG", why_simplifly_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
       <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[0rem]" x-cloak x-show="about_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
