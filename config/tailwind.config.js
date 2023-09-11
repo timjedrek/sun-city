@@ -27,7 +27,7 @@ module.exports = {
         'custom-800': '#0B3545',
         'custom-900': '#07232E',
         */
-        'custom-50': '#d0ebf4',
+        'custom-50': '#ffbb59',   /* Custom Yellow for Sun City */
         'custom-100': '#aec4cc',
         'custom-200': '#90bccc',
         'custom-300': '#60b3d7',
@@ -36,7 +36,7 @@ module.exports = {
         'custom-600': '#1780a6',
         'custom-700': '#135b88',
         'custom-800': '#0f4b6f',
-        'custom-900': '#08293d',
+        'custom-900': '#08293d', 
       },
       keyframes: {
         'plane-enter': {
