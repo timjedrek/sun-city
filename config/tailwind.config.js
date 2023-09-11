@@ -121,6 +121,10 @@ module.exports = {
         'slide-out-left3': 'slide-out-left 0.5s ease-out',
         'slide-out-left4': 'slide-out-left 0.6s ease-out',
         'slide-out-left5': 'slide-out-left 0.7s ease-out',
+
+        'ping-1': 'ping 4s linear infinite',
+        'ping-2': 'ping 4s linear infinite 0.5s',
+        'ping-3': 'ping 4s linear infinite 1s',
       },
       backgroundImage : {
         'home' : "url('overfly_az.webp')",
