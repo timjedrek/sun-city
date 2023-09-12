@@ -272,13 +272,40 @@
   <div class="max-w-5xl border-2 border-black bg-black lg:rounded-xl flex flex-col items-center px-3 lg:px-10 text-white">
     <h3 class="text-3xl lg:text-5xl font-bold text-center py-10">Why <span class="text-custom-50">Sun City</span><br>Aviation Academy?</h3>
     <div class="flex flex-col lg:flex-row lg:items-center w-full">
-      <div class="lg:w-1/2 h-96 bg-luke bg-cover bg-center">
-        sdsd
+      <div class="lg:w-1/2 h-96 bg-luke bg-cover bg-center flex flex-col items-center justify-end lg:hidden">
+        <div class="w-full bg-black/70 text-center">
+          <div class="text-3xl font-bold py-3">
+            Luke Puolos
+          </div>
+          <div class="font-serif italic pb-5">
+            Founder, CEO & Chief Pilot
+          </div>
+        </div>
+      </div>
+      <div
+        class="lg:w-1/2 h-96 bg-luke bg-cover bg-center lg:flex flex-col items-center justify-end relative overflow-hidden hidden"
+        x-data="{ isVisible: false }"
+        x-on:mouseenter="isVisible = true"
+        x-on:mouseleave="isVisible = false"
+      >
+        <div class="w-full absolute inset-0 flex flex-col items-center justify-end">
+          <div
+            class="bg-black/70 w-full text-center transition-transform transform translate-y-full hover:translate-y-0 py-3 duration-500"
+            :class="{ 'translate-y-full': !isVisible, 'translate-y-0': isVisible }"
+          >
+            <div class="text-3xl font-bold">
+              Luke Puolos
+            </div>
+            <div class="font-serif italic pb-5">
+              Founder, CEO & Chief Pilot
+            </div>
+          </div>
+        </div>
       </div>
       <div class="lg:w-1/2 flex flex-col items-center justify-center">
         <hr class="bg-white h-1 w-3/4 my-10"/>
         <p class="lg:w-3/4 text-lg">
-          We offer a diverse range of programs designed to elevate you to new heights in the world of aviation. Experience our fast-track programs with 7-day-a-week training, guided by our seasoned instructors. Luke Poulos, our founder, boasts over 20 years of aviation industry experience. His ambition is to make Sun City Aviation Academy the top-rated flight school in the country. 
+          We offer a diverse range of programs designed to elevate you to new heights in the world of aviation. Experience our fast track programs with 7 days a week training, guided by our seasoned instructors. Luke Poulos, our founder, boasts over 20 years of aviation industry experience. His ambition is to make Sun City Aviation Academy the top rated flight school in the country. 
         </p>
         <hr class="bg-white h-1 w-3/4 my-10"/>
       </div>
