@@ -59,6 +59,25 @@
 }
 
 
+.shutter-button {
+  /* Set up the hover */
+  /* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
+  background-image: linear-gradient(to bottom, #FFBB59 50%, transparent 50%), linear-gradient(to top, #FFBB59 50%, transparent 50%), linear-gradient(#FFFFFF, #FFFFFF);
+  background-size: 100% 0, 100% 0, auto;
+  background-repeat: no-repeat;
+  background-position: center 0, center 100%, center center;
+  transition: all .2s ease-out;
+}
+
+.shutter-button:hover {
+  background-size: 100% 100%, 100% 100%, auto;
+}
+
+.shutter-button:hover .check {
+  fill: white;
+}
+
+
 .outline-letters {
   color: transparent;
   -webkit-text-stroke: 5px white;
