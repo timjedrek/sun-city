@@ -69,7 +69,7 @@
   transition: all .2s ease-out;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .shutter-button:hover {
     background-size: 100% 100%, 100% 100%, auto;
   }
