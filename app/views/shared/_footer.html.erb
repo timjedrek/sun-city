@@ -1,81 +1,26 @@
 
-<footer class="bg-white">
-
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 ">
-    
-    <ul class="hidden lg:block">					
-      <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
-      <li class="relative " x-data="{ selected: false }" @mouseenter="selected = true" @mouseleave="selected = false">
-        <div class="flex-row flex w-full justify-between" x-on:mouseover="open = true" x-on:mouseout="open = false">
-          <div class="font-header text-2xl font-semibold w-1/4 hover:text-sky-500 duration-500" >
-            <%= link_to "HOW TO BECOME A PILOT", root_path, data: { turbo: false }, class: ""%>
-          </div>
-          <div class="font-header text-2xl font-semibold w-1/4 pl-10 hover:text-sky-500 duration-500" >
-            <%= link_to "AIRLINE PILOT COURSES", airline_pilot_courses_path, data: { turbo: false }, class: ""%>
-          </div>
-          <div class="font-header text-2xl font-semibold w-1/4 pl-20 hover:text-sky-500 duration-500" >
-            <%= link_to "WHY SIMPLIFLY", why_simplifly_path, data: { turbo: false }, class: ""%>
-          </div>
-          <div class="font-header text-2xl font-semibold w-1/8 hover:text-sky-500 duration-500" >
-            <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: ""%>
-          </div>
-        </div>
-        <!--Hover menu-->
-        <div class=" relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-          <div class="flex-row flex w-full justify-between pt-5">
-            <div class="font-header text-2xl font-semibold w-1/4">
-              <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ENROLL AT SIMPLIFLY", enroll_path, target: "blank", data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "PILOT TRAINING", pilot_training_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "BEGIN PILOT CAREER", cfi_path, data: { turbo: false }%></li>
-              </ul>
-            </div>
-            <div class="font-header text-2xl font-semibold w-1/4 pl-12" >
-              <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ACCELERATED COURSE", accelerated_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "FLEXIBLE COURSE", flexible_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "TIMELINE", timeline_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "COST", cost_path, data: { turbo: false }%></li>
-              </ul>
-            </div>
-            <div class="font-header text-2xl font-semibold w-1/4 pl-24">
-              <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "OUR TEAM", our_team_path, data: { turbo: false }%></li>
-                <!--<li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "AIRPLANES", data: { turbo: false }%></li>-->
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "LOCATIONS", location_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "BLOG", blog_path, data: { turbo: false }%></li>
-              </ul>
-            </div>
-            <div class="font-header text-2xl font-semibold w-1/8 pl-40">
-              <!--BLANK-->
-            </div>
-          </div>
-        </div>
-      </li>
-      <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
-    </ul>
-    
-    
-
-
-    <div class="md:flex md:justify-between">
-      <div class="mb-6 md:mb-0 flex flex-col lg:flex-row gap-10">
-        <div class="text-gray-600">
-          <div class="font-semibold pb-5">Falcon Field</div>
-          4766 E Falcon Dr<br>
-          Mesa, AZ 85215<br>
-          <a href="tel:1-480-256-8355">480-256-8355</a><br>
-        </div>
-        <div class="text-gray-600">
-          <div class="font-semibold pb-5">Spanish Fork</div>
-          2050 N. 300 W<br>
-          Spanish Fork, UT 84660<br>
-          <a href="tel:1-801-877-0568">801-877-0568</a><br>
-        </div>
+<footer class="bg-black text-white w-full">
+  <div class="flex flex-col lg:flex-row lg:justify-center w-full">
+    <div class="lg:w-1/4 flex flex-col pl-3 pt-1">
+      <%= link_to root_path, data: { turbo: false } do %>
+        <%= image_tag "sun-city-white-text-logo.webp", alt: "Sun City Aviation Academy Logo", class: "w-24 lg:w-48 top-0 py-2"%>
+        <p class="px-3">
+          Our mission is to train professional, safe, and proficient pilots, who will one day excel in the aviation industry.  When you fly with the team at Sun City Aviation Academy, you're family.  Individualized instruction means you're more than just a number.  You're a future Sun City aviator.
+        </p>
+      <% end %>
+    </div>
+    <div class="lg:w-1/6 flex flex-col items-center">
+      <p class="font-bold text-2xl pt-10">Quick Links</p>
+    </div>
+    <div class="lg:w-1/6 flex flex-col items-center">
+      <p class="font-bold text-2xl pt-10">Navigation</p>
+    </div>
+    <div class="lg:w-1/3 flex flex-col">
+      <div class="m-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.1490846155243!2d-80.2355894240109!3d25.995933277205516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a96c916c96bb%3A0x7fe41940c41420e8!2sSun%20City%20Aviation%20Academy!5e0!3m2!1sen!2sus!4v1694496294691!5m2!1sen!2sus" class="w-full" height="350px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-    <%= render "shared/bottom_footer"%>
   </div>
+  
+  <%= render "shared/bottom_footer"%>
 </footer>
