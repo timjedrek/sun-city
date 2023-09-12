@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <!--JS for drops-->
-  <div class="hidden lg:flex flex-row gap-5 xl:gap-10 items-center font-bold text-lg xl:text-xl mt-8 mr-5" 
+  <div class="hidden lg:flex flex-row gap-5 xl:gap-10 items-center font-bold text-lg xl:text-xl h-full pr-5 overflow-x-hidden overflow-visible" 
     x-data="{ 
       fly_drop: false, 
       pilot_drop: false, 
@@ -166,18 +166,20 @@
       </div>
     </div>
 
-    <!--SIMPLIFLY-->
+    <!--BLOG-->
     <div class="">
       <%= link_to "BLOG", why_simplifly_path, data: { turbo: false }, class: "link-underline link-overline py-3 z-10" %>
     </div>
-    <span class="relative flex">
-      <span class="animate-ping-1 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
-      <span class="animate-ping-2 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
-      <span class="animate-ping-3 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></span>
-      <span class="btn-primary">
+
+    <!--Button-->
+    <div class="relative flex">
+      <div class="animate-ping-1 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></div>
+      <div class="animate-ping-2 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></div>
+      <div class="animate-ping-3 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0"></div>
+      <div class="btn-primary">
         START TODAY
-      </span>
-    </span>
+      </div>
+    </div>
   </div>
   <div class="lg:hidden mr-5 mt-5" x-data="{ open: false }">
     <%= render "shared/header_nav_mobile_menu"%>
