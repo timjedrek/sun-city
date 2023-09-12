@@ -69,14 +69,15 @@
   transition: all .2s ease-out;
 }
 
-.shutter-button:hover {
-  background-size: 100% 100%, 100% 100%, auto;
-}
+@media (min-width: 768px) {
+  .shutter-button:hover {
+    background-size: 100% 100%, 100% 100%, auto;
+  }
 
-.shutter-button:hover .check {
-  fill: white;
+  .shutter-button:hover .check {
+    fill: white;
+  }
 }
-
 
 .outline-letters {
   color: transparent;
