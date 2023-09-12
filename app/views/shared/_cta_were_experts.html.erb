@@ -1,12 +1,13 @@
 
-<section class="w-full bg-ideal-ramp bg-cover h-screen-3/4 lg:h-screen-4/5 bg-[center_right_-3rem] flex justify-center items-center">
+<section class="w-full bg-experts bg-cover bg-center h-screen-3/4 lg:h-screen-4/5 flex justify-center items-center">
   <div class="flex flex-col justify-center items-center drop-shadow-2xl transform-gpu" x-data>
-    <h2 class="w-4/5 font-bold text-5xl lg:text-7xl">We are the <span class="text-ideal-blue">flight training experts</span> of St. Louis</h2>
-    <p class="w-4/5 py-5 lg:py-10 text-xl lg:text-2xl font-semibold">The Ideal Aviation family comes from a long history of aviation in St. Louis.  Dating back to the 1980's Ideal Aviation has been helping pilots earn their wings.</p>
-    <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+    <h2 class="w-4/5 font-bold text-5xl lg:text-7xl">At <span class="text-custom-50 font-extrabold">SUN CITY</span>, safety is paramount.</h2>
+    <p class="w-4/5 py-5 lg:py-10 text-xl lg:text-2xl font-semibold">We're experts in flight training and never compromise on safety. Choose Sun City Aviation Academy for your pilot training in the South Florida area.</p>
+    <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start relative" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+      
       <%=link_to location_path, data: { turbo: false }, class: "mx-auto" do%>
-        <div class="btn-primary text-xl lg:text-3xl">
-          VISIT IDEAL TODAY
+        <div class="btn-primary text-xl lg:text-3xl z-10">
+          VISIT SUN CITY TODAY
         </div>
       <% end %>
     </div>

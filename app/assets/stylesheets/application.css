@@ -81,20 +81,21 @@
 
 .outline-letters {
   color: transparent;
-  -webkit-text-stroke: 5px white;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 5px #FFBB59;
+  -webkit-text-fill-color: black;
   /* For other browsers */
-  text-stroke: 5px white;
-  text-fill-color: transparent;
+  text-stroke: 5px #FFBB59;
+  text-fill-color: black;
 }
 
 .outline-letters-sm {
   color: transparent;
   -webkit-text-stroke: 3px white;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #FFBB59;
   /* For other browsers */
   text-stroke: 3px white;
-  text-fill-color: transparent;
+  text-fill-color: #FFBB59;
+  font-weight: 900;
 }
 
 

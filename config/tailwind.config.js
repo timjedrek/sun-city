@@ -134,6 +134,7 @@ module.exports = {
         'course5' : "url('sun-city-instructor.webp')",
         'course6' : "url('sun-city-atp.webp')",
         'luke' : "url('sun-city-luke.webp')",
+        'experts' : "url('sun-city-shore-bg.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
