@@ -346,67 +346,69 @@
 <%= render "shared/testimonials" %>
 
 <section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <span class="text-3xl ">Step 1.</span>
-    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">YOUR DISCOVERY FLIGHT</h3>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <span class="text-3xl ">Start Your Aviation Journey With</span>
+    <h3 class="text-5xl font-bold pb-10 mx-5 text-center">A DISCOVERY FLIGHT</h3>
     <p class="w-3/4">
-      A discovery flight is the perfect way to get your feet off the
-      ground and experience the joy of flying for the first
-      time. During this introductory flight, you'll take the
-      controls and work with one of our experienced
-      instructors to learn the basics of flying.
+      A discovery flight the first step into becoming a pilot. 
+      If you've ever been interested in flying an airplane, 
+      then this is your chance to be inside the cockpit on the controls. 
+      You'll be paired up with a certificated flight instructor and get clearance from the tower to taxi to the runway. 
+      Push the throttle forward and pull controls back to lift the plane from the ground. 
     </p>
     <p class="w-3/4 py-10">
       Doing a discovery flight is the best way to
-      determine if flying is for you and help you make an
-      informed decision about pursuing your pilot's
-      license. If you're ready to take the first step, sign
-      up for a Discovery Flight today and discover the
-      thrill of flying for yourself!
+      determine if being a pilot is right for you. 
+      Whether you're trying it out for fun or want to fly professionally,
+      doing a discovery flight will allow you to see the Ft. Lauderdale Hollywood from a new perspective.
     </p>
-    <%= link_to "SIGN UP NOW", discovery_flight_path, target: "blank", data: { turbo: false }, class: "btn-primary mb-10" %>
+    <%= link_to "SCHEDULE TODAY", discovery_flight_path, target: "blank", data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "discovery-flight.webp", alt: "Student pilot taking a discovery flight", class: "lg:h-screen-2/3 lg:rounded-2xl lg:drop-shadow-2xl"%>
+    <%=image_tag "sun-city-discovery-flight.webp", alt: "Take a disovery flight with Sun City and see Miami from the skies", class: "lg:h-screen-2/3 lg:rounded-2xl lg:drop-shadow-2xl"%>
   </div>
 </section>
 
 <section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-white">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <span class="text-3xl ">Step 2.</span>
-    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">FLY AT SIMPLIFLY</h3>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <span class="text-3xl ">Start Pilot Training and</span>
+    <h3 class="text-5xl font-bold pb-10 mx-5 text-center">RECIEVE YOUR PILOT CERTIFICATE</h3>
     <p class="w-3/4">
-      We'll help you every step of the way to get your private pilot certificate and fly a plane. 
-      You'll gain the knowledge, skills, and confidence to safely navigate the skies with precision.  
-      With a private pilot certificate from SimpliFly you'll have the freedom to embark on exciting cross country adventures, fly friends and family to new destinations, and be the pilot in command of your own aircraft. 
-
+      Your private pilot certificate is the first major milestone in becoming a pilot. 
+      With a private pilot certificate, you are allowed to be the pilot in command and 
+      have the priviledge of taking on passengers. To get the certificate, you will train 
+      consistently and pass a written exam, medical exam, and pratical exam.
     </p>
     <p class="w-3/4 py-10">
-      Then, expand your skills, enhance your aviation knowledge, and open doors to a wide range of career opportunities.  SimpliFly offers instrument rating and commercial certificate programs to equip you with the skills and expertise needed to navigate confidently in challenging conditions and unlock new opportunities in your aviation career.
+      The team at Sun City Aviation Academy will guide you every step of the way.  Right after your discovery 
+      flight, you'll work with a flight instructor where you'll have individualized training.  You'll learn how to 
+      maneuver the airplane in the sky and eventually get your wings and have the training to fly solo.  From there, 
+      we work on strengthening your piloting skills to be prepared for your checkride with a FAA designated pilot examiner.  
+      When you fly at Sun City, you're more than just a number.  Your part of the Sun City family.  
     </p>
-    <%= link_to "VIEW PROGRAMS", pilot_training_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+    <%= link_to "PRIVATE PILOT TRAINING", pilot_training_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "pilot_pass_checkride.webp", alt: "Student pilot passing a checkride", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
+    <%=image_tag "sun-city-studying.webp", alt: "Sun City students going over maps and flight charts planning out a cross country in the Hollywood, FL airspace", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <span class="text-3xl ">Step 3.</span>
-    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">BEGIN YOUR PILOT CAREER</h3>
+<section class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 pb-0 lg:py-10 bg-white">
+  <div class="flex flex-col items-center lg:w-1/2">
+    <h3 class="text-5xl font-bold pb-10 mx-5 text-center">Can You Become a Pilot?</h3>
     <p class="w-3/4">
-      After obtaining your commercial pilot certificate, the path to becoming an airline pilot involves building a minimum of 1,500 flight hours. 
-      Instructing at SimpliFly allows you to accumulate flight time while helping others achieve their aviation dreams. Our comprehensive certified flight instructor (CFI) training program will equip you with the skills, knowledge, and mentoring needed to excel in this crucial role.
-
+      Many people believe that becoming a pilot is out of reach due to concerns about expenses, time commitments, and safety. These concerns often arise from online research and general uncertainty. We understand these valid concerns and encourage you to speak with a Sun City team member to address any questions that may have arisen during your research.
     </p>
     <p class="w-3/4 py-10">
-      Our commitment to excellence, combined with a supportive and collaborative environment, ensures that you'll thrive as an instructor. Join our team of dedicated professionals at SimpliFly and embark on a rewarding journey that not only helps you build your flight hours but also allows you to inspire and mentor the next generation of pilots.
+      At Sun City Aviation Academy, you don't need to make a substantial financial commitment upfront. It all begins with an affordable discovery flight, costing only a few hundred dollars. Pursuing your pilot's license is indeed a significant time investment, but it's a life changing achievement with long lasting rewards. Safety is our utmost priority at Sun City, ensuring your journey to becoming a pilot is both fulfilling and safe.
     </p>
-    <%= link_to "APPLY TODAY", cfi_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+    <p class="w-3/4 pb-10">
+      Wondering if a pilot's life is right for you? Discover if the world of aviation is right for you by taking our "Is Flying Right for Me?" quiz. This quiz is designed to help you explore your interests and determine if the skies are where you belong. Get started on your aviation journey by clicking below to take the quiz,
+    </p>
+    <%= link_to "TAKE THE QUIZ", cfi_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "student-pilot-after-solo-with-instructor.webp", alt: "Student pilot at SimpliFly after soloing pictured with instructor", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
+    <%=image_tag "sun-city-private-pilot-pass-checkride.webp", alt: "Student pilot at Sun City after passing her private pilot checkride", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
   </div>
 </section>
 
