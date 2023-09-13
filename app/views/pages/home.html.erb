@@ -352,6 +352,70 @@
   <div class="elfsight-app-eb5af969-ae75-40f0-9b9e-af9db5c793e7"></div>
 </section>
 
+<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <span class="text-3xl ">Step 1.</span>
+    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">YOUR DISCOVERY FLIGHT</h3>
+    <p class="w-3/4">
+      A discovery flight is the perfect way to get your feet off the
+      ground and experience the joy of flying for the first
+      time. During this introductory flight, you'll take the
+      controls and work with one of our experienced
+      instructors to learn the basics of flying.
+    </p>
+    <p class="w-3/4 py-10">
+      Doing a discovery flight is the best way to
+      determine if flying is for you and help you make an
+      informed decision about pursuing your pilot's
+      license. If you're ready to take the first step, sign
+      up for a Discovery Flight today and discover the
+      thrill of flying for yourself!
+    </p>
+    <%= link_to "SIGN UP NOW", discovery_flight_path, target: "blank", data: { turbo: false }, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "discovery-flight.webp", alt: "Student pilot taking a discovery flight", class: "lg:h-screen-2/3 lg:rounded-2xl lg:drop-shadow-2xl"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-white">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <span class="text-3xl ">Step 2.</span>
+    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">FLY AT SIMPLIFLY</h3>
+    <p class="w-3/4">
+      We'll help you every step of the way to get your private pilot certificate and fly a plane. 
+      You'll gain the knowledge, skills, and confidence to safely navigate the skies with precision.  
+      With a private pilot certificate from SimpliFly you'll have the freedom to embark on exciting cross country adventures, fly friends and family to new destinations, and be the pilot in command of your own aircraft. 
+
+    </p>
+    <p class="w-3/4 py-10">
+      Then, expand your skills, enhance your aviation knowledge, and open doors to a wide range of career opportunities.  SimpliFly offers instrument rating and commercial certificate programs to equip you with the skills and expertise needed to navigate confidently in challenging conditions and unlock new opportunities in your aviation career.
+    </p>
+    <%= link_to "VIEW PROGRAMS", pilot_training_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "pilot_pass_checkride.webp", alt: "Student pilot passing a checkride", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <span class="text-3xl ">Step 3.</span>
+    <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">BEGIN YOUR PILOT CAREER</h3>
+    <p class="w-3/4">
+      After obtaining your commercial pilot certificate, the path to becoming an airline pilot involves building a minimum of 1,500 flight hours. 
+      Instructing at SimpliFly allows you to accumulate flight time while helping others achieve their aviation dreams. Our comprehensive certified flight instructor (CFI) training program will equip you with the skills, knowledge, and mentoring needed to excel in this crucial role.
+
+    </p>
+    <p class="w-3/4 py-10">
+      Our commitment to excellence, combined with a supportive and collaborative environment, ensures that you'll thrive as an instructor. Join our team of dedicated professionals at SimpliFly and embark on a rewarding journey that not only helps you build your flight hours but also allows you to inspire and mentor the next generation of pilots.
+    </p>
+    <%= link_to "APPLY TODAY", cfi_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "student-pilot-after-solo-with-instructor.webp", alt: "Student pilot at SimpliFly after soloing pictured with instructor", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
+  </div>
+</section>
 
 <%= render "shared/cta_were_experts"%>
 <%= render "shared/cta_next_steps"%>
