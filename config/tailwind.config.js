@@ -99,11 +99,24 @@ module.exports = {
             opacity: 0,
           },
         },
+        'bounce-horizontal': {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '50%': {
+            transform: 'translateX(10px)', 
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        }
       },
       animation: {
+        'bounce-horizontal': 'bounce-horizontal 1s ease-in-out infinite',
+        
         'plane-enter': 'plane-enter 0.7s ease-out forwards',
         'plane-leave': 'plane-leave 0.3s ease-out forwards',
-
+        
 
         marquee: 'marquee 55s linear infinite',
         marquee2: 'marquee2 55s linear infinite',

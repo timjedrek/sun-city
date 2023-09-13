@@ -10,23 +10,83 @@
       </p>
       
     </div>
-    <div class="lg:w-1/6 flex flex-col items-center">
-      <p class="font-bold text-2xl pt-10">Quick Links</p>
-      <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Our Courses</li>
-        <li>Our Planes</li>
-      </ul>
+    <div class="lg:w-1/6 flex flex-col items-center"
+    x-data="{ 
+      isHovered1: false, 
+      isHovered2: false, 
+      isHovered3: false, 
+      isHovered4: false, 
+      }"
+    >
+      <p class="font-bold text-2xl pt-10 pb-5">Quick Links</p>
+      <hr class="h-[2px] w-3/4 bg-custom-50 border-0" />
+      <div class="flex flex-col items-start w-3/4">
+        <ul class="mt-7 fill-white">
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered1 = true" x-on:mouseleave="isHovered1 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered1 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Home</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered2 = true" x-on:mouseleave="isHovered2 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered2 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">About Us</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered3 = true" x-on:mouseleave="isHovered3 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered3 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Our Courses</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered4 = true" x-on:mouseleave="isHovered4 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered4 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Our Planes</div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="lg:w-1/6 flex flex-col items-center">
-      <p class="font-bold text-2xl pt-10">Navigation</p>
-      <ul>
-        <li>FAQ</li>
-        <li>Student Resources</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
-      </ul>
+    <div class="lg:w-1/6 flex flex-col items-center"
+    x-data="{ 
+      isHovered5: false, 
+      isHovered6: false, 
+      isHovered7: false, 
+      isHovered8: false, 
+      }"
+    >
+      <p class="font-bold text-2xl pt-10 pb-5">Navigation</p>
+      <hr class="h-[2px] w-3/4 bg-custom-50 border-0" />
+      <div class="flex flex-col items-start w-3/4">
+        <ul class="mt-7 fill-white">
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered5 = true" x-on:mouseleave="isHovered5 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered5 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">FAQ</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered6 = true" x-on:mouseleave="isHovered6 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered6 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Student Resources</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered7 = true" x-on:mouseleave="isHovered7 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered7 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Blog</div>
+            </div>
+          </li>
+          <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered8 = true" x-on:mouseleave="isHovered8 = false">
+            <div class="flex mb-5 items-center">
+              <div class="" :class="{ 'animate-bounce-horizontal': isHovered8 }"><%= render "shared/bullet_point" %></div>
+              <div class="ml-5">Contact Us</div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="lg:w-1/3 flex flex-col">
       <div class="m-5">
