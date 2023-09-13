@@ -1,21 +1,38 @@
-<!--Hamburger Button-->
-<button x-on:click="open = !open"
-        class="flex items-center space-x-2 focus:outline-none">
-
-  <span x-text="open ? 'Close' : 'Menu'"
-        class="text-lg font-semibold ">Menu</span>
+<!--Hamburger Button
+<button class="flex focus:outline-none px-3 py-5 bg-neutral-800 rounded-full"
+        x-on:click="open = !open">
   
-  <div class="w-6 flex items-center justify-center relative text-white">
-    <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
+  <div class="w-6 flex items-center justify-center relative text-custom-50">
+    <div x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
+          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></div>
     
-    <span x-bind:class="open ? 'opacity-0 translate-x-3' : 'opacity-100'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
+    <div x-bind:class="open ? 'opacity-0 translate-x-3' : 'opacity-100'"
+          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></div>
     
-    <span x-bind:class="open ? 'translate-y-0 -rotate-45' : 'translate-y-2'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
+    <div x-bind:class="open ? 'translate-y-0 -rotate-45' : 'translate-y-2'"
+          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></div>
   </div>
-</button>
+</button>-->
+
+<div>
+  <button class="relative"
+          x-on:click="open = !open"
+  >
+    <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-neutral-700 duration-200 shadow-md">
+      <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-500 origin-center overflow-hidden"
+           x-bind:class="open ? '-rotate-180' : ''">
+        <div class="bg-custom-50 h-[2px] w-7 transform transition-all duration-500"
+             x-bind:class="open ? 'rotate-45 -translate-x-1' : ''"></div>
+        <div class="bg-custom-50 h-[2px] w-7 rounded transform transition-all duration-500"></div>
+        <div class="bg-custom-50 h-[2px] w-7 transform transition-all duration-500"
+             x-bind:class="open ? '-rotate-45 -translate-x-1' : ''"></div>
+      </div>
+    </div>
+  </button>
+</div>
+
+
+
 
 <menu x-show="open"
       x-cloak

@@ -1,7 +1,5 @@
-<nav class="sticky top-0 z-50 h-16 lg:h-28 flex flex-row justify-between items-start bg-black text-white drop-shadow-2xl transform-gpu">
-  <div class="lg:hidden w-[81px] ml-5">
-  </div>
-  <div class="lg:pl-3 pt-2 z-50">
+<nav class="sticky top-0 z-50 h-16 lg:h-28 flex flex-row justify-between items-center bg-black text-white drop-shadow-2xl transform-gpu">
+  <div class="pl-5 lg:pl-3 lg:pt-2 z-50">
     <%= link_to root_path, data: { turbo: false } do %>
       <%= image_tag "sun-city-white-text-logo.webp", alt: "Sun City Aviation Academy Logo", class: "w-24 lg:w-48 top-0"%>
     <% end %>
@@ -181,7 +179,7 @@
       </div>
     </div>
   </div>
-  <div class="lg:hidden mr-5 mt-5" x-data="{ open: false }">
+  <div class="lg:hidden mr-5 " x-data="{ open: false }">
     <%= render "shared/header_nav_mobile_menu"%>
   </div>
 </nav>
