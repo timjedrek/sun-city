@@ -28,12 +28,12 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
   >
     <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-neutral-700 duration-200 shadow-md">
       <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-500 origin-center overflow-hidden"
-           x-bind:class="open ? '-rotate-180' : ''">
-        <div class="bg-custom-50 h-[2px] w-7 transform transition-all duration-500"
-             x-bind:class="open ? 'rotate-45 -translate-x-1' : ''"></div>
-        <div class="bg-custom-50 h-[2px] w-7 rounded transform transition-all duration-500"></div>
+           x-bind:class="open ? 'rotate-180' : ''">
         <div class="bg-custom-50 h-[2px] w-7 transform transition-all duration-500"
              x-bind:class="open ? '-rotate-45 -translate-x-1' : ''"></div>
+        <div class="bg-custom-50 h-[2px] w-7 rounded transform transition-all duration-500"></div>
+        <div class="bg-custom-50 h-[2px] w-7 transform transition-all duration-500"
+             x-bind:class="open ? 'rotate-45 -translate-x-1' : ''"></div>
       </div>
     </div>
   </button>
@@ -45,13 +45,14 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
 <menu x-show="open"
       x-cloak
       x-transition:enter="transition ease-out duration-300 transform"
-      x-transition:enter-start="-translate-x-full opacity-0"
+      x-transition:enter-start="translate-x-full opacity-0"
       x-transition:enter-end="translate-x-0 opacity-100"
       x-transition:leave="transition ease-in duration-300 transform"
       x-transition:leave-start="translate-x-0 opacity-100"
-      x-transition:leave-end="-translate-x-full opacity-0"
-      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-sky-600/90 to-sky-100 pt-10 flex flex-col z-30"
+      x-transition:leave-end="translate-x-full opacity-0"
+      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen right-0 top-16 bg-gradient-to-b from-black/90 to-neutral-500 pt-10 flex flex-col z-30"
 >
+
   <div class="ml-16 mr-5 mt-5" x-data="{
           mobile_resources_drop: false,
           mobile_now_drop: false,
