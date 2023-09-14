@@ -128,7 +128,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <% end %>
       <%= yield %>
     </main>
-    <script type="text/javascript" src="//cdn.callrail.com/companies/400810513/51d2a7c293b47e7f67d2/12/swap.js"></script> 
+    <%
+=begin %>
+    <!--<script type="text/javascript" src="//cdn.callrail.com/companies/400810513/51d2a7c293b47e7f67d2/12/swap.js"></script> -->
 
     <%# GOOGLE TAG ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
     <% if Rails.env.production? %>
@@ -155,5 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         })(window,document,'script','dataLayer','GTM-N2FPMTG');
       </script> -->
     <%end%>
+<%
+=end %>
   </body>
 </html>
