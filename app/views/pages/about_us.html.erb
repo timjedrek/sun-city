@@ -1,5 +1,19 @@
 <%= render "shared/header"%>
 
+<section class="flex flex-col bg- items-center text-black">
+  
+  <h2 class="text-4xl font-bold py-10 text-center">We've Come a Long Way Since Then</h2>
+
+  <div class="max-w-2xl mx-auto">
+    <%#=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: ""%>
+
+    <p class="p-text py-10 px-5 lg:px-0">
+      Ideal Aviation expanded its operation and spans over three hangars in St. Louis Downtown Airport.  Today, we have over 15 flight instructors and 10 different aircraft and we're continually growing.  Ideal Aviation is a full-service aircraft rental, flight training, and fractional aircraft ownership that has been serving both present and future pilots.  We wouldn't be able to get this far without the hard work and commitment from our team.
+    </p>
+    
+  </div>
+  <%= link_to "MEET OUR TEAM", root_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mb-10" %>
+</section>
 
 <section class="bg-slate-100">
   <div class="flex flex-col lg:flex-row items-center justify-center">
@@ -10,7 +24,7 @@
         <div class="pb-3 w-full">ABOUT US</div>
         <h1 class="font-bold text-5xl pb-8">Meet Bill Macon.</h1>
         <!--Mobile image-->
-        <%= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
+        <%#= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
         <div class="italic text-slate-500 text-center text-sm px-5 lg:hidden pb-10">
           <!--Sub text-->
         </div>
@@ -29,7 +43,7 @@
     <!--Desktop Picture-->
     <div class="lg:w-1/2 py-20 lg:flex flex-col items-center hidden">
       <div class="flex flex-col items-center lg:w-1/2">
-        <%= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
+        <%#= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
         <div class="italic text-slate-500 text-center text-sm">
           <!--Subtext-->
         </div>
@@ -40,11 +54,11 @@
 
 <section class="flex flex-col lg:flex-row lg:pt-10">
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "beverly-vonhoffmann.webp", alt: "Beverly Von Hoffman", class: "lg:w-2/3"%>
+    <%#=image_tag "beverly-vonhoffmann.webp", alt: "Beverly Von Hoffman", class: "lg:w-2/3"%>
     <p class="py-10 p-text max-w-lg mx-5 lg:mx-auto">My mother, Beverly von Hoffmann, obtained her pilot license in 1943, just past her 18th birthday.  She reveled flying her Stinson during her days at Stevens College in Columbia, Missouri, often taking friends on weekend outings to St. Louis and beyond.</p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "bill_macon_sr.webp", alt: "Bill Macon Sr.", class: "lg:w-1/2 lg:pb-8"%>
+    <%#=image_tag "bill_macon_sr.webp", alt: "Bill Macon Sr.", class: "lg:w-1/2 lg:pb-8"%>
     <p class="py-10 p-text max-w-lg mx-5 lg:mx-auto">My father, Bill Macon Sr., was a pilot in the U.S. Army Air Corps during World War II.  “Big Bill” is pictured here after completing his flight training at Cimmaron Army Airfield in Oklahoma in 1943.  Macon, Sr. went on to teach radio communications at Scott Field during war, just down the road from where Ideal Aviation is now.</p>
   </div>
 </section>
@@ -54,17 +68,17 @@
   <h2 class="text-4xl font-bold py-10 text-center">We've Come a Long Way Since Then</h2>
 
   <div class="max-w-2xl mx-auto">
-    <%=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: ""%>
+    <%#=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: ""%>
 
     <p class="p-text py-10 px-5 lg:px-0">
       Ideal Aviation expanded its operation and spans over three hangars in St. Louis Downtown Airport.  Today, we have over 15 flight instructors and 10 different aircraft and we're continually growing.  Ideal Aviation is a full-service aircraft rental, flight training, and fractional aircraft ownership that has been serving both present and future pilots.  We wouldn't be able to get this far without the hard work and commitment from our team.
     </p>
     
   </div>
-  <%= link_to "MEET OUR TEAM", our_team_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mb-10" %>
+  <%= link_to "MEET OUR TEAM", root_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mb-10" %>
 </section>
 
-<%= render "shared/visit_ideal"%>
+<%#= render "shared/visit_ideal"%>
 
 <%= render "shared/cta_were_experts"%>
 
