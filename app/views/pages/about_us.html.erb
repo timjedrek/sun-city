@@ -1,84 +1,154 @@
 <%= render "shared/header"%>
 
-<section class="flex flex-col bg- items-center text-black">
+<section class="flex flex-col h-screen-3/4 bg-gradient-to-t from-amber-50 to-white lg:bg-about-us bg-cover bg-center lg:justify-end justify-center items-center text-black"  x-data="">
+  <hr
+    class=" lg:hidden bg-custom-50 pt-1 border-0 w-3/4 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+    x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+    />
   
-  <h2 class="text-4xl font-bold py-10 text-center">We've Come a Long Way Since Then</h2>
+  <h2 class="text-4xl font-bold text-center">Come See What Everyone's Talking About</h2>
 
   <div class="max-w-2xl mx-auto">
-    <%#=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: ""%>
 
-    <p class="p-text py-10 px-5 lg:px-0">
-      Ideal Aviation expanded its operation and spans over three hangars in St. Louis Downtown Airport.  Today, we have over 15 flight instructors and 10 different aircraft and we're continually growing.  Ideal Aviation is a full-service aircraft rental, flight training, and fractional aircraft ownership that has been serving both present and future pilots.  We wouldn't be able to get this far without the hard work and commitment from our team.
+    <p class="pt-5 lg:px-0 font-serif italic text-xl text-center">
+      We train professional, safe, and proficient pilots, who will excel in aviation
     </p>
-    
+
   </div>
-  <%= link_to "MEET OUR TEAM", root_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mb-10" %>
+  
+  <%= link_to "SAY HELLO", root_path, data: { turbo: false }, class: "btn-primary  mb-10 mt-5" %>
+
+  <hr
+    class="lg:hidden bg-custom-50 h-1 w-3/4 mt-10 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+    x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+    />
 </section>
 
-<section class="bg-slate-100">
-  <div class="flex flex-col lg:flex-row items-center justify-center">
-    <!--Text-->
-    <div class="lg:w-1/2 flex flex-col items-end">
-      <!--Container for text so I can align them-->
-      <div class="lg:w-3/4 text-center lg:text-left pt-20 lg:pt-10">
-        <div class="pb-3 w-full">ABOUT US</div>
-        <h1 class="font-bold text-5xl pb-8">Meet Bill Macon.</h1>
-        <!--Mobile image-->
-        <%#= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
-        <div class="italic text-slate-500 text-center text-sm px-5 lg:hidden pb-10">
-          <!--Sub text-->
+<div class="lg:hidden">
+  <%= image_tag "sun-city-about-us-background-no-fade.webp"%>
+</div>
+
+<section class="bg-white flex flex-col items-center">
+  <div class="max-w-4xl">
+    <ol class="items-center sm:flex ">
+      <li class="relative mb-6 sm:mb-0 mt-10 ">
+        <div class="flex justify-center lg:justify-start ">
+          
+            <h3 class="text-3xl font-bold pb-3 text-center">
+              How It All Started
+            </h3>
+            
         </div>
+        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="mt-6 sm:pr-8">
+          <div class="flex flex-col-reverse lg:flex-row w-full gap-10 items-end">
+            
+            
+            <%= image_tag "sun-city-luke-poulos-sea-plane.webp", alt: "", class: "lg:w-1/3 object-cover lg:rounded-2xl" %>
+            
+
+            <div class="text-base font-normal text-neutral-600">
+              <p class="pb-10 px-3">
+              Founded in December 2022 by Chief Pilot Luke
+              Poulos, Sun City Aviation Academy embodies a
+              lifelong passion for aviation and teaching.
+
+              Inspired by his grandfather's legacy and fueled by his
+              father's teaching experience in the medical field,
+              Luke is driven to nurture aspiring aviators.
+              </p>
+              <p class="px-3">
+              With a solid background in aviation, including Part 135 charter operations and Part
+              121 airline experience, he understands the importance of a strong foundation in
+              flight training. He also knows firsthand how the guidance of a knowledgeable
+              instructor can give students a competitive edge in the aviation industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <ol class="items-center sm:flex ">
+      <li class="mb-6 sm:mb-0 mt-10 flex-grow">
+        <div class="flex items-center justify-center lg:justify-end">
+          
+            <div class="text-3xl font-bold lg:pb-3">
+              Our Location
+            </div>
+            
+        </div>
+        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
         
-        <div class="text-base text-left px-10 lg:pl-0 lg:pr-8">
-          <p class="pb-5 p-text">
-            I acquired Ideal Aviation in 2011 and since then I've earned my private, instrument, and multi-engine ratings.  It's been a fantastic opportunity to combine work and pleasure.  I enjoy flying for business and personal trips.
-          </p>
-
-          <p class="pb-5 p-text">
-            Our family has a long history in aviation.  My father and mother were both pilots.  In the 1930s, my grandfather owned the Von Hoffmann Aircraft Corporation and the Von Hoffmann Flying School.  
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--Desktop Picture-->
-    <div class="lg:w-1/2 py-20 lg:flex flex-col items-center hidden">
-      <div class="flex flex-col items-center lg:w-1/2">
-        <%#= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
-        <div class="italic text-slate-500 text-center text-sm">
-          <!--Subtext-->
-        </div>
-      </div>
+      </li>
+    </ol>
+    <h3 class="text-center pt-6 text-neutral-600">We are located at North Perry Airport KHWO in Pembroke Pines, Florida, U.S.A</h3>
+    <div class="mt-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.1490846155243!2d-80.2355894240109!3d25.995933277205516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a96c916c96bb%3A0x7fe41940c41420e8!2sSun%20City%20Aviation%20Academy!5e0!3m2!1sen!2sus!4v1694496294691!5m2!1sen!2sus" class="w-full" height="315px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row lg:pt-10">
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%#=image_tag "beverly-vonhoffmann.webp", alt: "Beverly Von Hoffman", class: "lg:w-2/3"%>
-    <p class="py-10 p-text max-w-lg mx-5 lg:mx-auto">My mother, Beverly von Hoffmann, obtained her pilot license in 1943, just past her 18th birthday.  She reveled flying her Stinson during her days at Stevens College in Columbia, Missouri, often taking friends on weekend outings to St. Louis and beyond.</p>
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%#=image_tag "bill_macon_sr.webp", alt: "Bill Macon Sr.", class: "lg:w-1/2 lg:pb-8"%>
-    <p class="py-10 p-text max-w-lg mx-5 lg:mx-auto">My father, Bill Macon Sr., was a pilot in the U.S. Army Air Corps during World War II.  “Big Bill” is pictured here after completing his flight training at Cimmaron Army Airfield in Oklahoma in 1943.  Macon, Sr. went on to teach radio communications at Scott Field during war, just down the road from where Ideal Aviation is now.</p>
-  </div>
-</section>
-
-<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue flex flex-col items-center text-white">
-  
-  <h2 class="text-4xl font-bold py-10 text-center">We've Come a Long Way Since Then</h2>
-
-  <div class="max-w-2xl mx-auto">
-    <%#=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: ""%>
-
-    <p class="p-text py-10 px-5 lg:px-0">
-      Ideal Aviation expanded its operation and spans over three hangars in St. Louis Downtown Airport.  Today, we have over 15 flight instructors and 10 different aircraft and we're continually growing.  Ideal Aviation is a full-service aircraft rental, flight training, and fractional aircraft ownership that has been serving both present and future pilots.  We wouldn't be able to get this far without the hard work and commitment from our team.
-    </p>
+<section class="flex flex-col items-center lg:my-10">
+  <div class="flex flex-col items-center w-full max-w-4xl bg-black text-white lg:rounded-2xl" x-data="">
+    <hr
+  class="bg-custom-50 pt-1 border-0 w-3/4 mt-6 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+  x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+  />
+  <h2 class="text-3xl font-serif italic font-semibold pb-10 pt-3">Our Mission Is</h2>
+  <p class="text-xl max-w-xl text-center mx-10">
+    to train professional, safe, and proficient pilots
+    <span class="hidden lg:inline"><br></span>
+    who will one day excel in the aviation industry.
+  </p>
+  <hr
+    class="bg-custom-50 h-1 w-3/4 mt-10 border-0 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+    x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+    />
     
   </div>
-  <%= link_to "MEET OUR TEAM", root_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mb-10" %>
 </section>
 
-<%#= render "shared/visit_ideal"%>
+<section class="bg-white flex flex-col items-center w-full">
+  <div class="max-w-4xl w-full">
+    <ol class="items-center sm:flex flex-grow pb-5">
+      <li class="mb-6 sm:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
+        <div class="flex items-center justify-center lg:justify-start">
+          <h2 class="text-3xl font-bold pb-3 w-full"> <!-- Added 'w-full' class to the h2 element -->
+            Meet The Team
+          </h2>
+        </div>
+        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
+      </li>
+    </ol>
+
+
+<div class="flex flex-col lg:flex-row w-full lg:gap-10 relative">
+  <div class="lg:w-1/2 relative">
+    <%= image_tag "sun-city-team-luke.webp", class: " lg:rounded-t-2xl", alt: "Luke Poulos, Founder, CEO & Chief Pilot"%>
+    <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center">
+      <p class="text-2xl font-semibold pt-5">Joe Cannizzaro</p>
+      <p class="italic font-serif">Director of Operations</p>
+      <p class="px-5 py-5">
+        Joe spent the last 30 Years working in flight school operations, and flying professionally for both a Part 121 and Part 135 Operator. Joe has been an essential part of multiple flight schools throughout his 30 years, serving as a Chief pilot and Director of Operations. Joe has over 4,000 total flight hours and currently holds a ATP, CFI, CFI-I, and MEI certificates.
+      </p>
+    </div>
+  </div>
+  <div class="lg:w-1/2 relative">
+    <%= image_tag "sun-city-team-joe.webp", class: "lg:rounded-t-2xl", alt: ""%> 
+    <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center">
+      <p class="text-2xl font-semibold pt-5">Joe Cannizzaro</p>
+      <p class="italic font-serif">Director of Operations</p>
+      <p class="px-5 py-5">
+        Joe spent the last 30 Years working in flight school operations, and flying professionally for both a Part 121 and Part 135 Operator. Joe has been an essential part of multiple flight schools throughout his 30 years, serving as a Chief pilot and Director of Operations. Joe has over 4,000 total flight hours and currently holds a ATP, CFI, CFI-I, and MEI certificates.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
 
 <%= render "shared/cta_were_experts"%>
 
