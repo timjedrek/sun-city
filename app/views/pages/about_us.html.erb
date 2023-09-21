@@ -1,3 +1,8 @@
+<%# Head / Meta Data %>
+<% title("Meet the Sun City Aviation Academy Team") %>
+<% meta_description("Meet the experienced team of instructors South Florida.  At North Perry Airport (KHWO), Our experienced and hands on instructors are committed to your pilot training success. Many of our students come from West Palm Beach, Port of Miami, and Fort Lauderdale") %>
+<% meta_keywords("how to become a pilot near me, flight school near me, Fort Lauderdale Flight School, Miami Flight School, West Palm Beach Flight School, Hollywood Flight School, Sun City Aviation Academy, flight school KHWO, flight school north perry") %>
+
 <%= render "shared/header"%>
 
 <section class="flex flex-col h-screen-3/4 bg-gradient-to-t from-amber-50 to-white lg:bg-about-us bg-cover bg-center lg:justify-end justify-center items-center text-black"  x-data="">
@@ -6,13 +11,13 @@
     x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
     />
   
-  <h2 class="text-4xl font-bold text-center">Come See What Everyone's Talking About</h2>
+  <div class="text-4xl font-bold text-center">Come See What Everyone's Talking About</div>
 
   <div class="max-w-2xl mx-auto">
 
-    <p class="pt-5 lg:px-0 font-serif italic text-xl text-center">
+    <h2 class="pt-5 lg:px-0 font-serif italic text-xl text-center">
       We train professional, safe, and proficient pilots, who will excel in aviation
-    </p>
+    </h2>
 
   </div>
   
@@ -30,8 +35,8 @@
 
 <section class="bg-white flex flex-col items-center">
   <div class="max-w-4xl">
-    <ol class="items-center sm:flex ">
-      <li class="relative mb-6 sm:mb-0 mt-10 ">
+    <ol class="items-center lg:flex ">
+      <li class="relative mb-6 lg:mb-0 mt-10 ">
         <div class="flex justify-center lg:justify-start ">
           
             <h3 class="text-3xl font-bold pb-3 text-center">
@@ -39,12 +44,12 @@
             </h3>
             
         </div>
-        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
-        <div class="mt-6 sm:pr-8">
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="mt-6 lg:pr-8">
           <div class="flex flex-col-reverse lg:flex-row w-full gap-10 items-end">
             
             
-            <%= image_tag "sun-city-luke-poulos-sea-plane.webp", alt: "", class: "lg:w-1/3 object-cover lg:rounded-2xl" %>
+            <%= image_tag "sun-city-luke-poulos-sea-plane.webp", alt: "", class: "lg:w-1/3 w-full object-cover lg:rounded-2xl" %>
             
 
             <div class="text-base font-normal text-neutral-600">
@@ -68,8 +73,8 @@
         </div>
       </li>
     </ol>
-    <ol class="items-center sm:flex ">
-      <li class="mb-6 sm:mb-0 mt-10 flex-grow">
+    <ol class="items-center lg:flex ">
+      <li class="mb-6 lg:mb-0 mt-10 flex-grow">
         <div class="flex items-center justify-center lg:justify-end">
           
             <div class="text-3xl font-bold lg:pb-3">
@@ -77,7 +82,7 @@
             </div>
             
         </div>
-        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
         
       </li>
     </ol>
@@ -114,20 +119,20 @@
 
 <section class="bg-white flex flex-col items-center w-full pb-10">
   <div class="max-w-4xl w-full">
-    <ol class="items-center sm:flex flex-grow pb-5">
-      <li class="mb-6 sm:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
+    <ol class="items-center lg:flex flex-grow pb-5">
+      <li class="mb-6 lg:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
         <div class="flex items-center justify-center lg:justify-start">
           <h2 class="text-3xl font-bold lg:pb-3 w-full text-center lg:text-start"> <!-- Added 'w-full' class to the h2 element -->
             Our Leadership Team
           </h2>
         </div>
-        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
       </li>
     </ol>
 
 
     <div class="flex flex-col lg:flex-row w-full lg:gap-10 relative">
-      <div class="lg:w-1/2 relative">
+      <div class="lg:w-1/2 flex flex-col">
         <%= image_tag "sun-city-team-luke.webp", class: " lg:rounded-t-2xl", alt: "Luke Poulos, Founder, CEO & Chief Pilot"%>
         <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center">
           <p class="text-2xl font-semibold pt-5">Luke Poulos</p>
@@ -137,7 +142,7 @@
           </p>
         </div>
       </div>
-      <div class="lg:w-1/2 relative">
+      <div class="lg:w-1/2 flex flex-col">
         <%= image_tag "sun-city-team-joe.webp", class: "lg:rounded-t-2xl", alt: "Joe Cannizzaro, Director of Operations"%> 
         <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center">
           <p class="text-2xl font-semibold pt-5">Joe Cannizzaro</p>
@@ -172,18 +177,18 @@
       </div>
     </div>
 
-    <ol class="items-center sm:flex flex-grow pb-5">
-      <li class="mb-6 sm:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
+    <ol class="items-center lg:flex flex-grow pb-5">
+      <li class="mb-6 lg:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
         <div class="flex items-center justify-center lg:justify-start">
           <h2 class="text-3xl font-bold lg:pb-3 w-full text-center lg:text-end"> <!-- Added 'w-full' class to the h2 element -->
             Flight Instructors and Staff
           </h2>
         </div>
-        <div class="hidden sm:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
       </li>
     </ol>
 
-    <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 ">
+    <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3 ">
       <div class="text-center text-slate-500 dark:text-slate-400">
         <%= image_tag "sun-city-team-paul.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Paul Janecki, Chief Pilot"%>
         <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
