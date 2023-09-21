@@ -13,28 +13,24 @@
 
   <div class="my-5">
     <%= form.label :name, class: "p-text" %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    <%= form.text_field :name, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
   </div>
 
   <div class="my-5">
     <%= form.label :email, class: "p-text" %>
-    <%= form.email_field :email, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    <%= form.email_field :email, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
   </div>
 
   <%= invisible_captcha :confirm_email, :message %>
 
   <div class="my-5">
     <%= form.label :phone, class: "p-text" %>
-    <%= form.text_field :phone, placeholder: "###-###-####", class: "placeholder:text-slate-300 block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    <%= form.text_field :phone, placeholder: "###-###-####", class: "placeholder:text-slate-300 block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
   </div>
 
   <div class="my-5">
-    <% if current_page?(cfi_path)%>
-      <span class="p-text">Tell us about yourself and why you want to be a CFI at SimpliFly</span>
-      <% else %>
-        <%= form.label "How can we help?", class: "p-text" %>
-    <%end%>
-    <%= form.text_area :body, rows: 4, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    <%= form.label "How can we help?", class: "p-text" %>
+    <%= form.text_area :body, rows: 4, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
   </div>
 
   <%# if @show_checkbox_recaptcha %>
@@ -45,10 +41,6 @@
   <%# end %>
 
   <div class="inline">
-  <% if current_page?(cfi_path)%>
-    <%= form.submit "APPLY TODAY", class: "btn-primary mb-10" %>
-    <% else %>
     <%= form.submit "SEND MESSAGE", class: "btn-primary mb-10" %>
-  <% end %>
   </div>
 <% end %>
