@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   before_validation :strip_phone_number
-  after_save :to_lacrm
+  #after_save :to_lacrm
   
   validates :name, presence: true
   validates :body, presence: { message: "Tell us how we can help" }
