@@ -93,16 +93,16 @@ Rails.application.configure do
 
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'simplifly-co.com' }
+  config.action_mailer.default_url_options = { host: 'suncityaviationacademy.com' }
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
     address: "mail.smtp2go.com",
     port: 80,
-    domain: "simplifly-co.com",
+    domain: "suncityaviationacademy.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "simplifly-co.com",
+    user_name: "default-713974",
     password: ENV["SMTP2GO_PASS"]
   }
 end
