@@ -153,6 +153,7 @@ module.exports = {
         'luke' : "url('sun-city-luke.webp')",
         'experts' : "url('sun-city-shore-bg3.webp')",
         'about-us' : "url('sun-city-about-us-background.webp')",
+        'airplanes' : "url('sun-city-airplanes-on-ramp.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',

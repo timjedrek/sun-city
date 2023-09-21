@@ -53,6 +53,7 @@ Rails.application.routes.draw do
 
   # Static Pages
   get 'about', to: 'pages#about_us', as: :about
+  get 'planes', to: 'pages#fixed_wing', as: :planes
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
