@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
-  #get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
+  get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
   #get 'visit-simplifly', to: 'messages#location', as: :location
   #get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
 
