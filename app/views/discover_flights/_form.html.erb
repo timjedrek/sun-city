@@ -94,7 +94,7 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                   <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
@@ -113,7 +113,7 @@
             <label class="">
               <%= form.radio_button :preferred_availability, option, { class: "hidden", "data-x-model" => "selectedAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-custom-500': selectedAvailability == '<%= option %>' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 " :class="{ 'bg-custom-500': selectedAvailability == '<%= option %>' }">
                   <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAvailability = '<%= option %>'"></span>
@@ -140,7 +140,7 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                   <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
@@ -158,7 +158,7 @@
             <label class="">
               <%= form.radio_button :alternate_availability, option, { class: "hidden", "data-x-model" => "alternateAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-custom-500': alternateAvailability == '<%= option %>' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 " :class="{ 'bg-custom-500': alternateAvailability == '<%= option %>' }">
                   <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': alternateAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateAvailability = '<%= option %>'"></span>
