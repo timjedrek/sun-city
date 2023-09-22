@@ -5,7 +5,89 @@
 
 <%= render "shared/header"%>
 
-Private Pilot Page
+<header class="w-full bg-check-fuel bg-cover h-screen-3/4 lg:h-screen-4/5 bg-bottom flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-5xl text-center">Private Pilot Course</h1>
+    <h2 class="font-bold text-4xl text-center py-10">The foundational course for your aviation career path</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What Is A Private Pilot`s License?</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      A Private Pilot Licence (PPL) or Private Pilot Certificate is a type of pilot licence that allows the holder to act as pilot in command of an aircraft privately (not for hire or compensation).
+    </p>
+    <p class="pb-10">
+      With a Private Pilot Certificate, you gain the privilege to operate aircraft for personal and recreational purposes. This means you can fly for leisure, travel, or just explore the skies at your own discretion. It's the foundation upon which you can build various flying experiences.
+    </p>
+    <p class="pb-10">
+      It's also the first certificate you receive during your pilot training and it lays the foundation for your further training.  If you're looking to advance onto getting your instrument, commercial, and maybe even your ATP (airline transport pilot) certificate, you're going to start here.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 1: Medical Exam</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-medical-exam.webp", class: "rounded-xl", alt: "Prospective student pilot getting a medical exam"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      The Federal Aviation Administration (FAA) requires all pilots to meet certain medical standards to ensure that they are physically and mentally fit. At Sun City, we understand that the medical exam can seem daunting, which is why we provide support and guidance to our students throughout the process. We work closely with certified aviation medical examiners and will be able to link you up with an Aviation Medical Examiner (AME) who can assist you in navigating the examination requirements seamlessly.
+      </p>
+    </div>
+    <p class="">
+      Our experienced team of instructors will guide you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's license.
+      We'll provide you with tips on how to prepare for the exam, including what to bring, what to expect on the day, and how to deal with any potential issues that may arise.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 2: Written Exam</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-written.webp", class: "rounded-xl", alt: "Picture of paper and pen during a study session"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      The written exam is the second step towards obtaining your pilot's license. It covers a wide range of topics, including regulations, airspace, weather, aerodynamics, and aircraft performance. The exam is designed to test your knowledge and ensure that you have a comprehensive understanding of what it takes to be a safe and competent pilot. At Sun City Aviation Academy, we offer comprehensive ground school training to prepare you thoroughly for this crucial examination, equipping you with the knowledge and confidence to excel in your written test and ultimately in your flying career.
+      </p>
+    </div>
+    <p class="">
+      Our experienced instructors will guide you through the material, answer your questions, and help you grasp the essential concepts required for success.  We understand that the written exam can be challenging, which is why we provide our students with comprehensive ground school training to help them prepare. Our experienced instructors will guide you through the study materials, providing you with a clear understanding of the concepts covered on the exam.
+    </p>
+  </div>
+  
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 3: Flight Exam</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-pass-checkride.webp", class: "rounded-xl", alt: "Picture of paper and pen during a study session"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      The flight exam, also known as the checkride, is the final step towards obtaining your license. It is designed to assess your ability to operate an aircraft safely and competently in various flight scenarios. The exam consists of both oral and practical components and is conducted by a certified FAA examiner. During the oral portion, you'll be tested on your knowledge of aircraft systems, flight planning, regulations, and aeronautical decision making (ADM). In the practical portion, you'll demonstrate your flying skills by performing maneuvers, takeoffs, landings, and emergency procedures. By training at our academy, you can be confident that you're receiving the best possible training and support to pass the flight exam and become a licensed pilot. 
+      </p>
+    </div>
+    <p class="">
+      Our experienced instructors will ensure that you have everything you need to succeed, from in-depth knowledge of the aircraft to proficient flying skills. We take pride in our high pass rates, and our commitment to your success means that you'll be well-prepared to confidently tackle the checkride and earn your wings.
+    </p>
+  </div>
+
+  
+
+</section>
 
 
 <%= render "shared/cta_fly_with"%>

@@ -1,13 +1,15 @@
-<section class="w-full h-screen bg-planes-parked bg-cover bg-bottom flex justify-center items-center">
-  <div class="flex flex-col justify-center items-center drop-shadow-2xl transform-gpu" x-data>
-      <h2 class="w-4/5 font-bold text-3xl sm:text-5xl lg:text-7xl">Fly with <span class="text-sky-400">experienced safe aviators</span> that know the flight training industry.</h2>
-      <p class="w-4/5 py-5 lg:py-10 text-xl lg:text-2xl font-semibold">We are a team of aviators that are experts in the flight training industry.  We have decades of combined experience to get you safely in the air.  Start your flight training today and see what we're talking about by scheduling a discovery flight.</p>
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10">
+  <div class="bg-aero-camp bg-cover bg-bottom h-screen-1/2 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black lg:py-10 lg:pt-16 text-white">
+    <div class="flex flex-col justify-center h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become A <span class="text-custom-50">Private</span> Pilot?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe private pilot.</p>
       <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
-        <%=link_to discovery_flight_path, target: "blank", data: { turbo: false }, class: "mx-auto" do%>
-          <div class="btn-primary text-xl lg:text-3xl">
-            SCHEDULE DISCOVERY FLIGHT
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
           </div>
         <% end %>
       </div>
+    </div>
   </div>
 </section>
