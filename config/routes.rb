@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   #get 'blog', to: 'posts#index', as: :blog
   #resources :posts
   
-  #resources :discover_flights
+  resources :discover_flights
   resources :messages
   #resources :enrollments
   #resources :book_downloads
@@ -40,8 +40,8 @@ Rails.application.routes.draw do
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Discovery flight form
-  #get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
-  #get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
+  get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
+  get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
   #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
