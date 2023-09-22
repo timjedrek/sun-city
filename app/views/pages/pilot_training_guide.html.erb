@@ -1,0 +1,260 @@
+<%= render "shared/header"%>
+
+<!--Desktop header-->
+<header class="w-full bg-flying bg-cover h-screen-3/4 lg:h-screen-4/5 bg-top flex justify-center items-center">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+      <h1 class="font-bold text-5xl text-center">Pilot Training Guide</h1>
+      <h2 class="font-bold text-4xl text-center py-10">Learn more about how to become a pilot</h2>
+      <%= link_to "START FLYING TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Do You Have What It Takes To Be A Pilot?</h3>
+    <p class="w-3/4">
+      Are you facinated by the world of aviation? Have you dreamed of flying and exploring the skies? Do you often look upward at passing aircraft, wondering if you yourself could be in the cockpit?
+    </p>
+    <p class="w-3/4 py-10">
+      Begin your journey in aviation with our brief quiz. Our quiz is designed to look at your aviation related knowledge and aptitude, alongside your unique personality traits and interests, to provide insights into whether a future in aviation aligns with your aspirations.
+    </p>
+    <%= link_to "TAKE THE QUIZ", root_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "sun-city-aero-camp-discovery-flight.webp", alt: "Young kid flying a plane at Sun City Aviation Academy's Aero Camp", class: "lg:h-screen-2/3"%>
+  </div>
+</section>
+
+<section class="bg-neutral-800 text-white flex flex-col items-center py-10 pb-20">
+  <div class="flex flex-col items-center">
+    <h3 class="text-3xl font-semibold pb-5 font-sans mx-5 text-center pt-10">How to Get Started</h3>
+    <p class="p-text text-center lg:max-w-xl mx-3">
+      If you've thought about becoming a pilot,
+      <br class="hidden lg:inline">
+      now is the perfect time to get started.
+      <br class="hidden lg:inline">
+      Sun City Aviation Academy is your place to
+      <br class="hidden lg:inline">
+      start training and get your pilot certificate and ratings.
+    </p>
+
+  </div>
+  <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-4 pt-10 lg:w-2/3 z-0 text-black">
+    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
+      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Take a Discovery Flight</h4>
+      <p class="p-text">
+        The best way to see if flying is right for you is to take a discovery flight.  This brief introductory flight, led by one of our seasoned instructors, offers a first hand glimpse into the world of piloting. During this experience, you'll take the controls of the plane, acquaint yourself with maneuvers, and view the south Florida coast from a new perspective.
+      </p>
+      <%= link_to "SCHEDULE TODAY", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+    </div>
+    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tr-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
+      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Flight Training</h4>
+      <p class="p-text">
+        The first step in your aviation journey is obtaining your private pilot certificate. This allows you to be pilot in command (PIC) of an aircraft and take passengers with you.  Our team of experienced instructors will work with you to craft a training regimen that perfectly suits your goals, schedule, and preferred learning style. Get your private pilot certificate at Sun City Aviation Academy.
+      </p>
+      <%= link_to "PRIVATE PILOT", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+    </div>
+    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-bl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
+      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Advanced Flight Training</h4>
+      <p class="p-text">
+        Expand your aviation knowledge and skills through a diverse range of advanced courses and certifications available at Sun City Aviation Academy. From instrument training to multi engine training, commercial training, and beyond, Sun City offers a comprehensive selection of advanced training options. In addition, we're one of the only flight schools in the area to offer a course to get your <%= link_to "sea plane rating", root_path, class: "text-sky-400 font-semibold hover:underline"%>.
+      </p>
+      <%= link_to "OUR COURSES", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+    </div>
+    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-br-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
+      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Your Pilot Career</h4>
+      <p class="p-text">
+        Begin your pilot career with Sun City Aviation Academy.  We offer training to get your ATP (airline transport pilot) certificate - the highest level of pilot certification and is a prerequisite for those wanting to join the airlines or get into corporate aviation.  One of the main requirements is building the minimum 1500 hours which many choose to do through being a <%= link_to "CFI", root_path, class: "text-custom-50 font-semibold hover:underline"%> (certified flight instructor).
+      </p>
+      <%= link_to "ATP COURSE", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/testimonials"%>
+
+<section class="flex flex-col lg:flex-row-reverse py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Why Choose Sun City Aviation Academy?</h3>
+    <p class="w-3/4">
+      Sun City Aviation Academy, nestled in the heart of the Miami, Ft. Lauderdale, and Hollywood area in Florida, is your premier destination for pilot training. Our unwavering commitment to safety sets us apart. With experienced and certified flight instructors boasting decades of collective knowledge, we equip you with the expertise and confidence required for a successful aviation journey.
+    </p>
+    <p class="w-3/4 py-10">
+      When you become part of Sun City Aviation Academy, you're not just enrolling in a flight school - you're becoming part of our aviation family. We take pride in offering personalized attention to each student, valuing you as more than just a number. Our lower student to instructor ratio compared to other schools in the area ensures that you receive the individualized care and support needed to thrive in your aviation pursuits.
+    </p>
+    <%= link_to "JOIN THE FAMILY", contact_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+</div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <video controls width="100%" class="h-screen-3/4" poster="<%= image_url "sun-city-video-poster-pilot-training-guide.webp"%>">
+      <source src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/F3486DC4035D9A4A686F08A7426C3EA3_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=107&vs=1165198040840300_4031180842&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9GMzQ4NkRDNDAzNUQ5QTRBNjg2RjA4QTc0MjZDM0VBM192aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0Y5MVlCU3g0WkdSdk1NQ0FHX2FLR01YZlI1MWJxX0VBQUFGFQICyAEAKAAYABsAFQAAJrK%2B4Nmb1sA%2FFQIoAkMzLBdAMwhysCDEnBgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&ccb=9-4&oh=00_AfAhwTUn-j6iMp_t_oVVDSsANDUolOoaImXQczu4O4VmcQ&oe=650E7BCF&_nc_sid=10d13b"
+              type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<%= render "shared/visit_school"%>
+
+<!--FAQ-->
+
+<section class="bg-gradient-to-b from-white to-yellow-50 py-10" id="faq">
+  <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Frequently Asked Questions</h2>
+  <div class=" max-w-2xl mx-5 lg:mx-auto p-text pb-12">
+    You might still have a few questions about pilot training at Sun City.  Discover answers to common inquiries about Sun City Aviation Academy's programs, facilities, and more. If you have any specific questions or need further information, please don't hesitate to reach out to us.
+  </div>
+
+  <div class="bg-white max-w-2xl mx-5 lg:mx-auto border border-gray-200 rounded-2xl mb-10">
+		<ul class="shadow-box">					
+		  <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">How long does it take to become a pilot?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+        </button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>This really depends on your availability, aptitude, and commitment. It can take anywhere from a few months to around a year.  If you train everyday, we've seen students get their private certiticate in one to two months.  If you're only able to dedicate a few days a week and train part time, expect to finish in 6 months to a year.  Training less often means that you will retain less information in the short term, but over time the training gets solidified.  Flight training is not a race and we need to make sure you are a safe and capable pilot.  Enjoy the journey and the only person you should be comparing yourself with is yourself.  A good pilot is always learning and training goes beyond and continues well after your private pilot certificate.</p>
+				  </div>
+			  </div>
+		  </li>
+		  <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">What are the eligibility requirements for becoming a pilot?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>You can start training right away and there are no prerequisites to start.  However to solo and then go on to get your pilot certificate, you must meet the following prerequisites:</p>
+            <ul class="list-disc ml-6">
+              <li>be at least 17 years old</li>
+              <li>be able to speak, read, and write English</li>
+              <li>be able to obtain an FAA third class medical or higher</li>
+            </ul>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">How does one obtain a medical certificate?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>One must register on <%= link_to "https://medxpress.faa.gov/medxpress/", "https://medxpress.faa.gov/medxpress/", target: "blank", class: "text-amber-500 hover:underline"%>  to fill out the application.  An instructor or staff member will make the medical appointment at one of the several local medical physicians we use.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">Do I need a college degree to be a pilot?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>You do NOT need a college degree to become a pilot as most major airlines no longer require it. However, having a college degree can make you more competitive in the job market if you are looking to make a career out of aviation.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">What is a private pilot license?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>A Private Pilot Certificate, also commonly known as a PPL (private pilot license), is one of the first certificates you obtain on your journey to becoming a licensed pilot. It allows you to be PIC (pilot in command) of an aircraft for personal and recreational purposes and also allows you to take passengers on board with you.  With a PPL, you cannot be compensated for flying as that would require a commercial certificate.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">Can I work for Sun City Aviation as a flight instructor after graduation?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>Yes, after completing your Certified Flight Instructor Certificate you will be offered a guaranteed interview with our Chief Pilot. (All potential employees must be authorized to work in the United States).  Being a CFI is a great way to build flight time, while also providing a very valuable service of teaching others how to fly and bringing more people into aviation.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">Is there a dress code or uniform policy?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>No, all students should dress comfortably during their training sessions. We pride ourselves in being a relaxed family environment.  While wearing uniform and brandishing epaulets is not required at Sun City Aviation, if you feel that you can train better wearing uniform, you are free to do so.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">What will be the daily training schedule?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>There may be half or full day sessions depending on the availability of both the student and instructor. Scheduling also depends on which portion of the curriculum the student is currently working on. However, the student will ultimately determine their own training schedule.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative border-b border-gray-200" x-data="{selected:null}">
+			  <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+				  <div class="flex items-center justify-between">
+					  <span class="font-semibold text-lg">What are the payment options?</span>
+					  <span class="ico-plus"></span>
+				  </div>
+				</button>
+			  <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+				  <div class="p-6 p-text">
+					  <p>A student may pay for the entire course up front, in increments, or pay as you go with a credit card on file. We also accept cash, checks, Zelle, and wire transfers as we are flexible in allowing our students several options for funding their flight training.</p>
+				  </div>
+			  </div>
+		  </li>
+      <li class="relative " x-data="{selected:null}">
+        <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 5 ? selected = 5 : selected = null">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-lg">What are the main advantages of Sun City Aviation Academy over other flight schools?</span>
+            <span class="ico-plus"></span>
+          </div>
+        </button>
+        <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+          <div class="p-6 p-text">
+            <p>Our management team and instructors are the most experienced in the industry, contributing to a 97 Percent first time pass rate. Competitively priced, we are also one of the most flexible flight schools in the country when it comes to scheduling and payment as we are focused on the needs and success of the student.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+	</div>
+
+  <div class=" max-w-2xl mx-5 lg:mx-auto p-text pb-10 flex flex-col items-center">
+    At Sun City Aviation Academy, we love aviation and sharing the joy of flying with others. Don't wait another day. Contact us today to get started on your aviation journey.
+  </div>
+
+</section>
+  
+<%= render "shared/cta_next_steps"%>
+
+<%= render "shared/footer"%>
+
+
+
+<!--Sticky div-->
+</div>
