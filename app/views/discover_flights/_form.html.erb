@@ -23,54 +23,54 @@
       <div class="">
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">First Name</span>
-          <%= form.text_field :first_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-500 focus:ring-custom-500" %>
+          <%= form.text_field :first_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Last Name</span>
-          <%= form.text_field :last_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-500 focus:ring-custom-500" %>
+          <%= form.text_field :last_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Email</span>
-          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-500 focus:ring-custom-500" %>
+          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <%= invisible_captcha :confirm_email, :discover_flight %>
 
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Phone</span>
-          <%= form.text_field :phone, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-500 focus:ring-custom-500" %>
+          <%= form.text_field :phone, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-5" x-data="{ selectedAircraft: '' }">
-          <span class="mb-4 font-sans text-lg font-semibold text-slate-700">Select aircraft category</span>
+          <span class="mb-4 font-sans text-lg font-semibold text-slate-700">Select Aviation Goal</span>
           <div class="flex flex-row justify-start gap-3 pt-5">
             <label class="inline-flex items-center pb-5">
-              <%= form.radio_button :aircraft, 'airplanes', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
+              <%= form.radio_button :aircraft, 'Recreation', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-500': selectedAircraft == 'airplanes' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'airplanes' }">Airplanes</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'Recreation' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'Recreation' }">Recreation</span>
                 </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'airplanes'"></span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'Recreation'"></span>
               </span>
             </label>
 
             <label class="inline-flex items-center pb-5" >
-              <%= form.radio_button :aircraft, 'helicopters', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
+              <%= form.radio_button :aircraft, 'career', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-500': selectedAircraft == 'helicopters' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'helicopters' }">Helicopters</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'career' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'career' }">Career</span>
                 </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'helicopters'"></span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'career'"></span>
               </span>
             </label>
 
             <label class="inline-flex items-center pb-5" >
               <%= form.radio_button :aircraft, 'both', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-500': selectedAircraft == 'both' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'both' }">Both</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'both' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'both' }">Both</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'both'"></span>
               </span>
@@ -95,7 +95,7 @@
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
@@ -141,7 +141,7 @@
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-500 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
@@ -185,7 +185,7 @@
         </div>
       </div>
 
-      <div class="mt-10 text-slate-600 italic text-sm">This form is a request to complete a discovery flight at Ideal Aviation.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  </div>
+      <div class="mt-10 text-slate-600 italic text-sm">This form is a <span class="font-semibold">request</span> to complete a discovery flight at Sun City Aviation Academy.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  <span class="font-semibold">You must talk with a Sun City team member and confirm the time and date to ensure you are on the schedule</span>.</div>
       <div class="mt-10">
         <%= image_tag "sun-city-black-text-logo.webp"%>
       </div>
