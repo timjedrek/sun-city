@@ -62,7 +62,7 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       <li><%= link_to "HOME", root_path, target: "blank", data: { turbo: false }%></li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%= link_to "ABOUT US", root_path, data: { turbo: false }%></div>
+          <div class=""><%= link_to "ABOUT US", about_path, data: { turbo: false }%></div>
           <div class="px-5 py-1" x-on:click="mobile_resources_drop = ! mobile_resources_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_resources_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -72,17 +72,17 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_resources_drop}">
-          <%= link_to "OUR TEAM" , root_path, data: { turbo: false }, target: "blank"%>
+          <%= link_to "OUR TEAM" , about_path, data: { turbo: false }, target: "blank"%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "AIRPLANE FLEET", root_path, target: "blank", data: { turbo: false }%>
+          <%= link_to "AIRPLANE FLEET", planes_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "CONTACT US", root_path, target: "blank", data: { turbo: false }%>
+          <%= link_to "CONTACT US", contact_path, target: "blank", data: { turbo: false }%>
         </li>        
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%=link_to "PILOT TRAINING GUIDE", root_path, data: { turbo: false }%></div>
+          <div class=""><%=link_to "PILOT TRAINING GUIDE", pilot_training_guide_path, data: { turbo: false }%></div>
           <div class="px-5 py-1" x-on:click="mobile_now_drop = ! mobile_now_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_now_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -92,10 +92,10 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "WHY BECOME A PILOT", root_path, data: { turbo: false }%>
+          <%=link_to "WHY BECOME A PILOT", why_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "DISCOVERY FLIGHT", root_path, data: { turbo: false }%>
+          <%=link_to "DISCOVERY FLIGHT", discovery_flight_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_now_drop}">
           <%=link_to "FLIGHT TRAINING", root_path, data: { turbo: false }%>
@@ -112,16 +112,16 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_about_drop}">
-          <%=link_to "PRIVATE PILOT", root_path, data: { turbo: false }%>
+          <%=link_to "PRIVATE PILOT", private_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
-          <%=link_to "INSTRUMENT RATING", root_path, data: { turbo: false }%>
+          <%=link_to "INSTRUMENT RATING", instrument_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_about_drop}">
-          <%=link_to "COMMERCIAL PILOT", root_path, data: { turbo: false }%>
+          <%=link_to "COMMERCIAL PILOT", commercial_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_about_drop}">
-          <%=link_to "MULTI ENGINE", root_path, data: { turbo: false }%>
+          <%=link_to "MULTI ENGINE", multi_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left5" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left5': !mobile_about_drop}">
           <%=link_to "FLIGHT INSTRUCTOR", root_path, data: { turbo: false }%>
