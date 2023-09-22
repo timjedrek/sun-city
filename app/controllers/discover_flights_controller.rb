@@ -27,7 +27,7 @@ class DiscoverFlightsController < ApplicationController
 
     respond_to do |format|
       if @discover_flight.save
-        #DiscoverFlightsMailer.discover_flights_email(@discover_flight).deliver_later
+        DiscoverFlightsMailer.discover_flights_email(@discover_flight).deliver_later
         format.html { redirect_to discovery_confirmation_path, notice: "#{@discover_flight.first_name}" }
         format.json { render :show, status: :created, location: @discover_flight }
       else
