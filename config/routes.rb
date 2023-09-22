@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about_us', as: :about
   get 'planes', to: 'pages#fixed_wing', as: :planes
   get 'pilot-training-guide', to: 'pages#pilot_training_guide', as: :pilot_training_guide
+  get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

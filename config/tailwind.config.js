@@ -155,6 +155,7 @@ module.exports = {
         'about-us' : "url('sun-city-about-us-background.webp')",
         'airplanes' : "url('sun-city-airplanes-on-ramp.webp')",
         'flying' : "url('sun-city-flying-bg.webp')",
+        'boeing' : "url('sun-city-boeing-bg.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
