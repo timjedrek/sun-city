@@ -29,6 +29,7 @@ class PagesController < ApplicationController
   end
 
   def instrument
+    @book_download = BookDownload.new
   end
 
   def commercial
