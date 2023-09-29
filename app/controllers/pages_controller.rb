@@ -33,6 +33,7 @@ class PagesController < ApplicationController
   end
 
   def commercial
+    @book_download = BookDownload.new
   end
   
   def pilot_training

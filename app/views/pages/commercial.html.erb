@@ -1,71 +1,116 @@
 <%# Head / Meta Data %>
-<% title("Commercial Pilot Training | SimpliFly Flight School") %>
-<% meta_description("Simplifly provides comprehensive commercial pilot training in Mesa, AZ and Spanish Fork, UT.  Prepare for a rewarding career in aviation with our professional training programs. Enroll with us now.  Many of our students come from Gilbert, Chandler, Tempe, Scottsdale, Apache Junction, Queen Creek, Fountain Hills, Gold Canyon, Maricopa, Pinal, Springville, Provo, Payson, Mapleton, Salem, Elk Ridge, Utah County, Juab County") %>
-<% meta_keywords("Commercial Pilot Training, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School, Spanish Fork Flight School, Salt Lake Flight School, Aviation Career, Professional Pilot Training") %>
+<% title("Commercial Pilot Training | Sun City Aviation Academy") %>
+<% meta_description("Explore our comprehensive commercial pilot training program at Sun City Aviation Academy. We offer FAA-approved training for aspiring commercial pilots in South Florida, serving the Hollywood, Fort Lauderdale, and Miami areas. Our experienced flight instructors, advanced flight simulators, and diverse fleet of aircraft provide you with the skills and knowledge needed to embark on a successful aviation career. Join our vibrant aviation community and take the next step towards becoming a commercial pilot.") %>
+<% meta_keywords("commercial pilot training, CPL training, commercial pilot program, FAA commercial pilot, flight training academy, Sun City Aviation Academy, South Florida, Hollywood, Florida, Fort Lauderdale, Miami, Broward County, KHWO, North Perry Airport, aviation career, flight instructors, flight simulator, aviation education, aviation courses, pilot licenses, flight experience, aviation skills, pilot certification, multi-engine training, aviation community, pilot career opportunities") %>
 
 <%= render "shared/header"%>
-
-<section class="bg-gradient-to-t lg:bg-gradient-to-l from-sky-800 to-slate-900 text-white">
-  <div class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 lg:py-10">
-    <!--Text Section-->
-    <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
-      <p class="text-xl lg:text-3xl text-center">Become a Commercial Pilot at SimpliFly</p>
-      <h2 class="font-bold text-3xl lg:text-5xl pt-5 text-center">Commercial Pilot Certificate</h2>
-      <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      After flying for a while, a commercial certificate would be the next step in your aviation journey.  A commercial certificate allows for you to get paid as a pilot and fly for compensation.
-      </p>
-      <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      Commercial pilots are paid to fly as a pilot which may include transporting cargo and passengers, as well as perform other operations such as aerial surveying and banner towing. 
-      </p>
-    </div>
-    <div class="lg:w-1/2">
-      <div class="grid place-items-center lg:mx-10">
-        <%= image_tag "simplifly-cfi.webp" , alt: "A SimpliFly commercial pilot", class: "lg:rounded-2xl lg:w-2/3"%>
-        
-      </div>
-    </div>
+<header class="w-full bg-airliner bg-cover h-screen-3/4 lg:h-screen-4/5 bg-bottom flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-5xl text-center">Commercial Pilot Course</h1>
+    <h2 class="font-bold text-4xl text-center py-10">Fly and get compensated with a commercial pilot certificate</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
-</section>
+</header>
 
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What Is A Commercial Pilot Certificate?</h3>
+  </div>
 
-
-<section class="bg-gradient-to-b from-slate-50 to-sky-200 flex flex-col items-center">
-  <div class="max-w-4xl flex flex-col pt-10 px-5">
-    <h3 class="text-5xl font-header uppercase font-semibold">Your Commercial Pilot Certificate</h3>
-    <h4 class="text-3xl text-slate-600 italic py-5">Simplifly Offers Accelerated and Flexible Training Options</h4>
-    <p class="text-lg">
-      The first major milestone on the journey to becoming an airline pilot is obtaining your commercial pilot certificate. Building upon the foundation of your private pilot certificate, the commercial pilot certificate opens up new opportunities and privileges in the aviation industry. As a commercially certified pilot, you gain the ability to fly for compensation or hire, paving the way for a professional career in aviation. Our comprehensive flight training program for the commercial pilot certificate focuses on advanced aircraft maneuvers, precision navigation, emergency procedures, and in depth cross country flight planning. While some individuals pursue this certification for personal or recreational reasons, it serves as a crucial step for those aspiring to embark on a fulfilling career as an airline pilot or in other professional pilot job roles.
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      A commercial pilot certificate, also frequently referred to as a commercial pilot license (CPL) is a significant milestone for aspiring aviators, opening doors to professional opportunities and career advancement in the aviation industry. With this license, you gain the authority to act as a pilot of an aircraft and receive payment for your services. Whether you dream of flying passengers or cargo, a commercial certificate allows you to take on roles as a PIC (pilot in command) in commercial situations, ensuring safe and efficient flight operations.
     </p>
-    
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What's the Difference Between Commercial Pilots and Airline Pilots</h3>
-    <p class="text-lg">
-    
-    Airline pilots fly regularly scheduled flights and must have an Airline Transport Pilot Certificate which is the highest pilot license the FAA issues.  However, before earning your ATP, you must get your private, instrument, and commercial certificates first.</p>
-
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">How Long Will it Take?</h3>
-    <p class="text-lg">The amount of time required to earn a commercial pilot certificate varies and largely depends on weather, availability, finances, and how often a student is available to fly. In our accelerated program, a commercial certificate can be earned in approximately six months. If flying only a few times a week, expect to be ready for your checkride after a year.</p>
-
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What are the Eligibility Requirements?</h3>
-    <ul class="list-disc text-lg pl-10 lg:pl-16">
-      <li>Hold a valid private pilot certificate</li>
-      <li>250 hours total flight time</li>
-      <li>100 hours pilot in command (PIC)</li>
-      <li>50 hours cross country</li>
-      <li>10 hours instrument</li>
-      <li>10 hours in a technically advanced aircraft</li>
-      <li>Receive flight training and a logbook endorsement from an authorized instructor</li>
-      <li>Pass a practical test for the aircraft rating sought</li>
-    </ul>
-    <p class="text-slate-600 italic pt-5">Reference 14 CFR §61.123 for the entire list of eligibility requirements.</p>
-
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">The SimpliFly Guarantee</h3>
-    <p class="text-lg pb-20">If you have completed your <%= link_to "private", private_pilot_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "instrument", instrument_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, commercial, and <%= link_to "CFI", cfi_path, class: "text-sky-600 hover:underline", data: {turbo: false}%> training at SimpliFly, we have an exciting opportunity for you. As a testament to our confidence in your abilities, we offer a guaranteed interview for a teaching position as a CFI within our flight school. This exclusive opportunity allows you to showcase the knowledge and skills you have acquired during your training journey with us. Join our team of dedicated instructors, inspire future aviators, and make a meaningful impact in the aviation community. Take the next step in your career as a CFI with SimpliFly and let your passion for aviation soar.</p>
+    <p class="pb-10">
+      Getting your commerical certificate represents a major step in your journey toward becoming a professional pilot. This license signifies that you have met the rigorous training and certification standards set by the Federal Aviation Administration (FAA) and are now eligible to pursue a rewarding career in aviation. It grants you the privilege to operate aircraft for compensation or hire, serving as a testament to your proficiency and dedication to the craft of flying.
+    </p>
+    <p class="pb-10">
+      Becoming a commercial pilot is your ticket to earning a living doing what you love: flying. It provides you with the legal authorization to accept payment for your pilot services, whether you aspire to work for airlines, charter companies, or engage in other commercial flying endeavors. With this qualification, you step into the world of professional aviation, where your skills, experience, and commitment can open doors to exciting career opportunities in the aviation industry.
+    </p>
   </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 1: Build the Flying Hours</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-flight-cessna.webp", class: "rounded-xl", alt: "Sun City's Cessna 172 flying above the city"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Our structured program provides a clear pathway to accumulate the essential 250 flight hours. We understand that reaching this milestone is a critical aspect of your journey towards your commercial pilot certificate. Through a structured curriculum that combines comprehensive flight training, cross country missions, and solo flight experiences, you'll gain invaluable hands on exposure to a wide range of flying conditions
+      </p>
+      
+    </div>
+    <p class="">
+      These experiences are carefully curated to enhance your piloting skills and instill the confidence and proficiency that characterize a seasoned commercial pilot. Our program is tailored to ensure that you are well prepared to meet the demanding requirements of the aviation industry and excel in your future commercial pilot career.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 2: Pass the Written Exam</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-aeronautical-chart.webp", class: "rounded-xl", alt: "Picture of an aeronautical chart with a plotter"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        The written examination for a commercial pilot certificate covers a broad spectrum of topics that are important for safe and knowledgeable piloting. It delves into aviation regulations, which encompass various aspects of flight operations and the legal framework governing commercial flying. Questions may touch upon flight crew responsibilities, aircraft maintenance requirements, and air traffic control procedures, ensuring aspiring commercial pilots understand and adhere to regulatory standards. The exam emphasizes understanding the rules regarding compensation for commercial services. It assesses your knowledge of when and how pilots can receive compensation, spanning activities such as carrying passengers or cargo and providing flight instruction.
+      </p>
+    </div>
+    <p class="">
+      Comprehending these regulations is essential for operating within legal boundaries as a commercial pilot. The written examination ensures that commercial pilot candidates possess a comprehensive understanding of critical subjects, combining legal compliance, meteorology, navigation, and more to prepare them for safe and successful careers in aviation.
+    </p>
+  </div>
+  
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 3: Complete Requirements</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-plane-about-to-take-off.webp", class: "rounded-xl", alt: "Sun City Cessna about to take off for a flight"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Achieving your Commercial Pilot Certificate involves fulfilling specific flight requirements, including demanding long cross country flights and other critical experiences. At Sun City Aviation Academy, our commercial program ensures that you master advanced flight maneuvers and precise navigation techniques to complete these cross country flights. With your long cross country flight, you'll demonstrate your ability to plan and execute complex missions, showcasing your aptitude for real world challenges. Our structured curriculum guides you through extensive cross country missions, providing hands on exposure to diverse flying conditions. 
+      </p>
+    </div>
+    <p class="">
+      You'll gain the skills and confidence that define a seasoned commercial pilot, mastering advanced maneuvers and navigation techniques. Throughout your training, we prioritize safety and precision, ensuring you are well prepared to excel in your commercial pilot checkride and embark on a successful career in aviation.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 4: Pass the Checkride</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-commercial-checkride-pass.webp", class: "rounded-xl", alt: "Sun City commercial student passing his commercial checkride"%>
+        <p class="text-center text-sm italic text-neutral-700">
+          Sun City Instrument Student passing his commercial checkride
+        </p>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      With a paramount focus on safety and precision, our experienced instructors will do their best job in preparing you for the pivotal check ride. Through detailed training and continuous evaluation, we ensure that you are not just adequately prepared but thoroughly ready to excel in your commercial checkride. As you confidently take to the skies with the examiner by your side, you'll embark on a journey that showcases the culmination of your training and the expertise you've gained throughout your time with Sun City Aviation Academy.
+      </p>
+    </div>
+    <p class="">
+      This check ride isn't just a test - it's an opportunity to demonstrate your proficiency, aeronautical decision making skills, and your ability to handle real world scenarios with confidence and composure. It's the moment where you transform from a diligent trainee into a skilled and certified commercial pilot, fully prepared to embrace the challenges and opportunities of a rewarding aviation career.
+    </p>
+  </div>
+  
+
 </section>
 
 
-
-<%= render "shared/cta_pilot_simple"%>
+<%= render "shared/cta_fly_with_commercial"%>
+<%= render "shared/cta_book"%>
 <%= render "shared/cta_next_steps"%>
 <%= render "shared/footer"%>
 

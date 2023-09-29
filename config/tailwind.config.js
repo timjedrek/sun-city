@@ -161,6 +161,10 @@ module.exports = {
         'aero-camp' : "url('sun-city-discovery-flight-aero-camp-bg.webp')",
         'clouds' : "url('sun-city-clouds.webp')",
         'sim' : "url('sun-city-in-the-simulator-bg.webp')",
+        'airliner' : "url('sun-city-commercial-airliner-cockpit-bg.webp')",
+        'uniform' : "url('sun-city-pilot-uniform-bg.webp')",
+        
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',
