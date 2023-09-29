@@ -22,24 +22,24 @@
       <div class="">
         <div class="my-3">
           <%= form.label :first_name, class: "text-slate-700 font-semibold text-base" %>
-          <%= form.text_field :first_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :first_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-3">
           <%= form.label :last_name, class: "text-slate-700 font-semibold text-base" %>
-          <%= form.text_field :last_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :last_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-3 flex flex-col">
           <%= form.label :email, class: "text-slate-700 font-semibold text-base" %>
-          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <%= invisible_captcha :confirm_email, :quiz_result %>
 
         <div class="my-3 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Phone</span>
-          <%= form.text_field :phone, placeholder: "###-###-####", class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full placeholder:text-slate-300 focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :phone, placeholder: "###-###-####", class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full placeholder:text-slate-300 focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <%# if @show_checkbox_recaptcha %>
@@ -57,46 +57,29 @@
     </div>
 
     <div x-show="currentPage === 2" class="flex flex-col justify-between" x-cloak>
-      <%# PROGRAM %>
-      <div class="my-3" x-data="{ program: '' }">
-        <span class="text-slate-700 text-base font-semibold">What type of training are you interested in?</span>
-        <div class="grid grid-cols-2 mt-5 gap-3">
-          <% availability_options = ['Helicopters', 'Airplanes'] %>
-          <% availability_options.each do |option| %>
-            <label class="">
-              <%= form.radio_button :program, option, { class: "hidden", "data-x-model" => "program" } %>
-              <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 w-5/6" :class="{ 'bg-ideal-blue': program == '<%= option %>' }">
-                  <span class="px-4 py-2 font-sans text-sm text-slate-800" :class="{ 'text-slate-50': program == '<%= option %>' }"><%= option %></span>
-                </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="program = '<%= option %>'"></span>
-              </span>
-            </label>
-          <% end %>
-        </div>
-      </div>
+      
 
       <%# WHY BECOME A PILOT? %>
       <div class="mt-5" x-data="{ reasons: [], otherReason: '' }">
         <div class="text-slate-700 font-semibold text-base mb-2">Why do you want to become a pilot? (select all that apply)</div>
         
         <div class="flex items-center mb-2">
-          <input type="checkbox" x-model="reasons" value="Adventure" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0">
+          <input type="checkbox" x-model="reasons" value="Adventure" class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0">
           <span class="ml-2 text-slate-700">Adventure</span>
         </div>
         
         <div class="flex items-center mb-2">
-          <input type="checkbox" x-model="reasons" value="Career" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0">
+          <input type="checkbox" x-model="reasons" value="Career" class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0">
           <span class="ml-2 text-slate-700">Career</span>
         </div>
         
         <div class="flex items-center mb-2">
-          <input type="checkbox" x-model="reasons" value="Hobby" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0">
+          <input type="checkbox" x-model="reasons" value="Hobby" class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0">
           <span class="ml-2 text-slate-700">Hobby</span>
         </div>
         
         <div class="flex items-center mb-2">
-          <input type="checkbox" x-model="reasons" value="Other" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0">
+          <input type="checkbox" x-model="reasons" value="Other" class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0">
           <span class="ml-2 text-slate-700">Other:</span>
         </div>
         
@@ -106,7 +89,7 @@
             x-init="otherReason = ''"
             placeholder="Enter other reasons why you want to become a pilot"
             rows=4
-            class="form-textarea mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-ideal-blue focus:ring focus:ring-ideal-blue-light focus:ring-opacity-50 placeholder-slate-500"
+            class="form-textarea mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-custom-50 focus:ring focus:ring-custom-50 focus:ring-opacity-50 placeholder-slate-500"
           ></textarea>
         </div>
         <%= form.hidden_field :why_pilot, "x-bind:value": "reasons.concat(otherReason ? [otherReason] : []).join(', ')" %>
@@ -114,7 +97,7 @@
 
       <div class="my-3">
         <span class="text-slate-700 font-semibold text-base">What are your aviation goals?</span>
-        <%= form.text_area :goals, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+        <%= form.text_area :goals, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
       </div>
 
       <div class="my-3">
@@ -122,7 +105,7 @@
         <%= form.select(:previous_training,  
           ['','Never piloted an aircraft before', 'I\'ve flown flight simulators or drones', 'A few hours but never soloed', 'I\'m working on a checkride'] , 
           {},
-          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue'}) 
+          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50'}) 
         %>
       </div>
 
@@ -140,7 +123,7 @@
         <%= form.select(:learn_style,  
           ['','Doing', 'Watching', 'Reading'] , 
           {},
-          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue'}) 
+          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50'}) 
         %>
       </div>
 
@@ -149,7 +132,7 @@
         <%= form.select(:structure,  
           ['','I prefer a structured approach', 'I prefer a flexible approach'] , 
           {},
-          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue'}) 
+          {:class => 'block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50'}) 
         %>
       </div>
 
@@ -158,27 +141,27 @@
         <div class="text-slate-700 font-semibold text-base mb-2">What kind of guidance and support would you prefer from your flight instructor? (Select all that apply)</div>
         
         <div class="flex mb-2">
-          <input type="checkbox" x-model="guidance" value="I prefer a personalized approach tailored to my individual learning needs and preferences." class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <input type="checkbox" x-model="guidance" value="I prefer a personalized approach tailored to my individual learning needs and preferences." class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0 mt-1">
           <span class="ml-2 text-slate-700">I prefer a personalized approach tailored to my individual learning needs and preferences.</span>
         </div>
         
         <div class="flex mb-2">
-          <input type="checkbox" x-model="guidance" value="I would like my flight instructor to be hands-on and involved in my training, providing constant feedback and guidance." class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <input type="checkbox" x-model="guidance" value="I would like my flight instructor to be hands-on and involved in my training, providing constant feedback and guidance." class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0 mt-1">
           <span class="ml-2 text-slate-700">I would like my flight instructor to be hands-on and involved in my training, providing constant feedback and guidance.</span>
         </div>
         
         <div class="flex mb-2">
-          <input type="checkbox" x-model="guidance" value="I prefer a structured approach with clear goals and objectives." class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <input type="checkbox" x-model="guidance" value="I prefer a structured approach with clear goals and objectives." class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0 mt-1">
           <span class="ml-2 text-slate-700">I prefer a structured approach with clear goals and objectives.</span>
         </div>
 
         <div class="flex mb-2">
-          <input type="checkbox" x-model="guidance" value="I prefer guidance that is supportive and encouraging, with a focus on building confidence." class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <input type="checkbox" x-model="guidance" value="I prefer guidance that is supportive and encouraging, with a focus on building confidence." class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0 mt-1">
           <span class="ml-2 text-slate-700">I prefer guidance that is supportive and encouraging, with a focus on building confidence. </span>
         </div>
         
         <div class="flex mb-2">
-          <input type="checkbox" x-model="guidance" value="Other" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <input type="checkbox" x-model="guidance" value="Other" class="form-checkbox h-5 w-5 text-custom-50 focus:ring-0 mt-1">
           <span class="ml-2 text-slate-700">Other:</span>
         </div>
         
@@ -188,7 +171,7 @@
             x-init="otherGuidance = ''"
             placeholder="Enter other things that you would like to see from your flight instructor"
             rows=4
-            class="form-textarea mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-ideal-blue focus:ring focus:ring-ideal-blue-light focus:ring-opacity-50 placeholder-slate-500"
+            class="form-textarea mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-custom-50 focus:ring focus:ring-custom-50 focus:ring-opacity-50 placeholder-slate-500"
           ></textarea>
         </div>
         <%= form.hidden_field :guidance, "x-bind:value": "guidance.concat(otherGuidance ? [otherGuidance] : []).join(', ')" %>
@@ -203,12 +186,12 @@
     <div x-show="currentPage === 4" class="flex flex-col justify-between" x-cloak>
       <div class="my-3">
         <div class="text-slate-700 font-semibold text-base mb-2">Just for fun, do you know how a wing generates lift?</div>
-        <%= form.text_area :wings_lift, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+        <%= form.text_area :wings_lift, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
       </div>
 
       <div class="my-3">
         <div class="text-slate-700 font-semibold text-base mb-2">Anything else you'd like us to know?</div>
-        <%= form.text_area :comments, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+        <%= form.text_area :comments, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
       </div>
 
       <div class="my-3">
@@ -234,7 +217,7 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                   <span class="px-4 py-2 text-sm" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
@@ -253,7 +236,7 @@
             <label class="">
               <%= form.radio_button :preferred_availability, option, { class: "hidden", "data-x-model" => "selectedAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-ideal-blue': selectedAvailability == '<%= option %>' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-custom-50': selectedAvailability == '<%= option %>' }">
                   <span class="px-4 py-2 font-sans text-sm text-slate-800" :class="{ 'text-slate-50': selectedAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAvailability = '<%= option %>'"></span>
@@ -280,7 +263,7 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                   <span class="px-4 py-2 text-sm" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
@@ -298,7 +281,7 @@
             <label class="">
               <%= form.radio_button :alternate_availability, option, { class: "hidden", "data-x-model" => "alternateAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-ideal-blue': alternateAvailability == '<%= option %>' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-custom-50': alternateAvailability == '<%= option %>' }">
                   <span class="px-4 py-2 font-sans text-sm text-slate-800" :class="{ 'text-slate-50': alternateAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateAvailability = '<%= option %>'"></span>

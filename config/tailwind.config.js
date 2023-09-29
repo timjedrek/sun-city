@@ -165,6 +165,7 @@ module.exports = {
         'uniform' : "url('sun-city-pilot-uniform-bg.webp')",
         'multi' : "url('sun-city-multi-bg.webp')",
         'multi-bottom' : "url('sun-city-multi-bg-bottom.webp')",
+        'beach' : "url('sun-city-beach-bg.webp')",
         
       },
       height: theme => ({
