@@ -164,6 +164,7 @@ module.exports = {
         'airliner' : "url('sun-city-commercial-airliner-cockpit-bg.webp')",
         'uniform' : "url('sun-city-pilot-uniform-bg.webp')",
         'multi' : "url('sun-city-multi-bg.webp')",
+        'multi-bottom' : "url('sun-city-multi-bg-bottom.webp')",
         
       },
       height: theme => ({
