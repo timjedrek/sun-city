@@ -38,14 +38,14 @@
         <!--Drop down Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start" >
           <div class="items-center">
-            <%= link_to about_path, data: { turbo: false }, target: "blank", class: "hover:text-custom-50 duration-300" do %>
+            <%= link_to about_path, data: { turbo: false }, class: "hover:text-custom-50 duration-300" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 OUR TEAM
               </div>
             <% end %>
           </div>
           <div class="items-center">
-            <%= link_to planes_path, data: { turbo: false }, target: "blank", class: "hover:text-custom-50 duration-300" do %>
+            <%= link_to planes_path, data: { turbo: false }, class: "hover:text-custom-50 duration-300" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 AIRPLANE FLEET
               </div>
@@ -81,7 +81,7 @@
             <% end %>
           </div>
           <div class="items-center">
-            <%= link_to discovery_flight_path, data: { turbo: false }, class: "hover:text-custom-50 duration-300" do %>
+            <%= link_to discovery_flight_path, data: { turbo: false }, target: "blank", class: "hover:text-custom-50 duration-300" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 DISCOVERY FLIGHT
               </div>
