@@ -1,3 +1,8 @@
+<%# Head / Meta Data %>
+<% title("Pilot Training Guide | Sun City Aviation Academy") %>
+<%# meta_description("") %>
+<%# meta_keywords("") %>
+
 <%= render "shared/header"%>
 
 <!--Desktop header-->
@@ -46,14 +51,14 @@
       <p class="p-text">
         The best way to see if flying is right for you is to take a discovery flight.  This brief introductory flight, led by one of our seasoned instructors, offers a first hand glimpse into the world of piloting. During this experience, you'll take the controls of the plane, acquaint yourself with maneuvers, and view the south Florida coast from a new perspective.
       </p>
-      <%= link_to "SCHEDULE TODAY", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+      <%= link_to "SCHEDULE TODAY", discovery_flight_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
     </div>
     <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tr-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
       <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Flight Training</h4>
       <p class="p-text">
         The first step in your aviation journey is obtaining your private pilot certificate. This allows you to be pilot in command (PIC) of an aircraft and take passengers with you.  Our team of experienced instructors will work with you to craft a training regimen that perfectly suits your goals, schedule, and preferred learning style. Get your private pilot certificate at Sun City Aviation Academy.
       </p>
-      <%= link_to "PRIVATE PILOT", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+      <%= link_to "PRIVATE PILOT", private_pilot_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
     </div>
     <div class="bg-white rounded-xl lg:rounded-none lg:rounded-bl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
       <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Advanced Flight Training</h4>
