@@ -1,7 +1,7 @@
 class QuizResult < ApplicationRecord
   #validates :previous_training, presence: true, unless: -> { previous_training.blank? }
   before_validation :strip_phone_number
-  after_save :to_lacrm
+  #after_save :to_lacrm
 
   validates :first_name, presence: true
   validates :last_name, presence: true

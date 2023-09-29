@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   #resources :enrollments
   resources :book_downloads
   #resources :checkouts
-  #resources :quiz_results
+  resources :quiz_results
 
   # Enrollment form
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
@@ -48,8 +48,8 @@ Rails.application.routes.draw do
   #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
 
   # Quiz form
-  #get 'quiz', to: 'quiz_results#new', as: :quiz
-  #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
+  get 'quiz', to: 'quiz_results#new', as: :quiz
+  get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
   get 'about', to: 'pages#about_us', as: :about
