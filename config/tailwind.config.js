@@ -163,7 +163,7 @@ module.exports = {
         'sim' : "url('sun-city-in-the-simulator-bg.webp')",
         'airliner' : "url('sun-city-commercial-airliner-cockpit-bg.webp')",
         'uniform' : "url('sun-city-pilot-uniform-bg.webp')",
-        
+        'multi' : "url('sun-city-multi-bg.webp')",
         
       },
       height: theme => ({
