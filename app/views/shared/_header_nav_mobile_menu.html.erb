@@ -58,7 +58,7 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
           mobile_now_drop: false,
           mobile_certification_drop: false,
           mobile_about_drop: false }">
-    <ul class="space-y-4 font-[900]">
+    <ul class="space-y-4 font-[900] pb-5">
       <li><%= link_to "HOME", root_path, target: "blank", data: { turbo: false }%></li>
       <li>
         <div class="flex flex-row justify-between" >
@@ -131,6 +131,15 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         </li>
         <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
           <%=link_to "SEAPLANE", root_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
+          <%=link_to "FLIGHT REVIEW", root_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
+          <%=link_to "IPC", root_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
+          <%=link_to "WINGMAN COURSE", root_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >

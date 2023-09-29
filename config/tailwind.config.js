@@ -166,7 +166,7 @@ module.exports = {
         'screen-1/3': 'calc(100vh / 3)',
         'screen-3/4': '75vh',
         'screen-4/5': '80vh',
-        'screen-mobile' : '110.1vh', //depends on menu height
+        'screen-mobile' : '92vh', //depends on menu height
       }),
     },
   },
