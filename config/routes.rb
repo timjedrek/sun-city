@@ -62,7 +62,8 @@ Rails.application.routes.draw do
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'certified-flight-instructor-cfi', to: 'pages#cfi', as: :cfi
   get 'airline-transport-pilot-atp', to: 'pages#atp', as: :atp
-
+  get 'seaplane-pilot-training', to: 'pages#seaplane', as: :seaplane
+  get 'flight-review-bfr', to: 'pages#bfr', as: :bfr
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize

@@ -1,0 +1,98 @@
+<%# Head / Meta Data %>
+<% title("Seaplane Training SES | Sun City Aviation Academy") %>
+<% meta_description("Explore Sun City Aviation Academy's Seaplane Training and Certification program. Learn to pilot amphibious aircraft and earn your seaplane rating in the picturesque surroundings of KHWO North Perry Airport.") %>
+<% meta_keywords("seaplane training, seaplane certification, seaplane rating, amphibious aircraft, seaplane pilot, KHWO North Perry Airport, water takeoff and landing") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-ses bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-5xl text-center">Seaplane Amphibious Aircraft</h1>
+    <h2 class="font-bold text-4xl text-center py-10">From land to ocean Sun City is the place for SES training</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Get Your Seaplane Certification</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Seaplane flying is an experience unlike any other in the aviation world. With the ability to touch down on waterways, lakes, and coastal areas, seaplanes open up a world of possibilities for exploration and adventure. The sensation of smoothly gliding off the water's surface or gracefully touching down on a secluded lake is an experience that leaves an indelible mark on every pilot. Seaplane training allows you to master the skills required to confidently handle these incredible aircraft, providing you with the expertise needed to safely operate seaplanes.
+    </p>
+    <p class="pb-10">
+      For those pursuing a career in aviation or simply seeking to expand their flying horizons, seaplane training is a valuable addition to any pilot's skill set. Whether you dream of becoming a commercial pilot, an airline captain, or simply wish to elevate your piloting capabilities, seaplane training offers a distinctive edge. It instills a profound appreciation for precision, adaptability, and resourcefulness in aviation, qualities that resonate with pilots as they navigate diverse flight conditions. As you delve into seaplane training at Sun City Aviation Academy, you'll discover that mastering the art of seaplane flying is not just a skill. It's a transformative experience that sets you apart as a well rounded aviator.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">How to Start Flying Seaplanes</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-seaplane-luke.webp", class: "rounded-xl", alt: "Luke Poulos in front of Sun City's Sea Plane"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        To enroll in our Seaplane Training Program, prospective students need to have their <%= link_to "private pilot certificate", private_pilot_path, class: "text-yellow-600 hover:underline"%> and valid medical certificate. At Sun City Aviation Academy, we're committed to helping you navigate these prerequisites, ensuring that you're well prepared to dive into the world of seaplane aviation with confidence. We recognize that each student's journey is unique, and we're dedicated to providing the necessary support to meet your specific requirements. 
+      </p>
+      
+    </div>
+    <p class="">
+      During your training, you'll study topics such as water based takeoffs and landings, aquatic navigation, and seaplane specific regulations. These components form the backbone of our program, ensuring you have a robust understanding of seaplane operations. Whether you're a seasoned pilot or new to aviation, our Seaplane Training Program is designed to cater to a diverse range of experience levels, providing a dynamic learning environment that nurtures your growth as a seaplane pilot.
+    </p>
+  </div>
+  
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Sun City Seaplane Course</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-seaplane-georgette.webp", class: "rounded-xl", alt: "Sun City's Georgette sitting on a seaplane"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        To earn a seaplane rating or certificate, you'll need to meet several minimum requirements. These include holding a Private Pilot Certificate, obtaining a valid medical certificate, being at least 18 years old, and accumulating approximately 10-15 hours of flight time in a seaplane. As part of the process, candidates must pass a specialized written knowledge exam focusing on seaplane operations and successfully complete a practical flight test with an FAA examiner. These requirements ensure that individuals are adequately trained and prepared to safely operate seaplanes in various scenarios, including water takeoffs and landings.
+      </p>
+    </div>
+    <p class="">
+      Earning your seaplane rating or certificate is an exciting achievement that opens up new horizons in aviation. At Sun City Aviation Academy, we've designed a structured program to guide you through the process. It begins with comprehensive ground instruction, where you'll go over seaplane specific topics, regulations, and safety procedures. Your journey continues with practical flight training, where you'll gain hands on experience in operating seaplanes on both water and land.
+    </p>
+  </div>
+
+</section>
+
+
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-5">
+  <div class="bg-sea-selfie bg-cover bg-center h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become A <span class="text-custom-50">Seaplane Pilot</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

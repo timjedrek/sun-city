@@ -170,7 +170,8 @@ module.exports = {
         'cfi2' : "url('sun-city-cfi-bg-2.webp')",
         'atp' : "url('sun-city-airliner-cockpit.webp')",
         'airline' : "url('sun-city-airline-pilot.webp')",
-        
+        'ses' : "url('sun-city-sea-plane-bg.webp')",
+        'sea-selfie' : "url('sun-city-seaplane-selfie-bg.webp')",
         
       },
       height: theme => ({
