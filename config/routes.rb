@@ -68,6 +68,7 @@ Rails.application.routes.draw do
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
   get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
   get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
+  get 'youth-aviation-programs', to: 'pages#youth', as: :youth
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
