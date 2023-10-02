@@ -1,0 +1,81 @@
+<%# Head / Meta Data %>
+<% title("Instrument Proficiency Check IPC | Sun City Aviation Academy") %>
+<% meta_description("Brush up on your instrument flying skills with Sun City Aviation Academy's IPC program. Renew your instrument proficiency and maintain safe and confident flight operations. Serving KHWO North Perry and the surrounding areas.") %>
+<% meta_keywords("Instrument Proficiency Check, IPC renewal, instrument flying skills, KHWO North Perry, instrument flight training, aviation academy, instrument proficiency, flight operations, aviation safety, flight training, IPC program") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-cloud2 bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Instrument Proficiency Check (IPC)</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Maintain currency with your instrument rating</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What's an IPC?</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      To maintain instrument currency, you need to log six instrument approaches, conduct holding procedures, and intercept and track courses every six calendar months. These activities are essential for keeping pilots well prepared to navigate through instrument meteorological conditions (IMC) effectively.  However, if you are unable to complete the requirements every six months and are past the grace period, then you need to complete an IPC in order to become current again.
+    </p>
+    <p class="pb-10">
+      At Sun City Aviation Academy, we offer a comprehensive Instrument Proficiency Check (IPC) program tailored to help pilots meet these currency requirements and go beyond. Our IPC program focuses on honing pilots' instrument flying skills, including precision approaches, procedure turns, and holding patterns, all while ensuring they are well versed in the latest regulations and technologies. With our experienced instructors and state of the art equipment, pilots can confidently maintain their instrument currency
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What to Expect</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-cessna-on-ground.webp", class: "rounded-xl", alt: "Sun City Cessna on the ground during low clouds"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        When you schedule an Instrument Proficiency Check (IPC) with Sun City Aviation Academy, you can expect a thorough and comprehensive evaluation of your instrument flying skills. The IPC typically includes both ground instruction and flight training to assess your knowledge and proficiency in various aspects of instrument flight. During the ground portion, you will review essential topics such as regulations, procedures, weather, and technology updates to ensure you are up to date and well prepared for instrument flying.
+      </p>
+      
+    </div>
+    <p class="">
+      In the flight portion of the IPC, you will engage in a series of flight maneuvers and procedures designed to evaluate your instrument flying abilities. This will include approaches, holding patterns, intercepting and tracking courses, and recovery from unusual attitudes. Our experienced instructors will provide guidance, feedback, and instruction to help you enhance your skills and proficiency in instrument flying. At Sun City, we are committed to ensuring that you leave your IPC feeling confident and well prepared to navigate safely and effectively through challenging instrument meteorological conditions (IMC).
+    </p>
+  </div>
+  
+
+</section>
+
+
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-0">
+  <div class="bg-walk bg-cover bg-center h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Complete Your <span class="text-custom-50">Instrument Proficiency Check</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

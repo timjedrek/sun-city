@@ -64,6 +64,10 @@ class PagesController < ApplicationController
     @book_download = BookDownload.new
   end
 
+  def ipc
+    @book_download = BookDownload.new
+  end
+
   def pilot_programs
   end
 

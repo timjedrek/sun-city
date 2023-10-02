@@ -174,6 +174,7 @@ module.exports = {
         'sea-selfie' : "url('sun-city-seaplane-selfie-bg.webp')",
         'oil' : "url('sun-city-instructor-checking-oil.webp')",
         'walk' : "url('sun-city-cfi-walking.webp')",
+        'cloud2' : "url('sun-city-clouds-bg2.webp')",
         
       },
       height: theme => ({

@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   get 'airline-transport-pilot-atp', to: 'pages#atp', as: :atp
   get 'seaplane-pilot-training', to: 'pages#seaplane', as: :seaplane
   get 'flight-review-bfr', to: 'pages#bfr', as: :bfr
+  get 'instrument-proficiency-check-ipc', to: 'pages#ipc', as: :ipc
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
