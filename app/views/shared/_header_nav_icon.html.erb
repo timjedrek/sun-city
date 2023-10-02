@@ -195,6 +195,13 @@
               </div>
             <% end %>
           </div>
+          <div class="items-center">
+            <%= link_to ppc_path, data: { turbo: false }, class: "hover:text-custom-50 duration-300" do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                PROFESSIONAL PILOT COURSE
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

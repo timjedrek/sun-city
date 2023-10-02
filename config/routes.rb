@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   get 'flight-review-bfr', to: 'pages#bfr', as: :bfr
   get 'instrument-proficiency-check-ipc', to: 'pages#ipc', as: :ipc
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
+  get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize

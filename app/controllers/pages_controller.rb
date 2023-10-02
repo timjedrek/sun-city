@@ -2,27 +2,18 @@ class PagesController < ApplicationController
   def home
   end
 
-  def stratus
+  def about_us
   end
 
-  def meritize
+  def fixed_wing
   end
 
-  def why_simplifly
-  end
+  # NEW TO FLYING
 
-  def accelerated
-  end
-
-  def flexible
+  def why_pilot
   end
   
-  def cost
-  end
-
-  def timeline
-    @book_download = BookDownload.new
-  end
+  # COURSES
   
   def private_pilot
     @book_download = BookDownload.new
@@ -72,15 +63,46 @@ class PagesController < ApplicationController
     @book_download = BookDownload.new
   end
 
+  def professional_pilot_course
+    @book_download = BookDownload.new
+  end
+
+  # YOUTH
+
+  def youth
+  end
+
+
+  ## PREVIOUS METHODS
+
+  def timeline
+    @book_download = BookDownload.new
+  end
+
+  def stratus
+  end
+
+  def meritize
+  end
+
+  def why_simplifly
+  end
+
+  def accelerated
+  end
+
+  def flexible
+  end
+  
+  def cost
+  end
+
   def pilot_programs
   end
 
   def aircraft_rental
   end
   
-  def fixed_wing
-  end
-
   def rotary_wing
   end
 
@@ -90,8 +112,6 @@ class PagesController < ApplicationController
   def helicopter_training
   end
 
-  def about_us
-  end
 
   def advanced_training
   end
