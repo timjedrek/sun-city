@@ -98,13 +98,13 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
           <%=link_to "WHY BECOME A PILOT", why_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "DISCOVERY FLIGHT", discovery_flight_path, data: { turbo: false }%>
+          <%=link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_now_drop}">
           <%=link_to "FLIGHT TRAINING", pilot_courses_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
-          <%=link_to "BECOME A PROFESSIONAL PILOT", root_path, data: { turbo: false }%>
+          <%=link_to "BECOME A PROFESSIONAL PILOT", ppc_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
