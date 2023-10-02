@@ -1,0 +1,103 @@
+<%# Head / Meta Data %>
+<% title("ATP - Airline Transport Pilot | Sun City Aviation Academy") %>
+<% meta_description("Prepare for a high-flying career with Sun City Aviation Academy's ATP certification program. Unlock opportunities in aviation, become an airline pilot, and soar to new heights. Serving the KHWO North Perry community, our comprehensive ATP training sets the standard for pilot education") %>
+<% meta_keywords("ATP certification, airline transport pilot, pilot career, aviation training, airline pilot, KHWO North Perry, Sun City Aviation Academy, pilot education, ATP program, airline captain, commercial pilot, ATP training, aviation academy, pilot school, ATP course") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-atp bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-5xl text-center">Airline Transport Pilot - ATP</h1>
+    <h2 class="font-bold text-4xl text-center py-10">Start your career in the airlines</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">How to Become an Airline Pilot</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Many people start flight training with the end goal of becoming an airline pilot.  As a very lucrative career, the airlines pay pilots a good salary with regional airline pilots starting out at around $100,000, to captains at legacy and major airlines making $300,000.  It's not unheard of to hear about pilots at major airlines that have gained decades of seniority making around $500,000.
+    </p>
+    <p class="pb-10">
+      To become an airline pilot requires commitment and over a thousand hours of flight time.  This commitment to aviation is signified by the experience you gather in your training and culminates into receiving your ATP (Airline Transport Pilot) certificate.  To obtain this certification, you will need to complete your private, instrument, commercial, and multi-engine certifications and ratings.  You'll also need to accumalate 1500 hours of flight time to qualify.  Lastly, similar to previous ratings and certifications, you will need to pass a written exam along with a pratical checkride.  The team at Sun City Aviation Academy in combination has over 10,000 hours of experience and our senior leadership team members have experience working in the Part 121 (airlines and scheduled commercial flight) world and will be able to guide and help you on your journey.
+    </p>
+    <p class="pb-10">
+      Below, we'll go over the specific requirements needed to get your ATP along with the details of our course to get you prepared for the ATP checkride.  We look forward to working with you and help shape you into a safe proficient pilot ready for the airlines or other aviation career opportunities.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">ATP Requirements</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-atp-checkride.webp", class: "rounded-xl", alt: "Sun City student passing his ATP checkride"%>
+        <p class="text-center text-sm italic text-neutral-700">
+          Sun City student passing his ATP checkride
+        </p>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        To qualify for an Airline Transport Pilot (ATP) certificate in the United States, several prerequisites must be met. Aspiring airline piltos should hold a <%= link_to "private pilot certificate", private_pilot_path , class: "text-yellow-600 hover:underline"%>, demonstrating their proficiency in basic flight operations. In addition, an <%= link_to "instrument rating", instrument_path , class: "text-yellow-600 hover:underline"%> and <%= link_to "commercial certificate", commercial_path , class: "text-yellow-600 hover:underline"%> are essential prerequisites, showcasing their competence in more advanced piloting skills, including instrument flying. Aspiring airline pilots must have accumulated a minimum of 1,500 total flight hours, which must include cross-country and night flight hours. For multi-engine ATP certification, an additional 50 hours of <%= link_to "multi-engine", multi_path , class: "text-yellow-600 hover:underline"%> flight time is also required.
+      </p>
+      
+    </div>
+    <p class="">
+      Educational background and having a college degree is not necessary but can be advantageous, with many ATP candidates completing aviation degree programs. A first class medical certificate is essential to meet medical requirements, and candidates must pass the ATP written knowledge test, assessing their knowledge of aviation regulations and procedures. Once these prerequisites are met, candidates can embark on ATP training and ultimately complete the ATP practical test to earn their coveted ATP certificate, marking a significant milestone in their aviation careers.
+    </p>
+  </div>
+  
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">ATP Course at Sun City</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-atp-instructor.webp", class: "rounded-xl", alt: "Sun City ATP instructor"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        At Sun City Aviation Academy, our Airline Transport Pilot (ATP) course stands out for its unwavering commitment to safety, proficiency, and real world experience. Our training approach is designed to prepare candidates not just to pass the FAA ATP written test but to excel as top tier airline pilots. With a strong emphasis on hands on learning, our experienced instructors provide 7 hours of dual instruction and 7 hours of ground school, ensuring that our students gain the practical skills and theoretical knowledge needed to meet the highest industry standards.
+      </p>
+    </div>
+    <p class="">
+      In addition to the comprehensive flight and ground training, you'll spend 5 hours in the Red Bird simulator. This invaluable tool allows candidates to practice and refine their skills in a safe and controlled environment, replicating real world flight scenarios. Sun City Aviation Academy's commitment to producing well rounded and competent airline pilots is reflected in every aspect of our ATP course, from our carefully structured curriculum to the expertise of our instructors. We take pride in setting the foundation for successful careers in aviation, preparing our students for the challenges and opportunities that await them in the airline industry.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+
+</section>
+
+
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-5">
+  <div class="bg-airline bg-cover bg-center h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become An <span class="text-custom-50">Airline Pilot</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

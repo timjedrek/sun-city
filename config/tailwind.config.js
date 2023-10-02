@@ -168,7 +168,8 @@ module.exports = {
         'beach' : "url('sun-city-beach-bg.webp')",
         'cfi' : "url('sun-city-cfi-bg.webp')",
         'cfi2' : "url('sun-city-cfi-bg-2.webp')",
-        
+        'atp' : "url('sun-city-airliner-cockpit.webp')",
+        'airline' : "url('sun-city-airline-pilot.webp')",
         
         
       },

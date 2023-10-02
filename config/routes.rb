@@ -56,6 +56,14 @@ Rails.application.routes.draw do
   get 'planes', to: 'pages#fixed_wing', as: :planes
   get 'pilot-training-guide', to: 'pages#pilot_training_guide', as: :pilot_training_guide
   get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
+  get 'multi-engine-rating', to: 'pages#multi', as: :multi
+  get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
+  get 'instrument-rating', to: 'pages#instrument', as: :instrument
+  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
+  get 'certified-flight-instructor-cfi', to: 'pages#cfi', as: :cfi
+  get 'airline-transport-pilot-atp', to: 'pages#atp', as: :atp
+
+
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
@@ -65,11 +73,6 @@ Rails.application.routes.draw do
   #get 'pilot-training-pricing-calculator', to: 'pages#cost' 
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
-  get 'multi-engine-rating', to: 'pages#multi', as: :multi
-  get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
-  get 'instrument-rating', to: 'pages#instrument', as: :instrument
-  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
-  get 'certified-flight-instructor-cfi', to: 'pages#cfi', as: :cfi
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
