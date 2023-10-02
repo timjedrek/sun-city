@@ -1,0 +1,81 @@
+<%# Head / Meta Data %>
+<% title("Flight Review BFR | Sun City Aviation Academy") %>
+<% meta_description("Stay current and proficient in your aviation skills with our Flight Review (BFR) program at Sun City Aviation Academy, conveniently located at KHWO North Perry Airport. Our certified flight instructors will guide you through a comprehensive review to ensure your continued safety and competence in the skies.") %>
+<% meta_keywords("Flight Review at KHWO, BFR Program in North Perry Airport, Aviation Skills Review KHWO, Proficiency Check KHWO, Flight Instructor Guided Review KHWO, Recurrent Pilot Training in Hollywood, FL, Aviation Knowledge Refresh KHWO, Flight Skills Evaluation Hollywood, FL, Sun City Aviation Academy Hollywood, FL, Flight Proficiency Maintenance KHWO") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-oil bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-5xl text-center">Biennial Flight Review</h1>
+    <h2 class="font-bold text-4xl text-center py-10">Become current and stay proficient</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What's a Flight Review?</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      A Flight Review, often referred to as a Biennial Flight Review (BFR), is a regular assessment and re-evaluation of a pilot's flying skills and knowledge that occurs every two years. This comprehensive examination which is completed by a qualified instructor is mandated by the Federal Aviation Administration (FAA) in the United States. The primary purpose of a flight review is to ensure that pilots continue to meet the FAA's safety and proficiency standards, allowing them to operate aircraft safely and confidently. During this review, pilots undergo a thorough assessment that covers a range of essential flying topics, from aircraft handling and emergency procedures to regulatory knowledge.
+    </p>
+    <p class="pb-10">
+      At Sun City Aviation Academy, we recognize the significance of the Flight Review and its role in maintaining the highest standards of aviation safety. Our Flight Review program is designed to provide a comprehensive evaluation of your flying skills, helping you stay current and proficient. Led by experienced and certified flight instructors, our flight review process covers all the essential aspects of aviation, from cockpit procedures to navigation techniques. Whether you're a seasoned pilot looking to refresh your skills or a newer pilot aiming to fulfill your biennial requirement, our flight review program at KHWO North Perry Airport in Hollywood, FL, is here to meet your needs and ensure that you're always ready to fly safely.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What to Expect</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-instructor-bfr.webp", class: "rounded-xl", alt: "Sun City CFI in front of Cessna 172"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        A flight review which mandated by the FAA every 24 calendar months, is a comprehensive evaluation of a pilot's knowledge and skills to ensure they continue to operate safely and proficiently. A flight review consists of a ground portion where you can expect an evaluation of your regulatory knowledge, aeronautical science, and weather; and a flight portion where you can expect an evaluation of your flight maneuvers and emergency procedures.
+      </p>
+      
+    </div>
+    <p class="">
+      More specifically, in the flight portion of the review, your ability to perform standard and advanced maneuvers will be assessed, including elements such as steep turns and stalls. Additionally, you will be evaluated on your reactions and decision-making skills in simulated emergency scenarios. It's important to demonstrate your proficiency in these areas to ensure you can handle challenging situations safely. In the ground portion, your knowledge of Federal Aviation Regulations (FARs), airspace rules, and operational limitations will be examined to ensure your understanding of the legal aspects of aviation. Overall, a Flight Review is a valuable opportunity to maintain and improve your piloting skills while ensuring you continue to meet the high safety standards required in aviation.
+    </p>
+  </div>
+  
+
+</section>
+
+
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-0">
+  <div class="bg-walk bg-cover bg-center h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Complete Your <span class="text-custom-50">Flight Review</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>
