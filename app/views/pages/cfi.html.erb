@@ -4,112 +4,154 @@
 <% meta_keywords("CFI certification, Certified Flight Instructor, flight training South Florida, aviation mentors Fort Lauderdale, flight proficiency Miami, aviation safety Broward County, aviation education Hollywood, aviation community Florida, pilot training HWO, flight instructor near me, best aviation school Miami") %>
 
 <%= render "shared/header"%>
-<header class="w-full bg-airliner bg-cover h-screen-3/4 lg:h-screen-4/5 bg-bottom flex justify-center items-center text-white">
+<header class="w-full bg-cfi bg-cover h-screen-3/4 lg:h-screen-4/5 bg-bottom flex justify-center items-center text-white">
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
-    <h1 class="font-bold text-5xl text-center">Commercial Pilot Course</h1>
-    <h2 class="font-bold text-4xl text-center py-10">Fly and get compensated with a commercial pilot certificate</h2>
+    <h1 class="font-bold text-5xl text-center">Certified Flight Instructor</h1>
+    <h2 class="font-bold text-4xl text-center py-10">Start your pilot career and teach others to fly</h2>
     <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
 </header>
 
 <section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
   <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
-    <h3 class="font-semibold text-xl lg:text-3xl text-center">What Is A Commercial Pilot Certificate?</h3>
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What Is A Certified Flight Instructor?</h3>
   </div>
 
   <div class="max-w-3xl mt-10 px-3">
     <p class="pb-10">
-      A commercial pilot certificate, also frequently referred to as a commercial pilot license (CPL) is a significant milestone for aspiring aviators, opening doors to professional opportunities and career advancement in the aviation industry. With this license, you gain the authority to act as a pilot of an aircraft and receive payment for your services. Whether you dream of flying passengers or cargo, a commercial certificate allows you to take on roles as a PIC (pilot in command) in commercial situations, ensuring safe and efficient flight operations.
+      Certified Flight Instructors (CFIs) play a pivotal role in the world of aviation as mentors, guides, and educators. They are the individuals responsible for shaping the next generation of skilled pilots, teaching student pilots not only the technical knowledge required for safe and efficient flight but also laying down and creating the core foundation for student pilot's aviation skills. CFIs are the bridge between aspiring aviators and accomplishing their aviation goals, providing the necessary guidance, training, and expertise to turn those dreams into reality. Their dedication, experience, and commitment are what enable student pilots to fly confidently and safely into the skies, making CFIs the unsung heroes of the aviation community.
     </p>
     <p class="pb-10">
-      Getting your commerical certificate represents a major step in your journey toward becoming a professional pilot. This license signifies that you have met the rigorous training and certification standards set by the Federal Aviation Administration (FAA) and are now eligible to pursue a rewarding career in aviation. It grants you the privilege to operate aircraft for compensation or hire, serving as a testament to your proficiency and dedication to the craft of flying.
+      CFI certification represents a significant milestone in a pilot's journey, signifying a high level of flight proficiency and instructional capabilities. This certification holds immense value not only for the individual achieving it but also for the broader aviation community. CFIs serve as the backbone of flight training programs, ensuring that future pilots are not only technically proficient but also well versed in aviation safety and aeronautical decision making. Their expertise contributes to safer skies and more pilots in the aviation industry, as they pass on their knowledge and passion to the next generation. As mentors and educators, CFIs leave a significant mark on the aviation landscape, nurturing a culture of continuous learning, safety, and excellence that benefits the entire flying community.
     </p>
     <p class="pb-10">
-      Becoming a commercial pilot is your ticket to earning a living doing what you love: flying. It provides you with the legal authorization to accept payment for your pilot services, whether you aspire to work for airlines, charter companies, or engage in other commercial flying endeavors. With this qualification, you step into the world of professional aviation, where your skills, experience, and commitment can open doors to exciting career opportunities in the aviation industry.
+      At Sun City Aviation Academy, we offer a range of Certified Flight Instructor (CFI) certifications. Whether you're looking to start your journey as a CFI, become a Certified Flight Instructor Instrument (CFII) to teach instrument flying, or aim for the Multi Engine Instructor (MEI) rating, our comprehensive programs cover it all. To get started on this rewarding path, aspiring CFIs will have gotten their Commercial Pilot Certificate, have logged a specific number of flight hours, and possess a valid medical certificate. From there, you'll undergo specialized training, extensive ground school, and practical flight experience under the guidance of our experienced instructors. Our dedicated team will ensure you're well prepared for the FAA examinations and practical assessments, setting you on the path to becoming a skilled and influential Certified Flight Instructor.
     </p>
   </div>
 
   <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
-    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 1: Build the Flying Hours</h3>
-  </div>
-
-  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div class="lg:w-2/5">
-        <%= image_tag "sun-city-flight-cessna.webp", class: "rounded-xl", alt: "Sun City's Cessna 172 flying above the city"%>
-      </div>
-      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
-        Our structured program provides a clear pathway to accumulate the essential 250 flight hours. We understand that reaching this milestone is a critical aspect of your journey towards your commercial pilot certificate. Through a structured curriculum that combines comprehensive flight training, cross country missions, and solo flight experiences, you'll gain invaluable hands on exposure to a wide range of flying conditions
-      </p>
-      
-    </div>
-    <p class="">
-      These experiences are carefully curated to enhance your piloting skills and instill the confidence and proficiency that characterize a seasoned commercial pilot. Our program is tailored to ensure that you are well prepared to meet the demanding requirements of the aviation industry and excel in your future commercial pilot career.
-    </p>
-  </div>
-
-  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
-    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 2: Pass the Written Exam</h3>
-  </div>
-
-  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div class="lg:w-2/5">
-        <%= image_tag "sun-city-aeronautical-chart.webp", class: "rounded-xl", alt: "Picture of an aeronautical chart with a plotter"%>
-      </div>
-      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
-        The written examination for a commercial pilot certificate covers a broad spectrum of topics that are important for safe and knowledgeable piloting. It delves into aviation regulations, which encompass various aspects of flight operations and the legal framework governing commercial flying. Questions may touch upon flight crew responsibilities, aircraft maintenance requirements, and air traffic control procedures, ensuring aspiring commercial pilots understand and adhere to regulatory standards. The exam emphasizes understanding the rules regarding compensation for commercial services. It assesses your knowledge of when and how pilots can receive compensation, spanning activities such as carrying passengers or cargo and providing flight instruction.
-      </p>
-    </div>
-    <p class="">
-      Comprehending these regulations is essential for operating within legal boundaries as a commercial pilot. The written examination ensures that commercial pilot candidates possess a comprehensive understanding of critical subjects, combining legal compliance, meteorology, navigation, and more to prepare them for safe and successful careers in aviation.
-    </p>
-  </div>
-  
-  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
-    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 3: Complete Requirements</h3>
-  </div>
-
-  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
-    <div class="flex flex-col lg:flex-row-reverse">
-      <div class="lg:w-2/5">
-        <%= image_tag "sun-city-plane-about-to-take-off.webp", class: "rounded-xl", alt: "Sun City Cessna about to take off for a flight"%>
-      </div>
-      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
-        Achieving your Commercial Pilot Certificate involves fulfilling specific flight requirements, including demanding long cross country flights and other critical experiences. At Sun City Aviation Academy, our commercial program ensures that you master advanced flight maneuvers and precise navigation techniques to complete these cross country flights. With your long cross country flight, you'll demonstrate your ability to plan and execute complex missions, showcasing your aptitude for real world challenges. Our structured curriculum guides you through extensive cross country missions, providing hands on exposure to diverse flying conditions. 
-      </p>
-    </div>
-    <p class="">
-      You'll gain the skills and confidence that define a seasoned commercial pilot, mastering advanced maneuvers and navigation techniques. Throughout your training, we prioritize safety and precision, ensuring you are well prepared to excel in your commercial pilot checkride and embark on a successful career in aviation.
-    </p>
-  </div>
-
-  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
-    <h3 class="font-semibold text-xl lg:text-3xl text-center">Step 4: Pass the Checkride</h3>
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">How to Become a CFI</h3>
   </div>
 
   <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
     <div class="flex flex-col lg:flex-row-reverse">
       <div class="lg:w-2/5 flex flex-col items-center">
-        <%= image_tag "sun-city-commercial-checkride-pass.webp", class: "rounded-xl", alt: "Sun City commercial student passing his commercial checkride"%>
+        <%= image_tag "sun-city-cfi-checkride.webp", class: "rounded-xl", alt: "Sun City student passing his CFI checkride"%>
         <p class="text-center text-sm italic text-neutral-700">
-          Sun City Instrument Student passing his commercial checkride
+          Sun City student passing his CFI checkride
         </p>
       </div>
       <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
-      With a paramount focus on safety and precision, our experienced instructors will do their best job in preparing you for the pivotal check ride. Through detailed training and continuous evaluation, we ensure that you are not just adequately prepared but thoroughly ready to excel in your commercial checkride. As you confidently take to the skies with the examiner by your side, you'll embark on a journey that showcases the culmination of your training and the expertise you've gained throughout your time with Sun City Aviation Academy.
+        To get your CFI certificate, you will need to have and meet the requirements a commercial pilot certificate.  This involves accruing 250 flight hours and holding a valid medical certificate.  For more information on obtaining your commercial certificate, please visit our <%= link_to "commercial certificate course", commercial_path, class: "text-yellow-600 hover:underline"%> page.  Additionally, you'll need to pass the FAA's Certified Flight Instructor Airplane knowledge test, which assesses your understanding of flight principles, regulations, and teaching techniques. Achieving a passing score on this test demonstrates your proficiency in the subject matter and readiness to instruct. 
+      </p>
+      
+    </div>
+    <p class="">
+      Furthermore, the FAA mandates that CFI candidates complete a certified flight instructor course, which includes ground instruction and practical flight training. This course is designed to prepare you for the CFI checkride, during which you'll demonstrate your ability to teach effectively, provide in-flight instruction, and evaluate student pilots' skills. Successfully passing this checkride is the final step in becoming a Certified Flight Instructor and embarking on a fulfilling career in aviation education.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">The Different Types of Flight Instructors</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    
+      
+      <p class="pt-10 lg:pt-0 lg:pr-10">
+        Sun City Aviation Academy offers courses for the three different CFI certifications: 
+        <ul class="list-disc ml-10">
+          <li>CFI (Certified Flight Instructor)</li>
+          <li>CFII (Certified Flight Instructor Instrument)</li>
+          <li>MEI (Multi Engine Instructor)</li>
+        </ul>
+          
+        
+        As the names of each of the certifications implies, CFI allows you to instruct student pilots, CFII allows you to instruct instrument training, and MEI allows you to instruct for multi engine aircraft.  The more advanced your certifications are, the more competitive you will become in your aviation career if you're looking to move onto the airlines or other types of commercial flight.
+      </p>
+    
+  </div>
+  
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">CFI - Certified Flight Instructor</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5">
+        <%= image_tag "sun-city-cfi.webp", class: "rounded-xl", alt: "Sun City CFI"%>
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        The Certified Flight Instructor (CFI) certification is a cornerstone of aviation education. As a CFI, you will play a pivotal role in shaping the next generation of pilots. This certification allows you to provide instruction and flight training to student pilots, helping them develop the knowledge and skills necessary to obtain their pilot certificates. CFIs are essential members of the aviation community, guiding students through ground school, flight training, and ultimately, ensuring their readiness for checkrides.
       </p>
     </div>
     <p class="">
-      This check ride isn't just a test - it's an opportunity to demonstrate your proficiency, aeronautical decision making skills, and your ability to handle real world scenarios with confidence and composure. It's the moment where you transform from a diligent trainee into a skilled and certified commercial pilot, fully prepared to embrace the challenges and opportunities of a rewarding aviation career.
+      In this role, you'll not only enhance your flying skills but also your ability to communicate complex aviation concepts effectively. The responsibilities of a CFI extend beyond just flying; they involve mentorship, guidance, and the empowerment of aspiring aviators. If you're passionate about sharing your love for aviation and helping others achieve their dreams of becoming pilots, then obtaining your CFI certification is a fulfilling and rewarding path.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">CFII - Certified Flight Instructor Instrument</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-ifr.webp", class: "rounded-xl", alt: "Flying in instrument (IFR) conditions in the clouds"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          CAPTION
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      The Certified Flight Instructor - Instrument (CFII) certification focuses on a crucial aspect of flight training: teaching instrument flight skills. As a CFII, you'll guide students in mastering the art of flying solely by reference to instruments, a skill that is indispensable for safe and proficient flying, especially in adverse weather conditions. Instrument flight instruction ensures that pilots can navigate and land aircraft safely when visibility is limited. 
+      </p>
+    </div>
+    <p class="">
+      CFIIs play a pivotal role in building confidence and competence in instrument flying. You'll help students understand complex instrument procedures, read and interpret instruments accurately, and make sound decisions when operating in challenging weather environments. Whether you're aspiring to be a CFII or looking to enhance your flight instructor career, this certification opens up opportunities to impart invaluable knowledge and skills to future pilots.
     </p>
   </div>
   
+<div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">MEI - Multi Engine Instructor</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-multi.webp", class: "rounded-xl", alt: "Sun City multi engine aircraft"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          CAPTION
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+      The Multi Engine Instructor (MEI) certification is a specialized qualification that focuses on instructing in multi-engine aircraft. If you have a passion for high performance, multi-engine planes, and want to share your expertise with others, the MEI certification is your gateway. MEIs are sought after for their proficiency in teaching the intricacies of multi-engine flight, a skill set that is highly valued in the aviation industry. 
+      </p>
+    </div>
+    <p class="">
+      In addition to the standard CFI requirements, MEI candidates must possess a deep understanding of multi-engine systems, aerodynamics, and advanced flight maneuvers.  As an MEI, you'll teach students how to operate aircraft with multiple engines, emphasizing the safe handling of these powerful machines. The MEI certification equips you with the expertise to prepare aspiring aviators for a future in multi-engine aircraft, making you an integral part of their journey towards advanced pilot careers.
+    </p>
+  </div>
 
 </section>
 
 
-<%= render "shared/cta_fly_with_commercial"%>
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-5">
+  <div class="bg-cfi2 bg-cover bg-center h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become A <span class="text-custom-50">Flight Instructor</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <%= render "shared/cta_book"%>
 <%= render "shared/cta_next_steps"%>
 <%= render "shared/footer"%>

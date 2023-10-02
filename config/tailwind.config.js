@@ -166,6 +166,10 @@ module.exports = {
         'multi' : "url('sun-city-multi-bg.webp')",
         'multi-bottom' : "url('sun-city-multi-bg-bottom.webp')",
         'beach' : "url('sun-city-beach-bg.webp')",
+        'cfi' : "url('sun-city-cfi-bg.webp')",
+        'cfi2' : "url('sun-city-cfi-bg-2.webp')",
+        
+        
         
       },
       height: theme => ({
