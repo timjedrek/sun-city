@@ -69,6 +69,7 @@ Rails.application.routes.draw do
   get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
+  get 'certified-flight-instructor-cfi', to: 'pages#cfi', as: :cfi
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
