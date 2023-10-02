@@ -176,6 +176,7 @@ module.exports = {
         'walk' : "url('sun-city-cfi-walking.webp')",
         'cloud2' : "url('sun-city-clouds-bg2.webp')",
         'cloud3' : "url('sun-city-cessna-below-clouds-bg.webp')",
+        'cessna-sky' : "url('sun-city-cessna-bg.webp')",
         
         
       },

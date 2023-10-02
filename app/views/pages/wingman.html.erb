@@ -1,0 +1,81 @@
+<%# Head / Meta Data %>
+<% title("Wingman Course | Sun City Aviation Academy") %>
+<% meta_description("Join our Wingman Course at Sun City Aviation Academy, serving the KHWO North Perry Airport area in South Florida. This course equips family members and friends with essential aviation safety knowledge and skills for handling emergencies and safe landings in the event of pilot incapacitation. Explore our invaluable passenger training today.") %>
+<% meta_keywords("Wingman Course, Passenger Emergency Preparedness Training, Aviation Safety Awareness, Pilot Support Program, Emergency Aircraft Handling Course, Family Member Flight Training, In-Flight Safety Seminar, Flight Companion Course, Aircraft Emergency Procedures Training, Flyer's Friend Program, Aviation Confidence Building Course") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-cessna-sky bg-cover h-screen-3/4 lg:h-screen-4/5 bg-top flex justify-center items-center">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Wingman Course</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Passenger emergency preparedness training</h2>
+    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What is the Wingman Course?</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Sun City Aviation Academy is proud to offer a unique and invaluable program known as the Wingman Course. Designed for family members, friends, and loved ones of pilots, this course empowers individuals with essential knowledge and skills to become trusted companions during flights. Whether you're a spouse, a close friend, or a family member of a pilot, the Wingman Course equips you with the confidence and competence to assist in case of emergencies or unforeseen situations in the air.
+    </p>
+    <p class="pb-10">
+      This comprehensive program covers a wide range of topics, including in flight safety procedures, emergency communication, and basic aircraft handling. Participants will learn about aircraft systems, emergency checklists, and the principles of safe aviation. Sun City's experienced instructors guide you through hands on training, ensuring you have the practical skills necessary to assist during any challenging scenario. With the Wingman Course, you'll become a valuable asset in the cockpit when your pilot is flying. 
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">What to Expect</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-shaking-hands.webp", class: "rounded-xl", alt: "Sun City student and instructor shaking hands"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <p class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        The Wingman Course at Sun City Aviation Academy offers a well structured and engaging learning experience. Participants can expect classroom instruction and hands on training. In the classroom, you'll delve into critical topics such as aviation safety procedures, aircraft systems, and emergency protocols. Our skilled instructors will provide comprehensive insights into how to handle various in flight scenarios, emphasizing how to communicate with air traffic control. 
+      </p>
+      
+    </div>
+    <p class="">
+      Participants will have the opportunity to familiarize themselves with aircraft controls and instruments, giving them a practical understanding of the aircraft environment. Hands on exercises and simulations will prepare you for real world scenarios, allowing you to practice emergency response procedures, radio communication, and basic flight maneuvers. You'll the basics of how to land in the unfortunate case that your pilot becomes incapacitated.  Taking this course is a great overview for those who are not necessarily looking to become pilots, but have family or friends that are pilots and want to be provide additional crew resources in the case of emergencies.
+    </p>
+  </div>
+  
+
+</section>
+
+
+<section class="w-full bg-neutral-800 flex justify-center items-center lg:py-10 py-0">
+  <div class="bg-cloud3 bg-cover bg-bottom h-screen-3/4 max-w-3xl px-5 lg:rounded-2xl lg:border-2 lg:border-black pb-5 text-white">
+    <div class="flex flex-col justify-end h-full items-center drop-shadow-2xl transform-gpu" x-data>
+      <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become A <span class="text-custom-50">Wingman</span>?</h2>
+      <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
+          <div class="btn-primary">
+            START TODAY
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>
