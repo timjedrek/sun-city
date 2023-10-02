@@ -183,7 +183,7 @@ module.exports = {
         'cloud3' : "url('sun-city-cessna-below-clouds-bg.webp')",
         'cessna-sky' : "url('sun-city-cessna-bg.webp')",
         'pilot-course' : "url('sun-city-pilot-courses-bg.webp')",
-        
+        'cockpit' : "url('sun-city-airline-cockpit-bg.webp')",
         
       },
       height: theme => ({
