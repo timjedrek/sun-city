@@ -3,7 +3,7 @@
   <h2 class="text-3xl font-semibold py-10 font-sans text-center px-5">Professional Pilot Course</h2>
 
   <div class="flex flex-col items-center">
-    <p class="lg:w-3/4 lg:mx-16 mx-5 items-center p-text mb-10">
+    <p class="lg:w-3/4 lg:mx-16 mx-5 items-center mb-10">
       Our Professional Pilot Course at Sun City Aviation Academy is a comprehensive program designed to take aspiring aviators on a journey from novice to professional. This course combines Private Pilot, Instrument Rating, Commercial Pilot, and Multi-Engine training into one cohesive curriculum. It's perfect for those who dream of making aviation their career. Throughout this course, you'll gain the knowledge, skills, and experience needed to excel in the aviation industry, from flying small planes to handling complex multi-engine aircraft. Join us in this intensive and rewarding adventure as we guide you toward becoming a skilled and confident professional pilot.
     </p>
   </div>
@@ -11,10 +11,12 @@
   <div class="min-h-screen flex items-center justify-center">
     <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2">
       <div class="flex flex-row-reverse md:contents">
-        <div class="w-full col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto bg-white border-2 border-custom-50">
+        <div class="w-full col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto bg-white border-2 border-custom-5">
           <h3 class="font-semibold text-xl mb-1 ">Private Pilot Certificate</h3>
-          <p class="text-slate-800 p-text pb-5">Begin your aviation journey with a private pilot certificate, your first step as an aspiring pilot. This certification lets you fly for personal purposes. Our skilled instructors are dedicated to giving you expert guidance, helping you master essential flight skills. Gain confidence in takeoffs, landings, and navigating the skies with our experienced team's support.</p>
-          <%= link_to "PRIVATE PILOT TRAINING", private_pilot_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          <p class="text-slate-800 pb-5">Begin your aviation journey with a private pilot certificate, your first step as an aspiring pilot. This certification lets you fly for personal purposes. Our skilled instructors are dedicated to giving you expert guidance, helping you master essential flight skills. Gain confidence in takeoffs, landings, and navigating the skies with our experienced team's support.</p>
+          <div class="">
+            <%= link_to "PRIVATE PILOT TRAINING", private_pilot_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          </div>
         </div>
 
         <div class="col-start-5 col-end-6 md:mx-auto hidden md:block relative mr-10">
@@ -37,16 +39,20 @@
 
         <div class="w-full col-start-6 col-end-10 my-4 mr-auto p-4 bg-white border-2 border-custom-50 rounded-xl">
           <h3 class="font-semibold text-xl mb-1 ">Instrument Rating</h3>
-          <p class="text-slate-800 p-text pb-5">Gain the expertise and skills to navigate challenging weather conditions with the Instrument Rating. This rating enables you to rely on your aircraft's instruments in low visibility scenarios. It opens up numerous opportunities, elevating your safety and proficiency as a pilot.</p>
-          <%= link_to "INSTRUMENT TRAINING", instrument_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          <p class="text-slate-800 pb-5">Gain the expertise and skills to navigate challenging weather conditions with the Instrument Rating. This rating enables you to rely on your aircraft's instruments in low visibility scenarios. It opens up numerous opportunities, elevating your safety and proficiency as a pilot.</p>
+          <div class="">
+            <%= link_to "INSTRUMENT TRAINING", instrument_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          </div>
         </div>
       </div>
 
       <div class="flex flex-row-reverse md:contents">
-        <div class="w-full col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto bg-white border-2 border-custom-50">
+        <div class="w-full col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto bg-white border-2 border-custom-5">
           <h3 class="font-semibold text-xl mb-1 ">Commercial Pilot Certificate</h3>
-          <p class="text-slate-800 p-text pb-5">Earn your commercial certificate and unlock the ability to fly for compensation or hire. Our experienced instructors will guide you in mastering advanced aircraft operation, including advanced maneuvers and emergency procedures. Rest assured, you'll receive comprehensive preparation to tackle any challenges in your aviation career.</p>
-          <%= link_to "COMMERCIAL TRAINING", commercial_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          <p class="text-slate-800 pb-5">Earn your commercial certificate and unlock the ability to fly for compensation or hire. Our experienced instructors will guide you in mastering advanced aircraft operation, including advanced maneuvers and emergency procedures. Rest assured, you'll receive comprehensive preparation to tackle any challenges in your aviation career.</p>
+          <div class="">
+            <%= link_to "COMMERCIAL TRAINING", commercial_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          </div>
         </div>
 
         <div class="col-start-5 col-end-6 md:mx-auto hidden md:block relative mr-10">
@@ -69,8 +75,10 @@
 
         <div class="w-full col-start-6 col-end-10 my-4 mr-auto p-4 bg-white border-2 border-custom-50 rounded-xl">
           <h3 class="font-semibold text-xl mb-1 ">Multi Engine</h3>
-          <p class="text-slate-800 p-text pb-5">Get ready to handle complex multi-engine aircraft with a multi-engine rating. Our advanced training covers engine management, emergency procedures, and more, equipping you with the skills and confidence needed for effortless multi-engine flying.</p>
-          <%= link_to "MULTI ENGINE TRAINING", multi_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          <p class="text-slate-800 pb-5">Get ready to handle complex multi-engine aircraft with a multi-engine rating. Our advanced training covers engine management, emergency procedures, and more, equipping you with the skills and confidence needed for effortless multi-engine flying.</p>
+          <div class="">
+            <%= link_to "MULTI ENGINE TRAINING", multi_path, data: { turbo: false }, class: "btn-primary bg-amber-500 hover:bg-amber-600 text-base" %>
+          </div>
         </div>
       </div>
 
