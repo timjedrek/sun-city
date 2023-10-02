@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   get 'instrument-proficiency-check-ipc', to: 'pages#ipc', as: :ipc
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
   get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
+  get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
@@ -78,7 +79,7 @@ Rails.application.routes.draw do
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
-  #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
+  
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   #get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos

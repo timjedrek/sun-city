@@ -177,6 +177,7 @@ module.exports = {
         'cloud2' : "url('sun-city-clouds-bg2.webp')",
         'cloud3' : "url('sun-city-cessna-below-clouds-bg.webp')",
         'cessna-sky' : "url('sun-city-cessna-bg.webp')",
+        'pilot-course' : "url('sun-city-pilot-courses-bg.webp')",
         
         
       },

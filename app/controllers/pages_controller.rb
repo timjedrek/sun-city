@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def why_pilot
   end
-  
+
   # COURSES
   
   def private_pilot
@@ -73,7 +73,7 @@ class PagesController < ApplicationController
   end
 
 
-  ## PREVIOUS METHODS
+  ## PREVIOUS METHODS ##
 
   def timeline
     @book_download = BookDownload.new
@@ -111,7 +111,6 @@ class PagesController < ApplicationController
 
   def helicopter_training
   end
-
 
   def advanced_training
   end
