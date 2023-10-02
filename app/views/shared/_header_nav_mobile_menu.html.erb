@@ -74,10 +74,13 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         <li class="ml-5 animate-slide-in-left" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_resources_drop}">
           <%= link_to "OUR TEAM" , about_path, data: { turbo: false }, target: "blank"%>
         </li>
-        <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
+        <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left1': !mobile_resources_drop}">
           <%= link_to "AIRPLANE FLEET", planes_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
+          <%= link_to "BLOG", root_path, target: "blank", data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left4" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
           <%= link_to "CONTACT US", contact_path, target: "blank", data: { turbo: false }%>
         </li>        
       <li>
@@ -99,6 +102,9 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_now_drop}">
           <%=link_to "FLIGHT TRAINING", root_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left4" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
+          <%=link_to "BECOME A PROFESSIONAL PILOT", root_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
@@ -143,7 +149,7 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         </li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%= link_to "BLOG", root_path, data: { turbo: false }%></div>
+          <div class=""><%= link_to "YOUTH PROGRAMS", root_path, data: { turbo: false }%></div>
         </div>
       </li>
       <li>
