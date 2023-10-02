@@ -179,7 +179,7 @@
     <p class="w-3/4 pb-10">
       Wondering if a pilot's life is right for you? Discover if the world of aviation is right for you by taking our "Is Flying Right for Me?" quiz. This quiz is designed to help you explore your interests and determine if the skies are where you belong. Get started on your aviation journey by clicking below to take the quiz,
     </p>
-    <%= link_to "TAKE THE QUIZ", quiz_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+    <%= link_to "TAKE THE QUIZ", quiz_path, target: "blank", data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%=image_tag "sun-city-private-pilot-pass-checkride.webp", alt: "Student pilot at Sun City after passing her private pilot checkride", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
