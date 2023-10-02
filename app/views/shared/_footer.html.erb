@@ -37,7 +37,7 @@
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered3 = true" x-on:mouseleave="isHovered3 = false">
             <div class="flex mb-5 items-center">
               <div class="" :class="{ 'animate-bounce-horizontal': isHovered3 }"><%= render "shared/bullet_point" %></div>
-              <div class="ml-5">Our Courses</div>
+              <div class="ml-5"><%= link_to "Our Courses", pilot_courses_path%></div>
             </div>
           </li>
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered4 = true" x-on:mouseleave="isHovered4 = false">
@@ -70,7 +70,7 @@
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered6 = true" x-on:mouseleave="isHovered6 = false">
             <div class="flex mb-5 items-center">
               <div class="" :class="{ 'animate-bounce-horizontal': isHovered6 }"><%= render "shared/bullet_point" %></div>
-              <div class="ml-5">Student Resources</div>
+              <div class="ml-5"><%= link_to "Youth Program", youth_path%></div>
             </div>
           </li>
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered7 = true" x-on:mouseleave="isHovered7 = false">
