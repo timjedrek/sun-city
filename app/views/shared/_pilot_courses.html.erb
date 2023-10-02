@@ -1,0 +1,241 @@
+<section class="w-full flex flex-col items-center lg:py-10 lg:px-5 bg-neutral-800">
+  
+  <div class="lg:max-w-5xl lg:border-2 border-black bg-neutral-200 lg:rounded-xl flex flex-col items-center lg:px-10">
+    <h3 class="text-2xl lg:text-4xl font-semibold text-center px-3 py-10">Become a Pilot at Sun City Aviation Academy</h3>
+    <p class="text-center max-w-lg pb-12 px-3">
+      Your aviation dreams take center stage here. Whether pursuing a professional career, building flight hours, or seeking leisurely adventure, we have the perfect path for you.
+    </p>
+    <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 lg:mb-10 w-full" 
+    x-data="{
+      private: false,
+      instrument: false,
+      commercial: false,
+      multi: false,
+      cfi: false,
+      atp: false
+    }"
+    >
+    <% 
+      private_text = "Your passport to the skies! Learn to pilot your dreams with our Private Pilot Course."
+      instrument_text = "Navigate through clouds and the skies with precision through our Instrument Rating course."
+      commercial_text = "Start your pilot career with our Commercial Pilot Course. Your path to the captain's seat is here."
+      multi_text = "Master the art of multi engine flying and unlock new horizons in your aviation career."
+      cfi_text = "Become a trusted guide in the world of aviation. Become a CFI and teach others to fly."
+      atp_text = "For many this is their goal.  The ATP certificate is a minimum requirement to join the airlines."
+    %>
+      <div class="px-3 bg-course1 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <!--Desktop text with hover effects-->
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="private = true" x-on:mouseleave="private = false">
+          <div class="font-bold">
+            Private Pilot
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="private == true ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= private_text %>
+              </p>
+              <%= link_to private_pilot_path do%>
+                <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                  Start Today
+                  <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                    :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                    x-transition:leave="() => { isOut = false }"
+                  >
+                    <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                  </svg>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= private_text %>
+        </p>
+        <%= link_to private_pilot_path do%>
+          <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-40 justify-center">
+            Private Pilot
+            <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+              <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+            </svg>
+          </div>
+        <% end %>
+      </div>
+      <div class="px-3 bg-course2 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="instrument = true" x-on:mouseleave="instrument = false">
+          <div class="font-bold">
+            Instrument
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="instrument == true ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= instrument_text %>
+              </p>
+              <%= link_to instrument_path do%>
+                <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                  Start Today
+                  <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                    :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                    x-transition:leave="() => { isOut = false }"
+                  >
+                    <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                  </svg>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= instrument_text %>
+        </p>
+        <%= link_to instrument_path do%>
+          <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-52 justify-center">
+            Instrument Rating
+            <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+              <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+            </svg>
+          </div>
+        <% end %>
+      </div>
+      <div class="px-3 bg-course3 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="commercial = true" x-on:mouseleave="commercial = false">
+          <div class="font-bold">
+            Commercial Pilot
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container3" x-bind:style="commercial == true ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= commercial_text %>
+              </p>
+              <%= link_to commercial_path do%>
+                <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                  Start Today
+                  <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                    :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                    x-transition:leave="() => { isOut = false }"
+                  >
+                    <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                  </svg>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= commercial_text %>
+        </p>
+        <%= link_to commercial_path do%>
+          <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-52 justify-center">
+            Commercial Pilot
+            <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+              <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+            </svg>
+          </div>
+        <% end %>
+      </div>
+      <div class="px-3 bg-course4 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="multi = true" x-on:mouseleave="multi = false">
+          <div class="font-bold">
+            Multi Engine
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container4" x-bind:style="multi == true ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= multi_text %>
+              </p>
+              <%= link_to multi_path do%>
+                <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                  Start Today
+                  <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                    :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                    x-transition:leave="() => { isOut = false }"
+                  >
+                    <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                  </svg>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= multi_text %>
+        </p>
+        <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-40 justify-center">
+          Multi Engine
+          <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+            <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="px-3 bg-course5 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="cfi = true" x-on:mouseleave="cfi = false">
+          <div class="font-bold">
+            Flight Instructor
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container5" x-bind:style="cfi == true ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= cfi_text %>
+              </p>
+              <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                Start Today
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= cfi_text %>
+        </p>
+        <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-52 justify-center">
+          Flight Instructor
+          <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+            <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="px-3 bg-course6 bg-cover h-56 lg:h-52 lg:w-72 w-full lg:rounded-xl flex flex-col justify-end">
+        <div class="bg-white mb-3 px-3 py-2 rounded-xl hidden lg:block" x-on:mouseenter="atp = true" x-on:mouseleave="atp = false">
+          <div class="font-bold">
+            ATP - Airline Transport
+            <div class="overflow-hidden transition-all max-h-0 duration-700" x-ref="container6" x-bind:style="atp == true ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''">
+              <p class="font-normal font-serif italic py-3">
+                <%= atp_text %>
+              </p>
+              <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                Start Today
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mobile text-->
+      <div class="lg:hidden px-5 py-5">
+        <p class="text-center">
+          <%= atp_text %>
+        </p>
+        <div class="font-bold text-center flex items-center bg-custom-50 rounded-full mt-3 py-1 px-3 w-60 justify-center">
+          ATP - Airline Transport
+          <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-black h-4 ml-3" >
+            <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
