@@ -73,6 +73,7 @@ Rails.application.routes.draw do
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
   get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
   get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
+  get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
@@ -87,7 +88,7 @@ Rails.application.routes.draw do
   
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   #get 'our-team', to: 'pages#our_team', as: :our_team
-  #get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
+  
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
   #get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
