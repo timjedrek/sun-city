@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   before_validation :strip_phone_number
-  #after_save :to_lacrm
+  #after_save :to_monday
   
   validates :name, presence: true
   validates :body, presence: { message: "Tell us how we can help" }
@@ -11,68 +11,38 @@ class Message < ApplicationRecord
     self.phone = phone.to_s.gsub(/[-() ]/, "")
   end
 
-  def to_lacrm
-    api_key = ENV['LACRM_API']
-    # Set the endpoint and headers
-    endpoint = "https://api.lessannoyingcrm.com/v2/"
+  def to_monday
+    api_key = ENV['monday_api_key']
+    
+    # Sun City Lead Board = 3536260889
+    # RRM Test Lead Board = 5264643666
+    query = 'mutation ($myItemName: String!, $columnVals: JSON!) { create_item (board_id: 5264643666, group_id: topics item_name: $myItemName, column_values: $columnVals) { id } }'
+
+    vars = {
+      myItemName: self.name,
+      columnVals: ({
+        "lead_email": { "text": "#{self.email}",  "email": "#{self.email}" },
+        "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
+        "text5": "TESTING 123",
+      }).to_json
+    }
+
+    url = 'https://api.monday.com/v2'
     headers = {
-      "Authorization" => api_key,
-      "Content-Type" => "application/json"
+      'Authorization' => api_key,
+      'Content-Type' => 'application/json',     
     }
-    # Get the user ID
-    user_payload = {
-      "Function" => "GetUser",
-      "Parameters" => {}
+    body = {
+    query: query,
+    variables: vars
     }
-    user_response = HTTParty.get(endpoint, headers: headers, body: user_payload.to_json)
-    if user_response.code == 200
-      user_id = JSON.parse(user_response.body)['UserId']
+    response = HTTParty.post(url, headers: headers, body: body.to_json)
+    if response.code == 200
+      parsed_response = JSON.parse(response.body)
+      puts JSON.pretty_generate(parsed_response)
     else
-      # Handle the error
-      user_id = nil
+      puts "Request failed with status code: #{response.code}, message: #{response.message}"
     end
-
-    # Create the contact
-    contact_payload = {
-      "Function" => "CreateContact",
-      "Parameters" => {
-        "IsCompany" => false,
-        "AssignedTo" => user_id,  #need to just get the USER ID so I can avoid doin the get call each time..
-        "Name" => "#{self.name}",
-        "Email" => "#{self.email}",
-        "Phone" => "#{self.phone}",
-        "Background Info" => "Originated from contact form on website",
-      }
-    }
-
-
-    
-
-    response = HTTParty.post(endpoint, headers: headers, body: contact_payload.to_json)
-    contact_id = JSON.parse(response.body)['ContactId']
-    
-    # DO I REALLY NEED TO SAVE THIS INTO THE DB??
-    #if response.code == 200
-    #  # API Contact created successfully
-    #  self.lacrm_contact_id = JSON.parse(response.body)['ContactId']
-    #else
-    #  self.lacrm_contact_id = 0
-    #end
-    #self.lacrm_response_code = response.code
-    #self.lacrm_response_body = response.body
-
-    
-
-    # Add a note
-    note_payload = {
-      "Function" => "CreateNote",
-      "Parameters" => {
-    #    "ContactId" => "#{self.lacrm_contact_id}", #removed bc we're not saving that value into DB. 
-        "ContactId" => contact_id,
-        "Note" => "#{self.body}",
-      }
-    }
-    HTTParty.post(endpoint, headers: headers, body: note_payload.to_json)
-
-  end  
+  end
+  
 end
