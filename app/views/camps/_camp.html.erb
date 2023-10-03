@@ -1,0 +1,52 @@
+<div id="<%= dom_id camp %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee first name:</strong>
+    <%= camp.attendee_first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee last name:</strong>
+    <%= camp.attendee_last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee age:</strong>
+    <%= camp.attendee_age %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= camp.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= camp.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Parent first name:</strong>
+    <%= camp.parent_first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Parent last name:</strong>
+    <%= camp.parent_last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Camp date:</strong>
+    <%= camp.camp_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= camp.comments %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this camp", camp, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this camp', edit_camp_path(camp), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

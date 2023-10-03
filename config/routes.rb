@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
     # 404/500 pages
     get 'errors/not_found'
     get 'errors/internal_server_error'
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   #get 'blog', to: 'posts#index', as: :blog
   #resources :posts
   
+  resources :camps
   resources :discover_flights
   resources :messages
   #resources :enrollments

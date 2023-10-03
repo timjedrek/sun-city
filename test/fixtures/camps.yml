@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attendee_first_name: MyString
+  attendee_last_name: MyString
+  attendee_age: 1
+  phone: MyString
+  email: MyString
+  parent_first_name: MyString
+  parent_last_name: MyString
+  camp_date: MyString
+  comments: MyText
+
+two:
+  attendee_first_name: MyString
+  attendee_last_name: MyString
+  attendee_age: 1
+  phone: MyString
+  email: MyString
+  parent_first_name: MyString
+  parent_last_name: MyString
+  camp_date: MyString
+  comments: MyText
