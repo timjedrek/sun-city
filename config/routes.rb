@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :messages
   resources :enrollments
   resources :book_downloads
-  #resources :checkouts
+  resources :checkouts
   resources :quiz_results
 
   # Enrollment form
@@ -49,8 +49,8 @@ Rails.application.routes.draw do
   get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
-  #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
-  #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
+  get 'visit-sun-city', to: 'checkouts#new', as: :checkout_sun_city
+  get 'visit-sun-city-confirmation', to: 'checkouts#confirmation', as: :checkout_sun_city_confirmation
 
   # Quiz form
   get 'quiz', to: 'quiz_results#new', as: :quiz

@@ -115,7 +115,7 @@
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
           <% (0..17).each do |i| %>
-            <% date = today + i.days %>
+            <% date = (today+3) + i.days %>
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
@@ -161,7 +161,7 @@
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
           <% (0..17).each do |i| %>
-            <% date = today + i.days %>
+            <% date = (today+3) + i.days %>
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">

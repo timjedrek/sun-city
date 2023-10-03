@@ -184,7 +184,7 @@ module.exports = {
         'cessna-sky' : "url('sun-city-cessna-bg.webp')",
         'pilot-course' : "url('sun-city-pilot-courses-bg.webp')",
         'cockpit' : "url('sun-city-airline-cockpit-bg.webp')",
-        
+        'office' : "url('sun-city-door-bg.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
