@@ -8,7 +8,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
     <h1 class="font-bold text-4xl lg:text-5xl text-center">Certified Flight Instructor</h1>
     <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Start your pilot career and teach others to fly</h2>
-    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+    <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
   </div>
 </header>
 
@@ -141,11 +141,7 @@
       <h2 class="w-4/5 font-bold text-xl lg:text-3xl">Ready To Become A <span class="text-custom-50">Flight Instructor</span>?</h2>
       <p class="w-4/5 py-5 text-lg lg:text-xl font-semibold">At Sun City Aviation Academy, we are dedicated to training you into a capable, adaptable, proficient, and safe pilot.</p>
       <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
-        <%=link_to root_path, data: { turbo: false }, class: "mx-auto" do%>
-          <div class="btn-primary">
-            START TODAY
-          </div>
-        <% end %>
+        <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
       </div>
     </div>
   </div>
