@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @enrollment = Enrollment.new
   end
 
   def about_us

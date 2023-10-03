@@ -23,14 +23,14 @@ Rails.application.routes.draw do
   resources :camps
   resources :discover_flights
   resources :messages
-  #resources :enrollments
+  resources :enrollments
   resources :book_downloads
   #resources :checkouts
   resources :quiz_results
 
   # Enrollment form
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
-  #get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
+  get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   get 'youth-aviation-programs', to: 'camps#new', as: :youth
   get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
