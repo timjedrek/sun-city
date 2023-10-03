@@ -5,7 +5,7 @@
     <h1 class="font-bold text-4xl py-10 text-center">You can be a pilot!</h1>  
     <p class="px-5 p-text pb-5">
     Thank you<%if notice.present?%>, <%= notice %>,<%end%> for taking our quiz.  
-    A member of our team will be in touch shortly to talk about your aviation goals. You can also give us a call at <%=link_to "1-754-423-2159", "tel:1-754-423-2159" %> or email us at <%= mail_to 'info@suncityaviation.com', class: "text-slate-800 hover:underline"%>
+    A member of our team will be in touch shortly to talk about your aviation goals. You can also give us a call at <%=link_to "1-754-423-2159", "tel:1-754-423-2159" %> or email us at <%= mail_to 'info@suncityaviation.com', class: "text-yellow-600 hover:underline"%>
     </p>
 
   </div>
@@ -14,7 +14,7 @@
     <div class="lg:w-1/2 lg:px-10">
       <h2 class="font-bold text-2xl py-10 text-center">Why Does an Airfoil Generate Lift?</h2>
       <p class="p-text px-5">
-        An airfoil, which is the shape of an airplane wing or a helicopter rotor, generates lift due to a phenomenon called Bernoulli's principle. When air flows over the curved upper surface of the airfoil, it has to travel a greater distance than the air flowing beneath the flat lower surface. As a result, the air flowing over the upper surface of the wing is forced to move faster than the air flowing beneath the wing, creating a region of low pressure above the wing and a region of higher pressure beneath the wing. This pressure difference results in a net upward force on the wing, which we refer to as lift. This lift is what enables airplanes to fly.
+        An airfoil is the shape of a wing and it generates lift through the application of Bernoulli's principle. As air glides across the curved upper surface of the airfoil, it covers a longer path compared to the air beneath the flat lower surface. Consequently, the air above the wing is forced to move at a faster pace in contrast to the air underneath, making an area of reduced pressure above the wing and a corresponding zone of heightened pressure beneath it. This difference in pressure creates an overall upward force on the wing, commonly identified as lift. It is this lifting force that gives airplanes the capability to achieve flight.
       </p>
     </div>
     
@@ -32,16 +32,16 @@
       <p class="p-text px-5 pb-5">
         If you're interested in taking a discovery flight, please mention this when you talk to one of our team members.
       </p>
-      <div class="pt-10 flex flex-row gap-3 justify-center">
-        <%= link_to root_path do %>
-          <div class="btn-primary mb-10">
-            VIEW PROGRAMS
+      <div class="pt-10 flex flex-col text-center px-5 lg:flex-row gap-3 justify-center">
+        <%= link_to discovery_flight_path do %>
+          <div class="btn-primary mb-5 lg:mb-10">
+            DISCOVERY FLIGHT
           </div>
         <% end %>
 
-        <%= link_to root_path do %>
+        <%= link_to pilot_courses_path do %>
           <div class="btn-primary mb-10">
-            HOME PAGE
+            PILOT PROGRAMS
           </div>
         <% end %>
       </div>
