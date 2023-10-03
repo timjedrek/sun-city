@@ -5,7 +5,11 @@ class EnrollmentMailer < ApplicationMailer
   def enrollment_email(message)
     @message = message
 
-    mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Application to Fly at Sun City Aviation Academy")
+    if Rails.env.production?
+      mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Application to Fly at Sun City Aviation Academy")
+    else
+      mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Application to Fly at Sun City Aviation Academy")
+    end
   end
 
 
