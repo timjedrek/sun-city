@@ -1,0 +1,30 @@
+Dear <%=@camp.parent_first_name%>, 
+
+Thank you for inquiring about AeroCamp on our website.  We'll reach out to your shortly with more details about what to expect.
+
+At Sun City Aviation Academy, we are committed to providing the best possible aviation education and training. We offer a variety of programs and courses designed to meet the needs of both aspiring pilots and experienced aviators.
+
+If you or your child(ren) are interested in pursuing training to become a pilot, we offer comprehensive training programs that will help you achieve your goals. Our programs cover everything from private pilot certification to advanced training in commercial aviation.
+
+Whatever your goals may be, we are confident that we can help you achieve them. If you have any questions about our programs, please don't hesitate to contact us.  We're looking forward to welcoming <%= @camp.attendee_first_name%> to AeroCamp
+
+
+The team at Sun City Aviation Academy
+754-423-2159
+info@suncityaviation.com
+
+  -------- Your Form Submission Details --------
+
+  Attendee Details
+    Desired AeroCamp Date: <%=@camp.camp_date%>
+    First Name: <%=@camp.attendee_first_name%>
+    Last Name: <%=@camp.attendee_last_name%>
+    Age: <%=@camp.attendee_age%>
+
+  Parent or Legal Guardian Details
+    First Name: <%=@camp.parent_first_name%>
+    Last Name: <%=@camp.parent_last_name%>
+    Phone: <%=@camp.phone%>
+    Email: <%=@camp.email%>
+    Comments: 
+    <%=@camp.comments%>

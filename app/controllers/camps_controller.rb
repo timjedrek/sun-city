@@ -1,6 +1,6 @@
 class CampsController < ApplicationController
   before_action :set_camp, only: %i[ show edit update destroy ]
-  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /camps or /camps.json
@@ -27,6 +27,7 @@ class CampsController < ApplicationController
 
     respond_to do |format|
       if @camp.save
+        CampMailer.camp_email(@camp).deliver_later
         format.html { redirect_to camp_confirmation_path, notice: @camp.attendee_first_name, alert: @camp.parent_first_name  }
         format.json { render :show, status: :created, location: @camp }
       else
