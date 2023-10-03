@@ -10,7 +10,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-bold text-5xl text-center">Pilot Training Guide</h1>
       <h2 class="font-bold text-4xl text-center py-10">Learn more about how to become a pilot</h2>
-      <%= link_to "START FLYING TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+      <button class="btn-primary" @click="showEnrollment = true">START FLYING TODAY</button>
   </div>
 </header>
 
@@ -24,7 +24,7 @@
     <p class="w-3/4 py-10">
       Begin your journey in aviation with our brief quiz. Our quiz is designed to look at your aviation related knowledge and aptitude, alongside your unique personality traits and interests, to provide insights into whether a future in aviation aligns with your aspirations.
     </p>
-    <%= link_to "TAKE THE QUIZ", root_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+    <%= link_to "TAKE THE QUIZ", quiz_path, target: "blank", data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%=image_tag "sun-city-aero-camp-discovery-flight.webp", alt: "Young kid flying a plane at Sun City Aviation Academy's Aero Camp", class: "lg:h-screen-2/3"%>
@@ -51,7 +51,7 @@
       <p class="p-text">
         The best way to see if flying is right for you is to take a discovery flight.  This brief introductory flight, led by one of our seasoned instructors, offers a first hand glimpse into the world of piloting. During this experience, you'll take the controls of the plane, acquaint yourself with maneuvers, and view the south Florida coast from a new perspective.
       </p>
-      <%= link_to "SCHEDULE TODAY", discovery_flight_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+      <%= link_to "SCHEDULE TODAY", discovery_flight_path, target: "blank", data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
     </div>
     <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tr-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
       <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Flight Training</h4>
@@ -88,7 +88,11 @@
     <p class="w-3/4 py-10">
       When you become part of Sun City Aviation Academy, you're not just enrolling in a flight school - you're becoming part of our aviation family. We take pride in offering personalized attention to each student, valuing you as more than just a number. Our lower student to instructor ratio compared to other schools in the area ensures that you receive the individualized care and support needed to thrive in your aviation pursuits.
     </p>
-    <%= link_to "JOIN THE FAMILY", contact_path, data: { turbo: false }, class: "btn-primary mb-10" %>
+    <div class="flex flex-col lg:flex-row gap-5">
+      <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "btn-primary" %>
+      <button class="btn-primary" @click="showEnrollment = true">JOIN THE FAMILY</button>
+    </div>
+    
 </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <video controls width="100%" class="h-screen-3/4" poster="<%= image_url "sun-city-video-poster-pilot-training-guide.webp"%>">
