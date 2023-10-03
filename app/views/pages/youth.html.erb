@@ -1,3 +1,8 @@
+<%# Head / Meta Data %>
+<% title("Youth Programs and AeroCamp at Sun City") %>
+<% meta_description("Sun City Aviation Academy in KHWO North Perry Airport in South Florida offers youth programs and AeroCamp experiences. Explore aviation at our local airport with engaging activities for young aviation enthusiasts.") %>
+<% meta_keywords("KHWO, North Perry Airport, South Florida, youth programs, AeroCamp, aviation education, aviation experiences, young aviators, aviation enthusiasts, local airport activities, aviation for kids, AeroCamp South Florida") %>
+
 <%= render "shared/header"%>
 
 <header class="w-full bg-center flex justify-center items-center">
@@ -43,7 +48,7 @@
       </p>
     </div>
     <div class="flex flex-col justify-center items-center lg:w-1/2">
-      <%= image_tag "sun-city-camper-climbing-plane.webp", alt: "Sun City AeroCamp attendee climbing a plane during pre-flight", class: "lg:w-3/4 rounded-xl"%>
+      <%= image_tag "sun-city-camper-climbing-plane.webp", alt: "Sun City AeroCamp attendee climbing a plane during pre-flight", class: "lg:w-3/4 lg:rounded-xl"%>
     </div>
   </div>
 </section>
@@ -64,6 +69,41 @@
     
   </div>
 </section>
+
+<section class="bg-gradient-to-b from-white-800 to-yellow-100 py-10">
+  <div class="flex flex-col lg:flex-row-reverse">
+    <div class="flex flex-col items-center lg:w-1/2">
+      <h2 class="font-bold text-5xl pt-5 text-center">Upcoming <span class="text-custom-50">AeroCamp</span> Dates</h2>
+      <p class="w-3/4 pb-20">
+        <div class="flex flex-col px-5 gap-3">
+          <div class="flex flex-row ">
+            <div class="text-custom-50 pr-2 font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-4 text-left">November 6, 2023 - November 9, 2023 (ages 8-13)</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-custom-50 pr-2 font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-4 text-left">November 13th, 2023 - November 16th, 2023 (ages 14-18)</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-custom-50 pr-2 font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-4 text-left">December 11th, 2023 - December 14th, 2023 (ages 8-18)</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-custom-50 pr-2 font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-4 text-left">December 27th, 2023 - December 30th, 2023 (ages 8-18)</h3>
+          </div>
+        </div>
+      </p>
+    </div>
+    <div class="flex flex-col justify-center items-center lg:w-1/2">
+      <%= image_tag "sun-city-aero-camp-discovery-flight3.webp", alt: "Sun City AeroCamp attendee flying a plane", class: "lg:w-3/4 lg:rounded-xl"%>
+      <p class="text-neutral-500 italic text-sm text-center">
+        AeroCamp attendee flying a plane over the South Florida area near Miami
+      </p>
+    </div>
+  </div>
+</section>
+
 
 <%= render "shared/footer"%>
 
