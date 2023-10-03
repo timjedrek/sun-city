@@ -63,16 +63,16 @@
     <div class="bg-white rounded-xl lg:rounded-none lg:rounded-bl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
       <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Advanced Flight Training</h4>
       <p class="p-text">
-        Expand your aviation knowledge and skills through a diverse range of advanced courses and certifications available at Sun City Aviation Academy. From instrument training to multi engine training, commercial training, and beyond, Sun City offers a comprehensive selection of advanced training options. In addition, we're one of the only flight schools in the area to offer a course to get your <%= link_to "sea plane rating", root_path, class: "text-sky-400 font-semibold hover:underline"%>.
+        Expand your aviation knowledge and skills through a diverse range of advanced courses and certifications available at Sun City Aviation Academy. From instrument training to multi engine training, commercial training, and beyond, Sun City offers a comprehensive selection of advanced training options. In addition, we're one of the only flight schools in the area to offer a course to get your <%= link_to "sea plane rating", seaplane_path, class: "text-sky-400 font-semibold hover:underline"%>.
       </p>
-      <%= link_to "OUR COURSES", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+      <%= link_to "OUR COURSES", pilot_courses_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
     </div>
     <div class="bg-white rounded-xl lg:rounded-none lg:rounded-br-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
       <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Your Pilot Career</h4>
       <p class="p-text">
-        Begin your pilot career with Sun City Aviation Academy.  We offer training to get your ATP (airline transport pilot) certificate - the highest level of pilot certification and is a prerequisite for those wanting to join the airlines or get into corporate aviation.  One of the main requirements is building the minimum 1500 hours which many choose to do through being a <%= link_to "CFI", root_path, class: "text-custom-50 font-semibold hover:underline"%> (certified flight instructor).
+        Begin your pilot career with Sun City Aviation Academy.  We offer training to get your ATP (airline transport pilot) certificate - the highest level of pilot certification and is a prerequisite for those wanting to join the airlines or get into corporate aviation.  One of the main requirements is building the minimum 1500 hours which many choose to do through being a <%= link_to "CFI", cfi_path, class: "text-yellow-600 font-semibold hover:underline"%> (certified flight instructor).
       </p>
-      <%= link_to "ATP COURSE", root_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
+      <%= link_to "ATP COURSE", atp_path, data: { turbo: false }, class: "btn-primary mt-5 text-base" %>
     </div>
   </div>
 </section>
