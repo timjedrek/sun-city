@@ -106,22 +106,12 @@
 
 <section class="flex flex-col items-center bg-gradient-to-b from-neutral-700 to-neutral-900 lg:py-10" id="camp_form">
   
-  <div class="max-w-6xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
-    <div class="flex-auto">
-      <h4 class="text-center text-2xl font-bold px-5 pb-5">
-        Interested in Joining <span class="text-custom-50">AeroCamp</span>?
-      </h4>
-      <p class="text-center px-5 italic text-neutral-700">
-        Fill out the form below and we will get in contact with you shortly!
-      </p>
-      <p class="text-center px-5 pt-5 text-sm text-neutral-700">
-        * denotes required fields
-      </p>
-      <div class="px-5">
-        <%= turbo_frame_tag 'form-section', class: "h-full" do %>
-          <%= render "form", camp: @camp %>  
-        <% end %>
-      </div>
+  <div class="max-w-4xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
+  
+    <div class="px-5">
+      <%= turbo_frame_tag 'form-section', class: "h-full" do %>
+        <%= render "form", camp: @camp %>  
+      <% end %>
     </div>
   </div>
 </section>

@@ -27,7 +27,7 @@ class CampsController < ApplicationController
 
     respond_to do |format|
       if @camp.save
-        format.html { redirect_to camp_url(@camp), notice: "Camp was successfully created." }
+        format.html { redirect_to camp_confirmation_path, notice: @camp.attendee_first_name, alert: @camp.parent_first_name  }
         format.json { render :show, status: :created, location: @camp }
       else
         format.html { render :new, status: :unprocessable_entity }
