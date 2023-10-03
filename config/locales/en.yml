@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      enrollment:
+        location: "" 
+    errors:
+      models:
+        enrollment:
+          attributes:
+            location:
+              blank: "Please tell us what program you're interested in"
