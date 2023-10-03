@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   #get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
+  get 'youth-aviation-programs', to: 'camps#new', as: :youth
+
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
@@ -70,7 +72,6 @@ Rails.application.routes.draw do
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
   get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
   get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
-  get 'youth-aviation-programs', to: 'pages#youth', as: :youth
 
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize

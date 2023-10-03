@@ -1,7 +1,7 @@
 <%= form_with(model: camp, class: "contents") do |form| %>
   <% if camp.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(camp.errors.count, "error") %> prohibited this camp from being saved:</h2>
+      <h2>Please fix the following <%= pluralize(camp.errors.count, "error") %>:</h2>
 
       <ul>
         <% camp.errors.each do |error| %>
@@ -12,51 +12,71 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :attendee_first_name %>
-    <%= form.text_field :attendee_first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label "Intended Camp Date" , class: "font-semibold text-xl capitalize" %><span class="text-sm">*</span>
+    <% camp_dates = ["11-6-2023 to 11-9-2023", "11-13-2023 to 11-16-2023", "12-11-2023 to 12-14-2023", "12-27-2023 to 12-30-2023"] %>
+    <div class="grid lg:grid-cols-2 grid-cols-1 pt-2">
+      <% camp_dates.each_with_index do |date_range, index| %>
+        <div class="flex items-center">
+          <%= form.check_box :camp_dates, { multiple: true, class: "text-custom-50" }, date_range, nil %>
+          <%= form.label "camp_dates_#{index}", date_range, class: "ml-2 text-neutral-700" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <p class="font-semibold text-xl">Attendee Information</p>
+  </div>
+  <div class="flex flex-col lg:flex-row lg:gap-5">
+    <div class="my-5">
+      <%= form.label "Attendee First Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :attendee_first_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="mb-5 lg:my-5">
+      <%= form.label "Attendee Last Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :attendee_last_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <%= form.label "Attendee Age*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.number_field :attendee_age, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-28", min: 8, max: 18 %>
   </div>
 
   <div class="my-5">
-    <%= form.label :attendee_last_name %>
-    <%= form.text_field :attendee_last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <p class="font-semibold text-xl">Parent or Legal Guardian Information</p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row lg:gap-5">
+    <div class="my-5">
+      <%= form.label "Parent First Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :parent_first_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="mb-5 lg:my-5">
+      <%= form.label "Parent Last Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :parent_last_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <%= form.label "Phone*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.text_field :phone, placeholder: "###-###-####", class: "placeholder:text-neutral-300 block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :attendee_age %>
-    <%= form.number_field :attendee_age, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label "Email*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :parent_first_name %>
-    <%= form.text_field :parent_first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :parent_last_name %>
-    <%= form.text_field :parent_last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :camp_date %>
-    <%= form.text_field :camp_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :comments %>
-    <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :comments, class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+
+    <%= form.submit "SEND", class: "btn-primary" %>
   </div>
 <% end %>

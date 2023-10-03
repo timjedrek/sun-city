@@ -1,8 +1,8 @@
 class CampsController < ApplicationController
   before_action :set_camp, only: %i[ show edit update destroy ]
   before_action :authenticate_admin!, except: [:create, :new, :confirmation]
-  invisible_captcha only: [:create], honeypot: :confirm_email
-  
+  #invisible_captcha only: [:create], honeypot: :confirm_email
+
   # GET /camps or /camps.json
   def index
     @camps = Camp.all
