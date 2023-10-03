@@ -9,7 +9,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
     <h1 class="font-bold text-4xl lg:text-5xl text-center">Private Pilot Course</h1>
     <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">The foundational course for your aviation career path</h2>
-    <%= link_to "START TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
+    <button class="btn-primary" @click="showEnrollment = true">START TODAY</button>
   </div>
 </header>
 
