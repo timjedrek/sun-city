@@ -1,7 +1,7 @@
 class CampsController < ApplicationController
   before_action :set_camp, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:create, :new, :confirmation]
-  #invisible_captcha only: [:create], honeypot: :confirm_email
+  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /camps or /camps.json
   def index
@@ -37,17 +37,17 @@ class CampsController < ApplicationController
   end
 
   # PATCH/PUT /camps/1 or /camps/1.json
-  def update
-    respond_to do |format|
-      if @camp.update(camp_params)
-        format.html { redirect_to camp_url(@camp), notice: "Camp was successfully updated." }
-        format.json { render :show, status: :ok, location: @camp }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @camp.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @camp.update(camp_params)
+  #      format.html { redirect_to camp_url(@camp), notice: "Camp was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @camp }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @camp.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /camps/1 or /camps/1.json
   def destroy

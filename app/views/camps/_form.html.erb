@@ -11,18 +11,25 @@
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label "Intended Camp Date" , class: "font-semibold text-xl capitalize" %><span class="text-sm">*</span>
+  <div class="my-5" x-data="{ selectedDates: [] }">
+    <%= form.label "Intended Camp Date", class: "font-semibold text-xl capitalize" %><span class="text-sm">*</span>
     <% camp_dates = ["11-6-2023 to 11-9-2023", "11-13-2023 to 11-16-2023", "12-11-2023 to 12-14-2023", "12-27-2023 to 12-30-2023"] %>
     <div class="grid lg:grid-cols-2 grid-cols-1 pt-2">
-      <% camp_dates.each_with_index do |date_range, index| %>
+      <% camp_dates.each do |date_range| %>
         <div class="flex items-center">
-          <%= form.check_box :camp_dates, { multiple: true, class: "text-custom-50" }, date_range, nil %>
-          <%= form.label "camp_dates_#{index}", date_range, class: "ml-2 text-neutral-700" %>
+          <input type="checkbox" x-model="selectedDates" value="<%= date_range %>" class="text-custom-50">
+          <%= form.label date_range, class: "ml-2 text-neutral-700" %>
         </div>
       <% end %>
     </div>
+    <%= form.hidden_field :camp_date, "x-bind:value": "selectedDates.join(', ')" %>
   </div>
+
+
+
+
+
+
 
   <div class="mt-5">
     <p class="font-semibold text-xl">Attendee Information</p>
@@ -69,6 +76,8 @@
     <%= form.label "Email*", class: "font-semibold text-sm text-neutral-600" %>
     <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+
+  <%= invisible_captcha :confirm_email, :camp %>
 
   <div class="my-5">
     <%= form.label :comments, class: "font-semibold text-sm text-neutral-600" %>

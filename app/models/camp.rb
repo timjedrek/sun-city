@@ -1,5 +1,6 @@
 class Camp < ApplicationRecord
-
+  before_validation :strip_phone_number
+  
   validates :camp_date, presence: true
   validates :attendee_first_name, presence: true
   validates :attendee_last_name, presence: true

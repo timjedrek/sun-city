@@ -118,7 +118,9 @@
         * denotes required fields
       </p>
       <div class="px-5">
-        <%= render "form", camp: @camp %>  
+        <%= turbo_frame_tag 'form-section', class: "h-full" do %>
+          <%= render "form", camp: @camp %>  
+        <% end %>
       </div>
     </div>
   </div>
