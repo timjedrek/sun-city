@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   before_validation :strip_phone_number
-  #after_save :to_monday
+  after_save :to_monday
   
   validates :name, presence: true
   validates :body, presence: { message: "Tell us how we can help" }
@@ -11,38 +11,46 @@ class Message < ApplicationRecord
     self.phone = phone.to_s.gsub(/[-() ]/, "")
   end
 
+
   def to_monday
     api_key = ENV['monday_api_key']
-    
+
     # Sun City Lead Board = 3536260889
     # RRM Test Lead Board = 5264643666
-    query = 'mutation ($myItemName: String!, $columnVals: JSON!) { create_item (board_id: 5264643666, group_id: topics item_name: $myItemName, column_values: $columnVals) { id } }'
+    query = 'mutation ($myItemName: String!, $columnVals: JSON!) {
+      create_item (board_id: 3536260889, item_name: $myItemName, column_values: $columnVals) {
+        id
+      }
+    }'
 
     vars = {
       myItemName: self.name,
-      columnVals: ({
+      columnVals: {
         "lead_email": { "text": "#{self.email}",  "email": "#{self.email}" },
         "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
-        "text5": "TESTING 123",
-      }).to_json
+        "long_text": "Generated from website contact form.  Message body: #{self.body}"
+      }.to_json
     }
 
     url = 'https://api.monday.com/v2'
     headers = {
       'Authorization' => api_key,
-      'Content-Type' => 'application/json',     
+      'Content-Type' => 'application/json',
     }
     body = {
-    query: query,
-    variables: vars
+      query: query,
+      variables: vars
     }
     response = HTTParty.post(url, headers: headers, body: body.to_json)
+
     if response.code == 200
       parsed_response = JSON.parse(response.body)
-      puts JSON.pretty_generate(parsed_response)
+      lead_id = parsed_response["data"]["create_item"]["id"]
+      puts "Lead created with ID: #{lead_id}"
     else
       puts "Request failed with status code: #{response.code}, message: #{response.message}"
     end
   end
+
   
 end
