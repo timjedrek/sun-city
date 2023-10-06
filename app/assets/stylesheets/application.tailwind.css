@@ -18,7 +18,7 @@
   }
 
   .btn-primary {
-    @apply text-xl bg-custom-50 px-3 py-2 rounded-full text-neutral-900 border-2 border-white z-0 hover:scale-105 hover:bg-amber-500 transition-all duration-300 font-bold;
+    @apply text-xl text-center bg-custom-50 px-3 py-2 rounded-full text-neutral-900 border-2 border-white z-0 hover:scale-105 hover:bg-amber-500 transition-all duration-300 font-bold;
   }
   .btn-secondary {
     @apply text-xl bg-black px-3 py-2 rounded-full text-custom-50 border-2 border-custom-50 z-0 hover:scale-105 hover:bg-neutral-800 transition-all duration-300 font-bold;

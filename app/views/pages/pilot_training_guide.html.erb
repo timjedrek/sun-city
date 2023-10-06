@@ -79,7 +79,7 @@
 
 <%= render "shared/testimonials"%>
 
-<section class="flex flex-col lg:flex-row-reverse py-10">
+<section class="flex flex-col lg:flex-row-reverse items-center py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Why Choose Sun City Aviation Academy?</h3>
     <p class="w-3/4">
@@ -93,13 +93,16 @@
       <button class="btn-primary" @click="showEnrollment = true">JOIN THE FAMILY</button>
     </div>
     
-</div>
+  </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <video controls width="100%" class="h-screen-3/4" poster="<%= image_url "sun-city-video-poster-pilot-training-guide.webp"%>">
+    <!--<video controls width="100%" class="h-screen-3/4" poster="<%= image_url "sun-city-video-poster-pilot-training-guide.webp"%>">
       <source src="https://scontent.cdninstagram.com/o1/v/t16/f1/m82/F3486DC4035D9A4A686F08A7426C3EA3_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=107&vs=1165198040840300_4031180842&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9GMzQ4NkRDNDAzNUQ5QTRBNjg2RjA4QTc0MjZDM0VBM192aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0Y5MVlCU3g0WkdSdk1NQ0FHX2FLR01YZlI1MWJxX0VBQUFGFQICyAEAKAAYABsAFQAAJrK%2B4Nmb1sA%2FFQIoAkMzLBdAMwhysCDEnBgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&ccb=9-4&oh=00_AfAhwTUn-j6iMp_t_oVVDSsANDUolOoaImXQczu4O4VmcQ&oe=650E7BCF&_nc_sid=10d13b"
               type="video/mp4">
       Your browser does not support the video tag.
-    </video>
+    </video>-->
+    
+    <iframe class="h-screen-3/4 rounded-xl mt-5 lg:mt-0" src="https://www.youtube.com/embed/7Ey1sP_hkxg" title="Ready to learn how to fly?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
   </div>
 </section>
 
