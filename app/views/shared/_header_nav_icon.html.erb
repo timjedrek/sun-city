@@ -68,7 +68,7 @@
         </div>
       </div>
     </div>
-    <!--PILOT TRAINING GUIDE-->
+    <!--New to flying?  PILOT TRAINING GUIDE-->
     <div class="" x-on:mouseover="pilot_drop = true">
       <%= link_to "NEW TO FLYING?" , pilot_training_guide_path, data: { turbo: false }, class: "link-underline link-overline py-3"%>
       <div class="dropshadow-xl bg-black/90 rounded-b-xl absolute z-50 pb-5 pt-2 right-[23.5rem] xl:right-[31.8rem]" x-cloak x-show="pilot_drop"
@@ -105,6 +105,13 @@
             <%= link_to ppc_path, class: "hover:text-custom-50 duration-300", data: { turbo: false } do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 BECOME A PROFESSIONAL PILOT
+              </div>
+            <% end %>
+          </div>
+          <div class="items-center">
+            <%= link_to stratus_path, class: "hover:text-custom-50 duration-300", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                FINANCING
               </div>
             <% end %>
           </div>

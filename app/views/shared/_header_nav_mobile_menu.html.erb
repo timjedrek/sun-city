@@ -106,6 +106,9 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
           <%=link_to "BECOME A PROFESSIONAL PILOT", ppc_path, data: { turbo: false }%>
         </li>
+        <li class="ml-5 animate-slide-in-left5" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_now_drop}">
+          <%=link_to "FINANCING", stratus_path, data: { turbo: false }%>
+        </li>
       <li>
         <div class="flex flex-row justify-between" >
           <div class=""><%= link_to "TRAINING COURSES", pilot_courses_path, data: { turbo: false }%></div>

@@ -74,8 +74,9 @@ Rails.application.routes.draw do
   get 'professional-pilot-course', to: 'pages#professional_pilot_course', as: :ppc
   get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
+  get 'stratus-finance', to: 'pages#stratus', as: :stratus
 
-  #get 'stratus-finance', to: 'pages#stratus', as: :stratus
+  
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
   #get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
