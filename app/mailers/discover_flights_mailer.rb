@@ -5,7 +5,11 @@ class DiscoverFlightsMailer < ApplicationMailer
   def discover_flights_email(discover_flight)
     @discover_flight = discover_flight
 
-    mail(to: @discover_flight.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Discovery Flight at Sun City Aviation Academy")
+    if Rails.env.production?
+      mail(to: @discover_flight.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Discovery Flight at Sun City Aviation Academy")
+    else
+      mail(to: @discover_flight.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Discovery Flight at Sun City Aviation Academy")
+    end
   end
 
 
