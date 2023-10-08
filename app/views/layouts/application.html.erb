@@ -101,13 +101,13 @@
       <%= yield %>
       <!-- Modal -->
       <div
-        class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50"
+        class="fixed inset-0 z-50 flex flex-col items-center justify-start lg:justify-center overflow-auto bg-black bg-opacity-50"
         x-show="showEnrollment"
         x-cloak
       >
         <!-- Modal inner -->
         <div
-            class="max-w-3xl px-6 py-4 mx-auto text-left bg-white rounded shadow-lg z-[1000]"
+            class="lg:max-w-3xl w-full px-3 lg:px-6 py-2 lg:py-4 mx-auto text-left bg-white rounded shadow-lg z-[1000]"
             @click.away="showEnrollment = false"
             x-transition:enter="motion-safe:ease-out duration-300"
             x-transition:enter-start="opacity-0 scale-90"
