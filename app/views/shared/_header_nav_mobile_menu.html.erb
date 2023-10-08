@@ -78,7 +78,7 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
           <%= link_to "AIRPLANE FLEET", planes_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "BLOG", root_path, target: "blank", data: { turbo: false }%>
+          <%= link_to "BLOG", blog_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
           <%= link_to "CONTACT US", contact_path, target: "blank", data: { turbo: false }%>

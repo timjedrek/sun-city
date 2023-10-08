@@ -76,7 +76,7 @@
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered7 = true" x-on:mouseleave="isHovered7 = false">
             <div class="flex mb-5 items-center">
               <div class="" :class="{ 'animate-bounce-horizontal': isHovered7 }"><%= render "shared/bullet_point" %></div>
-              <div class="ml-5">Blog</div>
+              <div class="ml-5"><%= link_to "Blog", blog_path, data: { turbo: false } %></div>
             </div>
           </li>
           <li class="hover:text-custom-50 hover:stroke-custom-50 hover:fill-custom-50 duration-300" x-on:mouseenter="isHovered8 = true" x-on:mouseleave="isHovered8 = false">
