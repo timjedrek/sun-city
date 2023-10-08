@@ -40,7 +40,7 @@
 
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Phone</span>
-          <%= form.text_field :phone, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
+          <%= form.text_field :phone, placeholder: "###-###-####", class: " placeholder:text-slate-300 block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-custom-50 focus:ring-custom-50" %>
         </div>
 
         <div class="my-5" x-data="{ selectedAircraft: '' }">
@@ -49,7 +49,7 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :aircraft, 'Recreation', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'Recreation' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'Recreation' }">
                   <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'Recreation' }">Recreation</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'Recreation'"></span>
@@ -59,7 +59,7 @@
             <label class="inline-flex items-center pb-5" >
               <%= form.radio_button :aircraft, 'career', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'career' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'career' }">
                   <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'career' }">Career</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'career'"></span>
@@ -69,7 +69,7 @@
             <label class="inline-flex items-center pb-5" >
               <%= form.radio_button :aircraft, 'both', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'both' }">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'both' }">
                   <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'both' }">Both</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'both'"></span>
@@ -94,8 +94,8 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
+                <span class="inline-flex items-center justify-center bg-custom-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-black': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
@@ -113,8 +113,8 @@
             <label class="">
               <%= form.radio_button :preferred_availability, option, { class: "hidden", "data-x-model" => "selectedAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 " :class="{ 'bg-custom-50': selectedAvailability == '<%= option %>' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAvailability == '<%= option %>' }"><%= option %></span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-custom-50 " :class="{ 'bg-custom-50': selectedAvailability == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-black': selectedAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAvailability = '<%= option %>'"></span>
               </span>
@@ -140,8 +140,8 @@
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
+                <span class="inline-flex items-center justify-center bg-custom-50 border  border-slate-300 rounded-full cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-black': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
@@ -158,8 +158,8 @@
             <label class="">
               <%= form.radio_button :alternate_availability, option, { class: "hidden", "data-x-model" => "alternateAvailability" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-slate-50 " :class="{ 'bg-custom-50': alternateAvailability == '<%= option %>' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': alternateAvailability == '<%= option %>' }"><%= option %></span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-full bg-custom-50 " :class="{ 'bg-custom-50': alternateAvailability == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-black': alternateAvailability == '<%= option %>' }"><%= option %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateAvailability = '<%= option %>'"></span>
               </span>
