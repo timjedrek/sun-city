@@ -28,7 +28,7 @@ class CheckoutsController < ApplicationController
     respond_to do |format|
       if @checkout.save
         CheckoutEmailMailer.checkout_email(@checkout).deliver_later
-        format.html { redirect_to checkout_confirmation_path, notice: "#{@checkout.first_name}" }
+        format.html { redirect_to checkout_sun_city_confirmation_path, notice: "#{@checkout.first_name}" }
         #format.json { render :show, status: :created, location: @checkout }
       else
         format.html { render :new, status: :unprocessable_entity }
