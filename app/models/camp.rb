@@ -21,27 +21,21 @@ class Camp < ApplicationRecord
     # Sun City Lead Board = 3536260889
     # RRM Test Lead Board = 5264643666
     query = 'mutation ($myItemName: String!, $columnVals: JSON!) {
-      create_item (board_id: 5264643666, item_name: $myItemName, column_values: $columnVals) {
+      create_item (board_id: 3536260889, item_name: $myItemName, column_values: $columnVals) {
         id
       }
     }'  
 
     vars = {
-      myItemName: "#{self.first_name} #{self.last_name}",
+      myItemName: "#{self.parent_first_name} #{self.parent_last_name}",
       columnVals: {
         "lead_email": { "text": "#{self.email}",  "email": "#{self.email}" },
         "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
-        "long_text": "Generated from website visit school form.  
-Which program are you interested in: #{self.interested_aircraft}
-
-What pilot certifications do you hold: #{self.certifications}
-
-Is there anything else you'd like us to know: #{self.comments}
-
-Selected Date: #{self.preferred_date}
-Selected Time: #{self.preferred_availability}
-Alternate Date: #{self.alternate_date}
-Alternate Time: #{self.alternate_availability}"
+        "long_text": "Generated from website camp form.
+Interested camp date: #{self.camp_date}
+Child name: #{self.attendee_first_name} #{self.attendee_last_name}
+Child age: #{self.attendee_age}
+Additional comments: #{self.comments}"
       }.to_json
     }
 
