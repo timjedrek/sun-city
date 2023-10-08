@@ -1,6 +1,6 @@
 class BookDownload < ApplicationRecord
   before_validation :strip_phone_number
-  #after_save :to_lacrm
+  after_save :to_monday
   
   validates :name, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
@@ -10,43 +10,44 @@ class BookDownload < ApplicationRecord
     self.phone = phone.to_s.gsub(/[-() ]/, "")
   end
 
-  def to_lacrm
-    api_key = ENV['LACRM_API']
-    # Set the endpoint and headers
-    endpoint = "https://api.lessannoyingcrm.com/v2/"
-    headers = {
-      "Authorization" => api_key,
-      "Content-Type" => "application/json"
-    }
-    # Get the user ID
-    user_payload = {
-      "Function" => "GetUser",
-      "Parameters" => {}
-    }
-    user_response = HTTParty.get(endpoint, headers: headers, body: user_payload.to_json)
-    if user_response.code == 200
-      user_id = JSON.parse(user_response.body)['UserId']
-    else
-      # Handle the error
-      user_id = nil
-    end
 
-    # Create the contact
-    contact_payload = {
-      "Function" => "CreateContact",
-      "Parameters" => {
-        "IsCompany" => false,
-        "AssignedTo" => user_id,  #need to just get the USER ID so I can avoid doin the get call each time..
-        "Name" => "#{self.name}",
-        "Email" => "#{self.email}",
-        "Phone" => "#{self.phone}",
-        "Background Info" => "Originated from book download form on website",
+  def to_monday
+    api_key = ENV['monday_api_key']
+
+    # Sun City Lead Board = 3536260889
+    # RRM Test Lead Board = 5264643666
+    query = 'mutation ($myItemName: String!, $columnVals: JSON!) {
+      create_item (board_id: 3536260889, item_name: $myItemName, column_values: $columnVals) {
+        id
       }
+    }'  
+
+    vars = {
+      myItemName: self.name,
+      columnVals: {
+        "lead_email": { "text": "#{self.email}",  "email": "#{self.email}" },
+        "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
+        "long_text": "Generated from website book download form."
+      }.to_json
     }
 
+    url = 'https://api.monday.com/v2'
+    headers = {
+      'Authorization' => api_key,
+      'Content-Type' => 'application/json',
+    }
+    body = {
+      query: query,
+      variables: vars
+    }
+    response = HTTParty.post(url, headers: headers, body: body.to_json)
 
-    response = HTTParty.post(endpoint, headers: headers, body: contact_payload.to_json)
-
-  end  
-
+    if response.code == 200
+      parsed_response = JSON.parse(response.body)
+      lead_id = parsed_response["data"]["create_item"]["id"]
+      puts "Lead created with ID: #{lead_id}"
+    else
+      puts "Request failed with status code: #{response.code}, message: #{response.message}"
+    end
+  end
 end
