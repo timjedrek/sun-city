@@ -3,5 +3,13 @@
 
 User-agent: *
 Disallow: /admins
+Disallow: /admins
+Disallow: /quiz_confirmation
+Disallow: /checkout_sun_city_confirmation
+Disallow: /discovery_confirmation
+Disallow: /book_download_confirmation
+Disallow: /contact_confirmation
+Disallow: /camp_confirmation
+Disallow: /enroll_confirmation
 
-Sitemap: https://simpliflyco.com/sitemap.xml.gz
+Sitemap: https://suncityaviation.com/sitemap.xml.gz

@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "simpliflyco.com"
+SitemapGenerator::Sitemap.default_host = "suncityaviation.com"
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
@@ -27,32 +27,36 @@ SitemapGenerator::Sitemap.create do
 
   #Static Pages
   add '/stratus-finance'
-  add '/meritize'
-  add '/accelerated-pilot-training'
-  add '/flexible-pilot-training'
-  add '/why-simplifly'
-  add '/financing'
-  add '/pilot-training-pricing-calculator'
-  add '/approximate-pilot-training-costs'
-  add '/timeline-to-be-a-pilot'
-  add '/multi-engine-rating'
-  add '/commercial-pilot-training'
-  add '/instrument-rating'
-  add '/private-pilot-training'
-  add '/pilot-training'
-  add '/airline-pilot-courses'
-  add '/pilot-programs'
-  add '/our-team'
-
-  #Blog
-  add '/blog'
-
-  #Forms
-  add '/enroll-at-simplifly'
-  add '/contact'
-  add '/visit-simplifly'
-  add '/instruct-at-simplifly'
+  add '/tos'
+  add '/pilot_courses'
+  add '/ppc'
+  add '/wingman'
+  add '/ipc'
+  add '/bfr'
+  add '/seaplane'
+  add '/atp'
+  add '/cfi'
+  add '/private_pilot'
+  add '/instrument'
+  add '/commercial'
+  add '/multi'
+  add '/why_pilot'
+  add '/pilot_training_guide'
+  add '/planes'
+  add '/about'
+  #add '/quiz_confirmation'
+  add '/quiz'
+  #add '/checkout_sun_city_confirmation'
+  add '/checkout_sun_city'
+  #add '/discovery_confirmation'
   add '/discovery-flight'
+  #add '/book_download_confirmation'
+  #add '/contact_confirmation'
+  add '/contact'
+  #add '/camp_confirmation'
+  add '/youth'
+  #add '/enroll_confirmation'
+  add '/enroll'
 
 
 end
