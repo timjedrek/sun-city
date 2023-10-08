@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
+  # Camp form
   get 'youth-aviation-programs', to: 'camps#new', as: :youth
   get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
 
@@ -76,6 +77,22 @@ Rails.application.routes.draw do
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
 
+  # Previous Site's Routes
+  get 'aerocamp', to: 'camps#new'
+  get 'fleet', to: 'pages#fixed_wing'
+  get 'student-resources', to: 'posts#index'
+  get 'contact-us', to: 'messages#new'
+  get 'private-course', to: 'pages#private_pilot'
+  get 'flight-reviews', to: 'pages#bfr'
+  get 'multiengine-course', to: 'pages#multi'
+  get 'commercial-course', to: 'pages#commercial'
+  get 'discovery-flights', to: 'discover_flights#new'
+  get 'frequently-asked-questions', to: 'pages#pilot_training_guide'
+  get 'flight-instructor-courses', to: 'pages#cfi'
+  get 'flight-instrument-instructor', to: 'pages#cfi'
+  get 'instrument-proficiency-check-ipc', to: 'pages#ipc'
+  get 'airline-transport-pilot-license', to: 'pages#atp'
+
   
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
@@ -99,18 +116,4 @@ Rails.application.routes.draw do
   #get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   #get 'careers', to: 'pages#careers', as: :careers
-  
-
-  # Previous Site's Routes
-  #get 'home/flight-training', to: 'pages#why_simplifly'
-  #get 'program-pricing', to: 'pages#cost'
-  #get 'programs', to: 'pages#pilot_training'
-  #get 'book-a-flight', to: 'discover_flights#new'
-  #get 'locations', to: 'messages#location'
-  #get 'contact-us', to: 'messages#new'
-  #get 'simplifying-your-training', to: 'pages#why_simplifly'
-  #get 'flight-instructors', to: 'pages#our_team'
-  #get 'category/pilot', to: 'pages#airline_pilot_courses'
-  #get 'becoming-a-pilot-timeline', to: 'pages#timeline'
-  #get 'private-pilots-license', to: 'pages#private_pilot'
 end
