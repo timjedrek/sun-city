@@ -17,7 +17,7 @@ class Checkout < ApplicationRecord
     # Sun City Lead Board = 3536260889
     # RRM Test Lead Board = 5264643666
     query = 'mutation ($myItemName: String!, $columnVals: JSON!) {
-      create_item (board_id: 5264643666, item_name: $myItemName, column_values: $columnVals) {
+      create_item (board_id: 3536260889, item_name: $myItemName, column_values: $columnVals) {
         id
       }
     }'  
