@@ -55,18 +55,22 @@
     <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'Sun City Aviation Academy | Miami South Florida Flight Training' end %>">
     <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Sun City Aviation Academy, located at KHWO - North Perry Airport in Hollywood, Florida, is your gateway to flight training excellence in the vibrant Miami-Fort Lauderdale metropolitan area. Our flight school serves aspiring pilots from Hollywood, Fort Lauderdale, Miami, and neighboring communities across Broward County. With our team of experienced instructors and a comprehensive range of aviation programs, we\'re committed to helping you achieve your aviation dreams right here in the heart of South Florida. Join us at Sun City Aviation Academy and embark on your journey to becoming a skilled pilot in one of the nation\'s most exciting aviation hubs.' end %>">
-    <meta property="og:image" content="<%#= if content_for?(:og_image) then yield(:og_image) else image_url('/simplifly_padded.webp') end %>">
+    <meta property="og:image" content="<%= if content_for?(:og_image) then yield(:og_image) else image_url('/sun-city-black-text-logo.jpg') end %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<%= request.original_url %>">
     <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "Sun City Aviation Academy | Miami South Florida Flight Training" end %>">
     <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Sun City Aviation Academy, located at KHWO - North Perry Airport in Hollywood, Florida, is your gateway to flight training excellence in the vibrant Miami-Fort Lauderdale metropolitan area. Our flight school serves aspiring pilots from Hollywood, Fort Lauderdale, Miami, and neighboring communities across Broward County. With our team of experienced instructors and a comprehensive range of aviation programs, we\'re committed to helping you achieve your aviation dreams right here in the heart of South Florida. Join us at Sun City Aviation Academy and embark on your journey to becoming a skilled pilot in one of the nation\'s most exciting aviation hubs.' end %>">
-    <meta property="twitter:image" content="<%#= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('/simplifly_padded.webp') end %>">
+    <meta property="twitter:image" content="<%= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('/sun-city-black-text-logo.jpg') end %>">
 
     <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+
+    <%#
+    begin
 
     <!--Google Fonts-->
     <!--**Not sure if this is still needed for font**  <link rel="preconnect" href="https://fonts.googleapis.com">-->
@@ -79,6 +83,9 @@
     <!--<noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap">
     </noscript>-->
+    
+    end
+    %>
 
     <!--JS-->
     <%= javascript_importmap_tags %>
