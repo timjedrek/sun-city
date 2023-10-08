@@ -1,16 +1,16 @@
 <%# Head / Meta Data %>
-<%# title(@post.title + " | Right Rudder Marketing Blog") %>
-<%# meta_description(if @post.meta_description? then @post.meta_description end) %>
-<%# meta_keywords(if @post.meta_keywords? then @post.meta_keywords end) %>
-<%# og_image(@post.feature_image.url) %>
-<%# twitter_image(@post.feature_image.url) %>
+<% title(@post.title + " | Sun City Aviation Academy Blog") %>
+<% meta_description(if @post.meta_desription? then @post.meta_desription end) %>
+<% meta_keywords(if @post.meta_keywords? then @post.meta_keywords end) %>
+<% og_image(rails_storage_proxy_url(@post.feature_image)) %>
+<% twitter_image(rails_storage_proxy_url(@post.feature_image)) %>
 
 <%= render "shared/header" %>
-<div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
+<div class="text-lg bg-gradient-to-r from-slate-100 to-amber-50">
   
 
   <div class="flex flex-col items-center">
-    <div class="lg:border-1 lg:w-3/5 flex flex-col lg:rounded-xl lg:my-10 border-slate-300 bg-slate-50">
+    <div class="lg:border-1 lg:w-3/5 flex flex-col lg:rounded-xl lg:my-10 border-slate-300 bg-white">
       <!--Header-->
       <%#=image_tag @post.feature_image.url, class:"w-full object-cover object-center lg:rounded-t-xl", alt: "picture for article: #{@post.title}"%>
       <% if @post.feature_image.present?%>
