@@ -9,16 +9,16 @@ Rails.application.routes.draw do
   
   devise_scope :admins do
     # Redirests signing out users back to sign-in
-    #get "admins", to: "devise/sessions#new"
+    get "admins", to: "devise/sessions#new"
   end
 
   devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
   root "pages#home"
 
 
-  #post 'uploader/image', to: 'uploader#image' #add upload image to posts 
-  #get 'blog', to: 'posts#index', as: :blog
-  #resources :posts
+  post 'uploader/image', to: 'uploader#image' #add upload image to posts 
+  get 'blog', to: 'posts#index', as: :blog
+  resources :posts
   
   resources :camps
   resources :discover_flights
