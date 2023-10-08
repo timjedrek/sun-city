@@ -29,7 +29,7 @@ class QuizResultsController < ApplicationController
 
     respond_to do |format|
       if @quiz_result.save #&& (success || checkbox_success)
-        QuizResultMailer.quiz_result_email(@quiz_result).deliver_later
+        #QuizResultMailer.quiz_result_email(@quiz_result).deliver_later
         format.html { redirect_to quiz_confirmation_path, notice: "#{@quiz_result.first_name}" }
         #format.json { render :show, status: :created, location: @quiz_result }
       else
