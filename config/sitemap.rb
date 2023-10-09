@@ -1,7 +1,6 @@
-# Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://suncityaviation.com"
 
-SitemapGenerator::Sitemap.create do
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
@@ -25,38 +24,45 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  #Static Pages
-  add '/stratus-finance'
-  add '/tos'
-  add '/pilot_courses'
-  add '/ppc'
-  add '/wingman'
-  add '/ipc'
-  add '/bfr'
-  add '/seaplane'
-  add '/atp'
-  add '/cfi'
-  add '/private_pilot'
-  add '/instrument'
-  add '/commercial'
-  add '/multi'
-  add '/why_pilot'
-  add '/pilot_training_guide'
-  add '/planes'
-  add '/about'
-  #add '/quiz_confirmation'
-  add '/quiz'
-  #add '/checkout_sun_city_confirmation'
-  add '/checkout_sun_city'
-  #add '/discovery_confirmation'
-  add '/discovery-flight'
-  #add '/book_download_confirmation'
-  #add '/contact_confirmation'
+SitemapGenerator::Sitemap.create do
+  add '/blog'
+  add '/youth-aviation-programs'
   add '/contact'
-  #add '/camp_confirmation'
-  add '/youth'
-  #add '/enroll_confirmation'
-  add '/enroll'
+  add '/discovery-flight'
+  add '/visit-sun-city'
+  add '/quiz'
+  add '/about'
+  add '/planes'
+  add '/pilot-training-guide'
+  add '/why-become-a-pilot'
+  add '/multi-engine-rating'
+  add '/commercial-pilot-training'
+  add '/instrument-rating'
+  add '/private-pilot-training'
+  add '/certified-flight-instructor-cfi'
+  add '/airline-transport-pilot-atp'
+  add '/seaplane-pilot-training'
+  add '/flight-review-bfr'
+  add '/instrument-proficiency-check-ipc'
+  add '/wingman-family-member-training'
+  add '/professional-pilot-course'
+  add '/flight-training-pilot-programs'
+  add '/terms-of-service-privacy-policy'
+  add '/stratus-finance'
 
-
+  # Previous Site's Routes
+  add '/aerocamp'
+  add '/fleet'
+  add '/student-resources'
+  add '/contact-us'
+  add '/private-course'
+  add '/flight-reviews'
+  add '/multiengine-course'
+  add '/commercial-course'
+  add '/discovery-flights'
+  add '/frequently-asked-questions'
+  add '/flight-instructor-courses'
+  add '/flight-instrument-instructor'
+  add '/instrument-proficiency-check-ipc'
+  add '/airline-transport-pilot-license'
 end
