@@ -26,7 +26,7 @@
     </div>
 
     <!--ABOUT US-->
-    <div class="" x-on:mouseover="about_drop = true">
+    <div class="" x-on:mouseover="about_drop = true" x-on:mouseleave="about_drop = false">
       <%= link_to "ABOUT US", about_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
       <div class="dropshadow-xl bg-black/90 rounded-b-xl absolute z-50 pb-5 pt-2 right-[38rem] xl:right-[51rem]" x-cloak x-show="about_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -69,7 +69,7 @@
       </div>
     </div>
     <!--New to flying?  PILOT TRAINING GUIDE-->
-    <div class="" x-on:mouseover="pilot_drop = true">
+    <div class="" x-on:mouseover="pilot_drop = true" x-on:mouseleave="pilot_drop = false">
       <%= link_to "NEW TO FLYING?" , pilot_training_guide_path, data: { turbo: false }, class: "link-underline link-overline py-3"%>
       <div class="dropshadow-xl bg-black/90 rounded-b-xl absolute z-50 pb-5 pt-2 right-[23.5rem] xl:right-[31.8rem]" x-cloak x-show="pilot_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -121,7 +121,7 @@
     </div>
     
     <!--TRAINING COURSES-->
-    <div class="" x-on:mouseover="financing_drop = true">
+    <div class="" x-on:mouseover="financing_drop = true" x-on:mouseleave="financing_drop = false">
       <%= link_to "TRAINING COURSES", pilot_courses_path, data: { turbo: false }, class: "link-underline link-overline py-3" %>
       <div class="dropshadow-xl bg-black/90 rounded-b-xl absolute z-50 pb-5 pt-2 right-[12.5rem] xl:right-[17rem]" x-cloak x-show="financing_drop"
         x-transition:enter="transition ease-out duration-300"
