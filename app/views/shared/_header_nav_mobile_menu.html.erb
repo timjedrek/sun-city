@@ -123,6 +123,9 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_about_drop}">
+          <%=link_to "PROFESSIONAL PILOT COURSE", ppc_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_about_drop}">
           <%=link_to "PRIVATE PILOT", private_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
@@ -151,9 +154,6 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         </li>
         <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
           <%=link_to "WINGMAN COURSE", wingman_path, data: { turbo: false }%>
-        </li>
-        <li class="ml-5 animate-slide-in-left7" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left7': !mobile_about_drop}">
-          <%=link_to "PROFESSIONAL PILOT COURSE", ppc_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
