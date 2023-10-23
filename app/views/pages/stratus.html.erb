@@ -59,12 +59,15 @@
 
     <h3 class="text-4xl uppercase font-semibold pb-5">Need More Information?</h3>
     <p class="pb-5">
-      Visit the Stratus Financial website to see how it all works. Click below to find out more and check out the Stratus Financial website.
+      We've prepared a free informational booklet to help you understand how financing with Stratus Financial works. Click below to find out more and download the booklet or check out the Stratus Financial website.
     </p>
 
     <div class="flex flex-col lg:flex-row gap-5 pb-10">
       <%= link_to "https://stratus.finance", target: "blank", data: { turbo: false } do%>
         <div class="btn-primary ">VISIT WEBSITE</div>
+      <%end%>
+      <%= link_to "https://drive.google.com/file/d/13wszvROm6r1hL2HEH-8CGQvgsqguPRp6/view?usp=share_link", target: "blank", data: { turbo: false } do%>
+        <div class="btn-primary">DOWNLOAD BOOKLET</div>
       <%end%>
     </div>
   </div>
