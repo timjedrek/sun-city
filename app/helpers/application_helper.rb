@@ -30,7 +30,7 @@ module ApplicationHelper
 
   def fetch_metar_data
     begin
-      url = URI.parse('https://aviationweather.gov/cgi-bin/data/metar.php?ids=KPTW')
+      url = URI.parse('https://aviationweather.gov/cgi-bin/data/metar.php?ids=KHWO')
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = (url.scheme == 'https')
   
