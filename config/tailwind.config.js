@@ -185,6 +185,8 @@ module.exports = {
         'pilot-course' : "url('sun-city-pilot-courses-bg.webp')",
         'cockpit' : "url('sun-city-airline-cockpit-bg.webp')",
         'office' : "url('sun-city-door-bg.webp')",
+        'vfrchart' : "url('sun-city-vfr-chart-bg.webp')",
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',

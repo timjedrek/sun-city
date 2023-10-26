@@ -1,0 +1,59 @@
+<%# Head / Meta Data %>
+<% title("Group Ground Lessons | Sun City Aviation Academy") %>
+<%# meta_description("") %>
+<%# meta_keywords("") %>
+
+<%= render "shared/header"%>
+
+<header class="w-full bg-vfrchart bg-cover h-screen-3/4 lg:h-screen-4/5 bg-bottom flex justify-center items-center">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Group Ground Pilot Training</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Learn the fundamentals to pass your written exam</h2>
+    <button class="btn-primary" @click="showEnrollment = true">START TODAY</button>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-10 py-2 rounded-full mx-5">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">How It Works</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      We understand that becoming a pilot is an exciting yet challenging endeavor, and we're here to provide the training you need to be successful. In the heart of Hollywood, Florida in North Perry KHWO airport, we offer a comprehensive curriculum that covers essential aviation topics. From aerodynamics to navigation, weather to regulations, and aircraft systems, our experienced instructors ensure you acquire a strong knowledge base. This knowledge is not only vital for passing the written exam but is also the cornerstone of your future as a pilot.
+    </p>
+    <p class="pb-10">
+      What sets our Group Ground School apart is the spirit of collaboration and family. You'll join a welcoming and supportive aviation community, a diverse group of individuals who share your passion for flight. Engage in discussions, ask questions, and exchange insights. In this environment, learning becomes a shared journey, and fellow students become more than just peers, they become lifelong friends. Our aim is not just to help you succeed in the written exam, but also to introduce you to the welcoming aviation community. From Hollywood to Miramar and far beyond, we extend a warm invitation to become a part of our close knit aviation family. Join our group ground school by filling out a form on our website or giving us a call.
+    </p>
+  </div>  
+
+  <div class="flex flex-col items-center w-full max-w-4xl bg-black text-white lg:rounded-2xl" x-data="">
+    <hr
+    class="bg-custom-50 pt-1 border-0 w-3/4 mt-6 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+    x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+    />
+    <p class="text-xl max-w-xl text-center mx-10">
+      Group Ground School at Sun City Aviation Academy offers an inclusive and structured curriculum designed to accommodate various learning styles. We're not just focused on helping you pass the written exam, our goal is to equip you with practical knowledge and skills that will serve you throughout your aviation career.
+    </p>
+    <hr
+      class="bg-custom-50 h-1 w-3/4 mt-10 border-0 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+      x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+    />
+  </div>
+
+</section>
+
+
+
+<%= render "shared/cta_fly_with"%>
+<%= render "shared/testimonials"%>
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>
