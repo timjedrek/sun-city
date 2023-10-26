@@ -51,8 +51,10 @@
         <span class="text-slate-700 text-base font-semibold">Which pilot program are you interested in?</span>
         <%= form.select :location, [
                           ["", ""],
+                          ["Professional Pilot Course", "Professional Pilot Course"],
                           ["Private Pilot Course", "Private Pilot Course"],
                           ["Instrument Rating", "Instrument Rating"],
+                          ["Group Ground School", "Group Ground School"],
                           ["Commercial Pilot Course", "Commercial Pilot Course"],
                           ["Multi Engine Course", "Multi Engine Course"],
                           ["Flight Instructor Course", "Flight Instructor Course"],
@@ -61,8 +63,8 @@
                           ["Flight Review", "Flight Review"],
                           ["IPC", "IPC"],
                           ["Wingman Course", "Wingman Course"],
-                          ["Professional Pilot Course", "Professional Pilot Course"],
-                          ["Youth Program", "Youth Program"]], {}, { class: "rounded-md border-slate-200 focus:border-custom-50 w-full focus:ring-custom-50" } %>
+                          ["AeroCamp", "AeroCamp"],
+                          ["Youth Aviation Class", "Youth Aviation Class"]], {}, { class: "rounded-md border-slate-200 focus:border-custom-50 w-full focus:ring-custom-50" } %>
 
       </div>
 
