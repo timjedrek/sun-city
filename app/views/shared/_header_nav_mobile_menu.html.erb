@@ -58,8 +58,8 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
   <div class="ml-16 mr-5 mt-5" x-data="{
           mobile_resources_drop: false,
           mobile_now_drop: false,
-          mobile_certification_drop: false,
-          mobile_about_drop: false }">
+          mobile_about_drop: false,
+          mobile_youth_drop: false }">
     <ul class="space-y-4 font-bold pb-5">
       <li><%= link_to "HOME", root_path, target: "blank", data: { turbo: false }%></li>
       <li>
@@ -129,6 +129,9 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
           <%=link_to "PRIVATE PILOT", private_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
+          <%=link_to "GROUP GROUND SCHOOL", group_ground_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
           <%=link_to "INSTRUMENT RATING", instrument_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_about_drop}">
@@ -158,8 +161,20 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
       <li>
         <div class="flex flex-row justify-between" >
           <div class=""><%= link_to "YOUTH PROGRAMS", youth_path, data: { turbo: false }%></div>
+          <div class="px-5 py-1" x-on:click="mobile_youth_drop = ! mobile_youth_drop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_youth_drop }">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
         </div>
       </li>
+        <!--DROP DOWN-->
+        <li class="ml-5 animate-slide-in-left" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_about_drop}">
+          <%=link_to "AEROCAMP", aerocamp_path, data: { turbo: false }%>
+        </li>
+        <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
+          <%=link_to "YOUTH AVIATION CLASS", youth_ground_path, data: { turbo: false }%>
+        </li>
       <li>
         <div class="flex flex-row justify-between" >
           <div class="btn-primary -ml-3"><%= link_to "START TODAY", root_path, data: { turbo: false }%></div>
