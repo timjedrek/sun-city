@@ -1,7 +1,9 @@
 class Enrollment < ApplicationRecord
   before_validation :strip_phone_number
   alias_attribute :program_name, :location
-  after_save :to_monday
+  if Rails.env.production?
+    after_save :to_monday
+  end
 
   validates :first_name, presence: true
   validates :last_name, presence: true

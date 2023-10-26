@@ -1,7 +1,7 @@
 class EnrollmentsController < ApplicationController
   before_action :set_enrollment, only: %i[ show edit update destroy ]
   before_action :authenticate_admin!, except: [:create, :new, :confirmation]
-  invisible_captcha only: [:create], honeypot: :confirm_email
+  invisible_captcha only: [:create, :new], honeypot: :confirm_email
 
   # GET /enrollments or /enrollments.json
   def index
