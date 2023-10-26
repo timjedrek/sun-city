@@ -58,6 +58,7 @@ Rails.application.routes.draw do
   get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
+  get 'youth-aviation-classes', to: 'pages#youth_ground', as: :youth_ground
   get 'group-ground-school', to: 'pages#group_ground', as: :group_ground
   get 'about', to: 'pages#about_us', as: :about
   get 'planes', to: 'pages#fixed_wing', as: :planes
