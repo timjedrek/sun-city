@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Camp form
-  get 'youth-aviation-programs', to: 'camps#new', as: :youth
+  get 'aerocamp', to: 'camps#new', as: :aerocamp
   get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
 
   # Contact form
@@ -59,6 +59,7 @@ Rails.application.routes.draw do
 
   # Static Pages
   get 'youth-aviation-classes', to: 'pages#youth_ground', as: :youth_ground
+  get 'youth-aviation-programs', to: 'pages#youth', as: :youth
   get 'group-ground-school', to: 'pages#group_ground', as: :group_ground
   get 'about', to: 'pages#about_us', as: :about
   get 'planes', to: 'pages#fixed_wing', as: :planes
