@@ -51,7 +51,9 @@
         
         <%= form.select :interested_aircraft, [
                           ["", ""],
+                          ["Professional Pilot Course", "Professional Pilot Course"],
                           ["Private Pilot Course", "Private Pilot Course"],
+                          ["Group Ground School", "Private Pilot Course"],
                           ["Instrument Rating", "Instrument Rating"],
                           ["Commercial Pilot Course", "Commercial Pilot Course"],
                           ["Multi Engine Course", "Multi Engine Course"],
@@ -61,7 +63,7 @@
                           ["Flight Review", "Flight Review"],
                           ["IPC", "IPC"],
                           ["Wingman Course", "Wingman Course"],
-                          ["Professional Pilot Course", "Professional Pilot Course"],
+                          ["AeroCamp", "AeroCamp"],
                           ["Youth Program", "Youth Program"]], {}, { class: "rounded-md border-slate-200 focus:border-custom-50 focus:ring-custom-50" } %>
       </div>
 
@@ -142,7 +144,7 @@
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-custom-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-2 lg:px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-2 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                     <div class="lg:hidden"><%= date.strftime('%b %d') %></div>
                     <div class="hidden lg:block"><%= date.strftime('%B %d') %></div>
                   </span>
@@ -190,7 +192,7 @@
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-custom-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-custom-50 text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-2 lg:px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-2 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-black': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
                     <div class="lg:hidden"><%= date.strftime('%b %d') %></div>
                     <div class="hidden lg:block"><%= date.strftime('%B %d') %></div>
                   </span>
