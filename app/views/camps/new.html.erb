@@ -5,37 +5,6 @@
 
 <%= render "shared/header"%>
 
-<header class="w-full bg-center flex justify-center items-center">
-  <div class="flex flex-col-reverse lg:flex-row w-full">
-    <div class="lg:w-3/4">
-      <%= image_tag "sun-city-aero-camp-group.webp", class:"object-cover min-h-full object-right", alt: "Sun City Aero Camp In Front of Sea Plane"%>
-    </div>
-    <div class="lg:w-1/4">
-      <div
-        class="flex flex-col items-center justify-center h-full" x-data="">
-        <hr
-          class="bg-custom-50 h-1 w-3/4 mt-10 lg:mt-0 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
-          x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
-        />
-        <h2 class="text-3xl xl:text-4xl font-bold text-center pb-10">Aviation Programs For <span class="text-custom-50">Youth</span> Pilots</h2>
-        <p class="px-5 xl:px-12 text-center">
-          We're dedicated to creating the next generation of pilots.  Our youth programs are geared to expose young aspiring aviators to the world of aviation and flying.
-        </p>
-        <div class="relative flex mt-5">
-          <span class="animate-ping-1 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0 overflow-hidden"></span>
-          <span class="animate-ping-2 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0 overflow-hidden"></span>
-          <span class="animate-ping-3 absolute inline-flex h-full w-full rounded-full bg-custom-50 opacity-20 z-0 overflow-hidden"></span>
-          <button class="btn-primary" onclick="scrollToElement('camp_form', 60);">JOIN TODAY</button>
-        </div>
-        
-        <hr
-          class="bg-custom-50 h-1 w-3/4 mt-10 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
-          x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
-        />
-      </div>
-    </div>
-  </div>
-</header>
 
 <section class="bg-gradient-to-b from-neutral-800 to-neutral-900 text-white">
   <div class="flex flex-col lg:flex-row">
