@@ -177,7 +177,9 @@ https://tailwindcomponents.com/component/animated-hamburger-menu-icon
         </li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class="btn-primary -ml-3"><%= link_to "START TODAY", root_path, data: { turbo: false }%></div>
+          <button class="btn-primary -ml-3" @click="showEnrollment = true">
+            START TODAY
+          </button>
         </div>
       </li>
     </ul>
