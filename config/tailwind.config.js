@@ -155,6 +155,7 @@ module.exports = {
         'course9' : "url('sun-city-ipc.webp')",
         'course10' : "url('sun-city-wingman.webp')",
         'course11' : "url('sun-city-airline-pilot-ppc.webp')",
+        'course12' : "url('sun-city-group-ground-school-bg.webp')",
         'luke' : "url('sun-city-luke.webp')",
         'experts' : "url('sun-city-shore-bg3.webp')",
         'about-us' : "url('sun-city-about-us-background.webp')",
