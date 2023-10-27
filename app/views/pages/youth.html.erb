@@ -40,12 +40,32 @@
 <section class="bg-gradient-to-b from-neutral-800 to-black">
 
 <div class="flex flex-col lg:flex-row w-full gap-10 py-10 lg:py-20 px-5 lg:px-10">
-  <div class="flex flex-col items-center lg:w-1/2 bg-gradient-to-r from-slate-50 to-slate-200 py-5 rounded-2xl">
-    TEST
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2 bg-gradient-to-r from-slate-50 to-slate-200 py-5 rounded-2xl">
-    TEST
-  </div>
+  <%= link_to aerocamp_path, class: "" do%>
+    <div class="flex flex-col w-full items-center lg:w-1/2 bg-gradient-to-r from-slate-50 to-slate-200 pb-5 rounded-2xl">
+      <%= image_tag "sun-city-aero-camp-preflight.webp", alt: "", class: "rounded-t-xl"%>
+      <div class="flex flex-col items-center">
+        <h2 class="font-bold text-4xl py-10">AeroCamp</h2>
+        <hr class="bg-custom-50 h-1 w-3/4 mb-10"/>
+      </div>
+      <div class="px-5 lg:px-20">
+        AeroCamp is a week long program where attendees get the fantastic opportunity to learn about aviation and aerospace.  At the end of the camp, you'll get the chance to fly an airplane and visit the air traffic control tower.
+      </div>
+      <%= link_to "AeroCamp", root_path, class: "btn-primary mt-5 "%>
+    </div>
+  <%end%>
+  <%= link_to youth_ground_path, class: "" do%>
+    <div class="flex flex-col items-center lg:w-1/2 bg-gradient-to-r from-slate-50 to-slate-200 pb-5 rounded-2xl">
+      <%= image_tag "sun-city-youth-group-class.webp", alt: "", class: "rounded-t-xl"%>
+      <div class="flex flex-col items-center">
+        <h2 class="font-bold text-4xl py-10">Youth Aviation Class</h2>
+        <hr class="bg-custom-50 h-1 w-3/4 mb-10"/>
+      </div>
+      <div class="px-5 lg:px-20">
+        Youth Aviation Class is a foundational course.  Topics include aerodynamics, navigation, weather, regulations, and aircraft systems.  When our students turn 16 they'll be able to fly solo and by 17, they'll be able to become certificated pilots.
+      </div>
+      <%= link_to "Youth Aviation Class", root_path, class: "btn-primary mt-5 "%>
+    </div>
+  <% end %>
 </div>
 
 </section>
