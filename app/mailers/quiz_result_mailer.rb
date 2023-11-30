@@ -6,7 +6,7 @@ class QuizResultMailer < ApplicationMailer
     @quiz_result = quiz_result
 
     if Rails.env.production?
-      mail(to: @quiz_result.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Thanks for Taking Our Quiz!")
+      mail(to: @quiz_result.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com", "georgette@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Thanks for Taking Our Quiz!")
     else
       # remove client email when not in production
       mail(to: @quiz_result.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Thanks for Taking Our Quiz!")

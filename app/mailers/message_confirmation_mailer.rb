@@ -6,7 +6,7 @@ class MessageConfirmationMailer < ApplicationMailer
     @message = message
 
     if Rails.env.production?
-      mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Thank you for contacting Sun City Aviation Academy")
+      mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com", "georgette@suncityaviation.com"], reply_to: "info@suncityaviation.com", subject: "✈️ Thank you for contacting Sun City Aviation Academy")
     else
       # remove client email from mailer when not in production
       mail(to: @message.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Thank you for contacting Sun City Aviation Academy")

@@ -6,7 +6,7 @@ class CampMailer < ApplicationMailer
     @camp = camp
 
     if Rails.env.production?
-      mail(to: @camp.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ AeroCamp Inquiry at Sun City Aviation Academy")
+      mail(to: @camp.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com", "georgette@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ AeroCamp Inquiry at Sun City Aviation Academy")
     else
       # remove client email when not in production
       mail(to: @camp.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com",subject: "✈️ AeroCamp Inquiry at Sun City Aviation Academy")
