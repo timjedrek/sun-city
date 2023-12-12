@@ -79,7 +79,7 @@ Rails.application.routes.draw do
   get 'flight-training-pilot-programs', to: 'pages#pilot_courses', as: :pilot_courses
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
-  get 'cessna-172', to: 'pages#cessna172'
+  get 'cessna-172', to: 'pages#cessna172', as: :cessna172
 
   # Previous Site's Routes
   get 'aerocamp', to: 'camps#new'

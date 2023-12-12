@@ -36,7 +36,7 @@
     <p class="w-3/4 pb-10">
       These reliable aircraft are equipped with cutting edge Garmin 430 navigation systems, Aspen and dual G5 PFDs (primary flight displays), and Garmin MFDs (multi function displays), ensuring that you're prepared to navigate the skies with precision and confidence.  Continue your training beyond your private certificate with our instrument capable aircraft.
     </p>
-    <button class="btn-primary mb-10" @click="showEnrollment = true">FLY THE CESSNA 172</button>
+    <%= link_to "FLY THE CESSNA 172", cessna172_path, class: "btn-primary mb-10",  data: { turbo: false }%>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <!--Slider--->
