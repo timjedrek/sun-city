@@ -1,0 +1,72 @@
+<% title("Cessna 172 | Sun City Aviation Academy") %>
+<% meta_description("Fly the Cessna 172 at Sun City Aviation Academy.  A tried and tested workhorse used for flight training, start flying Cessna 172 to finish your private pilot training and beyond.  Take the Cessna 172 on a spin and see the Hollywood, FL coast from above before bringing it back home at the Pembroke Pine’s North Perry Airport (KHWO).") %>
+<% meta_keywords("cessna 172, sun city aviation academy, how to fly a cessna 172, flying a cessna 172, pembroke pines, hollywood, south florida, miami") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-cessna-bg bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Fly the Cessna 172</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Pilot Training in the Cessna 172 in Miramar, FL</h2>
+    <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-5 mx-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Cessna 172</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Embark on an aviation journey starting with our Cessna 172 aircraft – a reliable companion for those stepping into the world of flight. Experience the open skies in a spacious cockpit designed as an environment where you can truly feel comfortable as you get started in the world of flight.
+    </p>
+    <p class="pb-10">
+      The Cessna 172 offers simplicity in control, allowing you to navigate the skies effortlessly as you take your initial flights. With top-notch stability, this aircraft is perfect for any level, from student to certified pilot.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full mx-5 px-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Avionics and Features</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-cessna2.webp", class: "rounded-xl", alt: "flying the Cessna 172 over the Hollywood, FL beach"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <div class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Immerse yourself in a learning environment where technology meets training. Our Cessna 172s are equipped with:
+        <ul class="list-disc py-10 ml-5">
+          <li>Advanced Garmin 430 navigation systems</li>
+          <li>Aspen, dual G5 PFDs</li>
+          <li>Garmin MFDs</li>
+        </ul>
+        These tools ensure that you’re not just a pilot, but an expert navigator too, ready to traverse the skies with confidence.
+      </div>
+      
+      
+    </div>
+    <p class="">
+      Beyond the basics, our instrument-capable Cessna 172s invite you to continue your journey beyond the private certificate and into an Instrument Rating certification.
+      Discover the joy of flight with our Cessna 172s and reserve your spot now.
+    </p>
+    <div class="pt-10">
+      <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+    </div>
+  </div>
+
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

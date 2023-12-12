@@ -188,6 +188,8 @@ module.exports = {
         'office' : "url('sun-city-door-bg.webp')",
         'vfrchart' : "url('sun-city-vfr-chart-bg.webp')",
         'youth-ground' : "url('sun-city-youth-group-ground.webp')",
+        'cessna-bg' : "url('sun-city-cessna-172-bg.webp')",
+        
         
       },
       height: theme => ({
