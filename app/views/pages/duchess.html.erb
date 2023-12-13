@@ -1,0 +1,83 @@
+<% title("Beechcraft Dutchess | Sun City Aviation Academy") %>
+<% meta_description("Fly the Beechcraft Duchess at Sun City Aviation Academy. A great training platform for multi engine training.  Take the Duchess on a flight and see the Miami coast from above before bringing her back home at the Pembroke Pine’s North Perry Airport (KHWO).") %>
+<% meta_keywords("Beechcraft Duchess, multi engine rating, multi engine training, sun city aviation academy, how to get your multi engine rating, flying a multi engine aircraft, Miramar, hollywood, south florida, Fort Lauderdale") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-duchess-bg bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Fly the Beechcraft Duchess</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Multi Engine Training in Fort Lauderdale</h2>
+    <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-5 mx-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">The Royal Duchess</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Step into a new realm of aviation excellence at Sun City Aviation with our Beechcraft Duchess.  The cockpit of our Beechcraft Duchess opens the door to a realm beyond single engine flight, where possibilities unfold and skills evolve. Our dedicated instructors are your guides, committed to steering you through the intricacies of multi-engine operations, ensuring you emerge well prepared for the challenges of the aviation industry.
+
+    </p>
+    <p class="pb-10">
+      The Duchess embodies our pledge to provide the highest quality training resources, a commitment rooted in helping you achieve your aviation aspirations. Elevate your career with the latest Garmin avionics seamlessly integrated into the cockpit, placing cutting edge technology at your fingertips.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full mx-5 px-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Avionics and Features</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-pushing-beechcraft-duchess-multi-engine-plane.webp", class: "rounded-xl", alt: "Sun City Team taking Beechcraft Duchess out of the hangar"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <div class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Our Duchess fleet is equipped with state of the art technology:
+        <ul class="list-disc py-10 ml-5">
+          <li>Dual Garmin G5 Electronic Flight Displays</li>
+          <li>The advanced touch screen Garmin 750xi</li>
+        </ul>
+        The Beechcraft Duchess becomes your stage for mastering multi-engine flight. It's not just an aircraft; it's a platform where state-of-the-art technology and training converge.
+      </div>
+      
+      
+    </div>
+    <p class="">
+      Unleash your potential in our <%= link_to "Multi Engine Flight Course", multi_path, class: "text-amber-500 hover:underline" %> at Sun City Aviation Academy. Explore new horizons, refine your skills, and let the Beechcraft Duchess be your partner in reaching the pinnacle of your aviation career.
+    </p>
+    <div class="pt-10">
+      <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <h4 class="pb-10 font-bold italic text-xl">
+      *We just added another Beachcraft Duchess to our fleet!*
+
+    </h4>
+    <p class="pb-10">
+      Reserve yours and take off today.
+    </p>
+
+    <%= image_tag "sun-city-duchess-hangar.webp", class: "pb-10", alt: "Multi Engine Beechcraft in Hangar at Pembroke Pines"%>
+  </div>
+
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

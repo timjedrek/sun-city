@@ -80,6 +80,7 @@ Rails.application.routes.draw do
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
   get 'cessna-172', to: 'pages#cessna172', as: :cessna172
+  get 'beechcraft-duchess-multi-engine-airplane', to: 'pages#duchess', as: :duchess
 
   # Previous Site's Routes
   get 'aerocamp', to: 'camps#new'
