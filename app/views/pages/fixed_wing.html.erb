@@ -239,7 +239,7 @@
     <p class="w-3/4 pb-10">
       This remarkable aircraft is equipped with Dual Garmin G5 Electronic Flight Displays, a Garmin 530W, and an MFD combo, providing you with advanced avionics for all your flying adventures, whether over land or water. Join us at Sun City Aviation Academy and set sail on the path to becoming a skilled and certified seaplane pilot.
     </p>
-    <button class="btn-primary mb-10" @click="showEnrollment = true">FLY THE SEAPLANE</button>
+    <%= link_to "FLY THE SEAPLANE", seaplane_fleet_path, class: "btn-primary mb-10",  data: { turbo: false }%>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <!--Slider--->

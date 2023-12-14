@@ -82,6 +82,7 @@ Rails.application.routes.draw do
   get 'cessna-172', to: 'pages#cessna172', as: :cessna172
   get 'beechcraft-duchess-multi-engine-airplane', to: 'pages#duchess', as: :duchess
   get 'redbird-flight-simulator', to: 'pages#redbird', as: :redbird
+  get 'airplane-single-engine-sea-ses', to: 'pages#seaplane_fleet', as: :seaplane_fleet
 
   # Previous Site's Routes
   get 'aerocamp', to: 'camps#new'

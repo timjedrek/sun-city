@@ -1,0 +1,71 @@
+<% title("Cessna 182 Seaplane SES Single Engine Sea | Sun City Aviation Academy") %>
+<% meta_description("Fly our Cessna 182 Seaplane at Sun City Aviation Academy in Pembroke Pines North Perry Airport.  Get your SES Rating and be able to land on water.") %>
+<% meta_keywords("SES Rating, seaplane, cessna 182 seaplane, Miami Gardens flight training, West Park pilot training, Dania beach pilot school, Osborne Reef pilot academy") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-ses bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Get Your SES Rating</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Amphibious Airplane Training in a Cessna 182 Seaplane</h2>
+    <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-5 mx-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Cessna 182 Seaplane</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Designed for both land and water, the Cessna 182 amphibious seaplane invites you into a world where the blue sky meets even bluer waterways. Whether you're soaring through the skies or making a graceful touchdown on tranquil waters, this aircraft promises an exhilarating flying experience and opportunity for deeper exploration.
+    </p>
+    <p class="pb-10">
+      Attaining your seaplane rating is a significant accomplishment and unlocks a realm of possibilities. From recreational flying to accessing remote areas and even pursuing potential careers in aerial tourism or bush flying, the horizon expands with each training course.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full mx-5 px-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Fly the Amphibious Seaplane</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-seaplane2.webp", class: "rounded-xl", alt: "Georgette Poulos walking in front of the Cessna 182 Seaplane at Sun City Aviation Academy"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <div class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Our remarkable seaplane is not just a mode of transport; it's a means to adventure. This aircraft offers advanced avionics to enhance your flying adventures, whether you're navigating over land or water:
+        <ul class="list-disc py-10 ml-5">
+          <li>Dual Garmin G5 Electronic Flight Displays</li>
+          <li>Garmin 530W</li>
+          <li>MFD combo</li>
+        </ul>
+        Join us at Sun City Aviation Academy and chart a course toward becoming a skilled and certified seaplane pilot with our <%= link_to "Seaplane Course (SES Training)", seaplane_path, class: "text-amber-500 hover:underline"%>.
+      </div>
+      
+      
+    </div>
+    <p class="">
+      The open skies and pristine waters await – seize the opportunity to redefine your flying experience and reserve your spot now.
+    </p>
+    <div class="pt-10">
+      <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+    </div>
+  </div>
+
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>
