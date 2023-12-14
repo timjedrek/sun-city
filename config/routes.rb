@@ -81,6 +81,7 @@ Rails.application.routes.draw do
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
   get 'cessna-172', to: 'pages#cessna172', as: :cessna172
   get 'beechcraft-duchess-multi-engine-airplane', to: 'pages#duchess', as: :duchess
+  get 'redbird-flight-simulator', to: 'pages#redbird', as: :redbird
 
   # Previous Site's Routes
   get 'aerocamp', to: 'camps#new'

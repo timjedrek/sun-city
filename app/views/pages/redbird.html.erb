@@ -1,0 +1,70 @@
+<% title("Redbird Flight Simulator | Sun City Aviation Academy") %>
+<% meta_description("Train on the Redbird Flight Simulator at Sun City Aviation Academy. A great training platform to solidify procedures and task workflow on the ground.  Come to Pembroke Pine’s North Perry Airport (KHWO) and try out our simulator.") %>
+<% meta_keywords("Redbird Flight Simulator, Miramar flight training, hollywood pilot training, south florida pilot school, Fort Lauderdale pilot academy") %>
+
+<%= render "shared/header"%>
+<header class="w-full bg-redbird-bg bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+    <h1 class="font-bold text-4xl lg:text-5xl text-center">Redbird Flight Simulator</h1>
+    <h2 class="font-bold text-3xl lg:text-4xl text-center py-10">Flight Simulator in Miami</h2>
+    <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+  </div>
+</header>
+
+<section class="flex flex-col items-center py-10 bg-gradient-to-b from-white to-amber-50">
+  <div class="max-w-3xl bg-black text-white lg:w-full px-5 mx-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">Redbird Flight Simulator</h3>
+  </div>
+
+  <div class="max-w-3xl mt-10 px-3">
+    <p class="pb-10">
+      Immerse yourself in cutting edge training with the Redbird Flight Simulator. At Sun City Aviation Academy, we understand the transformative power of simulator training, and we've harnessed its capabilities to enhance your learning journey. The Redbird Flight Simulator stands as an indispensable tool, offering a host of benefits that amplify the student pilot experience.
+
+    </p>
+    <p class="pb-10">
+      Unlock a realm of possibilities as you practice maneuvers, refine techniques, and master emergency procedures in a dynamic and controlled environment. With the ability to pause mid-flight and replay scenarios under different conditions, the simulator becomes a pivotal tool, solidifying your training and refining your skills for real-world scenarios.
+    </p>
+  </div>
+
+  <div class="max-w-3xl bg-black text-white lg:w-full mx-5 px-5 lg:px-10 py-2 rounded-full">
+    <h3 class="font-semibold text-xl lg:text-3xl text-center">How it Works</h3>
+  </div>
+
+  <div class="max-w-3xl my-10 bg-neutral-300 border-2 border-black rounded-2xl mx-3 px-3 py-5">
+    <div class="flex flex-col lg:flex-row-reverse">
+      <div class="lg:w-2/5 flex flex-col items-center">
+        <%= image_tag "sun-city-redbird2.webp", class: "rounded-xl", alt: "Sun City Aviation School Instructors teaching the basics of flight navigation"%>
+        <!--<p class="text-center text-sm italic text-neutral-700">
+          Caption
+        </p>-->
+      </div>
+      <div class="py-10 lg:pt-0 lg:w-3/5 lg:pr-10">
+        Our scenario based training approach, combined with FAA approval as an Advanced Aviation Training Device (AATD), ensures that your simulator hours contribute significantly toward your pilot certification. Simulator training empowers you to confidently navigate real-world challenges, shaping you into a pilot equipped with precision, safety, and astute aeronautical decision-making skills.
+        <p class="pt-10">
+        Step into the future of flight training with the Redbird Flight Simulator at Sun City Aviation Academy – where every simulation propels you closer to mastery of the skies.
+        </p>  
+        <p class="pt-10">
+          Contact us today and give it a spin!
+        </p>
+      </div>
+      
+      
+    </div>
+    
+    <div class="pt-10">
+      <button class="btn-primary mx-auto" @click="showEnrollment = true">START TODAY</button>
+    </div>
+  </div>
+
+
+
+<%= render "shared/cta_book"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

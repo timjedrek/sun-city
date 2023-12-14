@@ -190,6 +190,8 @@ module.exports = {
         'youth-ground' : "url('sun-city-youth-group-ground.webp')",
         'cessna-bg' : "url('sun-city-cessna-172-bg.webp')",
         'duchess-bg' : "url('sun-city-duchess-bg.webp')",
+        'redbird-bg' : "url('sun-city-redbird-bg.webp')",
+        
         
         
         
