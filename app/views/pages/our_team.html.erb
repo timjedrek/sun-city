@@ -1,142 +1,289 @@
 <%# Head / Meta Data %>
-<% title("The SimpliFly Team") %>
-<% meta_description("Meet the experienced team of instructors at Simplifly in Mesa, Phoenix, Scottsdale, and Spanish Fork, Salt Lake. Our knowledgeable and dedicated instructors are committed to your pilot training success. Many of our students come from Gilbert, Chandler, Tempe, Scottsdale, Apache Junction, Queen Creek, Fountain Hills, Gold Canyon, Maricopa, Pinal, Springville, Provo, Payson, Mapleton, Salem, Elk Ridge, Utah County, Juab County") %>
-<% meta_keywords("Flight School Instructors, Pilot Training Team, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School, Spanish Fork Flight School, Salt Lake Flight School") %>
+<% title("Meet the Sun City Aviation Academy Team") %>
+<% meta_description("Meet the experienced team of instructors South Florida.  At North Perry Airport (KHWO), Our experienced and hands on instructors are committed to your pilot training success. Many of our students come from West Palm Beach, Port of Miami, and Fort Lauderdale") %>
+<% meta_keywords("how to become a pilot near me, flight school near me, Fort Lauderdale Flight School, Miami Flight School, West Palm Beach Flight School, Hollywood Flight School, Sun City Aviation Academy, flight school KHWO, flight school north perry") %>
 
 <%= render "shared/header"%>
-<section class="bg-white">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:px-6 p-text">
-    <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-      <h2 class="mb-4 text-4xl  font-bold text-slate-900 ">Leadership Team</h2>
-      <p class="font-light text-slate-500 lg:mb-16 lg:text-xl ">Our leadership team consists of skilled and experienced aviation experts who have a deep passion for the flight training and are dedicated to delivering exceptional training and support to our students.</p>
-    </div> 
-    <div class="px-5 lg:mx-auto flex flex-col w-full gap-8 mb-6 lg:mb-16 max-w-4xl">
-      
-      <div class="items-center bg-slate-100 rounded-lg shadow lg:flex">
-          <%= image_tag "blake.webp", class: "w-full lg:w-54 rounded-lg rounded-b-none lg:rounded-none lg:rounded-l-lg", alt: "Blake Murphy"%>
-          <div class="p-5">
-            <h3 class="text-xl font-semibold  text-slate-900 ">
-                Blake Murphy
+
+<section class="flex flex-col h-screen-3/4 bg-gradient-to-t from-amber-50 to-white lg:bg-about-us bg-cover bg-center lg:justify-end justify-center items-center text-black"  x-data="">
+  <hr
+    class=" lg:hidden bg-custom-50 pt-1 border-0 w-3/4 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+    x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+    />
+  
+  <div class="text-4xl font-bold text-center">Come See What Everyone's Talking About</div>
+
+  <div class="max-w-2xl mx-auto">
+
+    <h2 class="pt-5 lg:px-0 font-serif italic text-xl text-center">
+      We train professional, safe, and proficient pilots, who will excel in aviation
+    </h2>
+
+  </div>
+  
+  <%= link_to "SAY HELLO", contact_path, data: { turbo: false }, class: "btn-primary  mb-10 mt-5" %>
+
+  <hr
+    class="lg:hidden bg-custom-50 h-1 w-3/4 mt-10 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+    x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+    />
+</section>
+
+<div class="lg:hidden">
+  <%= image_tag "sun-city-about-us-background-no-fade.webp"%>
+</div>
+
+<section class="bg-white flex flex-col items-center">
+  <div class="max-w-4xl">
+    <ol class="items-center lg:flex ">
+      <li class="relative mb-6 lg:mb-0 mt-10 ">
+        <div class="flex justify-center lg:justify-start ">
+          
+            <h3 class="text-3xl font-bold pb-3 text-center">
+              How It All Started
             </h3>
-            <span class="text-slate-500 ">Owner | CFO</span>
-            <p class=" font-light text-slate-500 text-base">Blake has a desire to grow as a person everyday and to help others do the same. During his aviation career, Blake worked  as a CFI, CFII and MEI.  He did most of his instructing as a multi-engine instructor for a Local flight school before opening SimpliFly with JT. He has over 1500 hours of flight time, most of that dual-given. Blake was flying for a private charter company before he took a break from flying to focus all of his attention on the flight school and helping as many people as he can become professional pilots. When the time is right Blake plans on returning to the airlines while continuing to build the flight school.</p>
+            
+        </div>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
+        <div class="mt-6 lg:pr-8">
+          <div class="flex flex-col-reverse lg:flex-row w-full gap-10 items-end">
+            
+            
+            <%= image_tag "sun-city-luke-poulos-sea-plane.webp", alt: "", class: "lg:w-1/3 w-full object-cover lg:rounded-2xl" %>
+            
+
+            <div class="text-base font-normal text-neutral-600">
+              <p class="pb-10 px-3">
+              Founded in December 2022 by Luke
+              Poulos, Sun City Aviation Academy embodies a
+              lifelong passion for aviation and teaching.
+
+              Inspired by his grandfather's legacy and fueled by his
+              father's teaching experience in the medical field,
+              Luke is driven to nurture aspiring aviators.
+              </p>
+              <p class="px-3">
+              With a solid background in aviation, including Part 135 charter operations and Part
+              121 airline experience, he understands the importance of a strong foundation in
+              flight training. He also knows firsthand how the guidance of a knowledgeable
+              instructor can give students a competitive edge in the aviation industry.
+              </p>
+            </div>
           </div>
-      </div> 
-      <div class="items-center bg-slate-100 rounded-lg shadow lg:flex  ">
-        <%= image_tag "jt.webp", class: "w-full lg:w-54 rounded-lg rounded-b-none lg:rounded-none lg:rounded-l-lg", alt: "JT Lesueur"%>
-        <div class="py-5 lg:py-0 px-5">
-          <h3 class="text-xl font-semibold  text-slate-900 ">
-              JT Lesueur
-          </h3>
-          <span class="text-slate-500 ">Owner | CEO</span>
-          <p class="mt-3 mb-4 font-light text-slate-500 text-base">JT has a passion for helping people become better. He learned how to have great customer service while working at LeSueur Car company, his family's dealership.  Instead of continuing on at the dealership he decided to pursue his dreams in aviation. JT and Blake decided to start the flight school in the beginning on 2020. He now flies for Southwest Airlines, has his ATP and is a CFI, CFII, and MEI. He has also received type ratings in the CRJ, Phenom 100, Airbus A320 and the Boeing 737. One of his favorite parts of working in aviation is the ability to bring his wife and three kids to different destinations.</p>
         </div>
-      </div> 
-      <div class="items-center bg-slate-100 rounded-lg shadow lg:flex">
-        <%= image_tag "jordan.webp", class: "w-full lg:w-54 rounded-lg rounded-b-none lg:rounded-none lg:rounded-l-lg", alt: "Jordan Cortez"%>
-        <div class="py-5 lg:py-0 px-5">
-            <h3 class="text-xl font-semibold  text-slate-900 ">
-                Jordan Cortez
-            </h3>
-            <span class="text-slate-500 ">Chief Pilot | Program Director</span>
-            <p class="mt-3 mb-4 font-light text-slate-500 text-base">Jordan was raised in Arizona and hired at SimpliFly in early 2021.  After receiving his Bachelor of Science from Brigham Young University, he began flight training at Falcon Field Airport in 2020. He is an ERJ-175 First Officer at SkyWest Airlines and also was recently promoted as the Program Director at SimpliFly. One of the few things he enjoys more than flying is teaching others. Jordan's mission at SimpliFly is to mentor the next generation of pilots and help them take advantage of the numerous opportunities in aviation.</p>
+      </li>
+    </ol>
+    <ol class="items-center lg:flex ">
+      <li class="mb-6 lg:mb-0 mt-10 flex-grow">
+        <div class="flex items-center justify-center lg:justify-end">
+          
+            <div class="text-3xl font-bold lg:pb-3">
+              Our Location
+            </div>
+            
         </div>
-      </div> 
-      <div class="items-center bg-slate-100 rounded-lg shadow lg:flex">
-        <%= image_tag "nate.webp", class: "w-full lg:w-54 rounded-lg rounded-b-none lg:rounded-none lg:rounded-l-lg", alt: "Nate Benham"%>
-        <div class="py-5 lg:py-0 px-5">
-            <h3 class="text-xl font-semibold  text-slate-900 ">
-                Nate Benham
-            </h3>
-            <span class="text-slate-500 ">Director of Operations</span>
-            <p class="mt-3 mb-4 font-light text-slate-500 text-base">Nate was a school guidance counselor & basketball coach for 12 years before changing careers to aviation in 2019. All of Nate’s 3 younger brothers are pilots as are his dad & grandpa. Nate is married with two boys & a baby girl due in September & says he’s scared to death far more about having a girl than signing off students for their first solo. When not flying Nate plays city league hoops with his friends & enjoys watching his boys play youth league sports & doing whatever the Mrs requests. Nate finds a lot of joy in both flying & teaching new students to fly.</p>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
+        
+      </li>
+    </ol>
+    <h3 class="text-center lg:pt-6 text-neutral-600">We are located at North Perry Airport KHWO in Pembroke Pines, Florida, U.S.A</h3>
+    <div class="mt-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.1490846155243!2d-80.2355894240109!3d25.995933277205516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a96c916c96bb%3A0x7fe41940c41420e8!2sSun%20City%20Aviation%20Academy!5e0!3m2!1sen!2sus!4v1694496294691!5m2!1sen!2sus" class="w-full" height="315px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="flex flex-col items-center lg:pt-10">
+  <%= image_tag "sun-city-team-women-in-front-of-seaplane.webp", class: "lg:max-w-4xl lg:rounded-2xl", alt: "Sun City Academy team members in front of their sea plane"%>
+</section>
+
+<section class="flex flex-col items-center lg:my-10">
+  <div class="flex flex-col items-center w-full max-w-4xl bg-black text-white lg:rounded-2xl" x-data="">
+    <hr
+  class="bg-custom-50 pt-1 border-0 w-3/4 mt-6 mb-12 opacity-0 transition-all duration-[1200ms] -translate-y-4"
+  x-intersect="$el.classList.add('opacity-100', 'translate-y-4', 'z-0')"
+  />
+  <h2 class="text-3xl font-serif italic font-semibold pb-10 pt-3">Our Mission Is</h2>
+  <p class="text-xl max-w-xl text-center mx-10">
+    to train professional, safe, and proficient pilots
+    <span class="hidden lg:inline"><br></span>
+    who will one day excel in the aviation industry.
+  </p>
+  <hr
+    class="bg-custom-50 h-1 w-3/4 mt-10 border-0 mb-10 opacity-0 transition-all duration-[1200ms] translate-y-9"
+    x-intersect="$el.classList.add('opacity-100', '-translate-y-0', 'z-0')"
+    />
+    
+  </div>
+</section>
+
+<section class="bg-white flex flex-col items-center w-full pb-10">
+  <div class="max-w-4xl w-full">
+    <ol class="items-center lg:flex flex-grow pb-5">
+      <li class="mb-6 lg:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
+        <div class="flex items-center justify-center lg:justify-start">
+          <h2 class="text-3xl font-bold lg:pb-3 w-full text-center lg:text-start"> <!-- Added 'w-full' class to the h2 element -->
+            Our Leadership Team
+          </h2>
         </div>
-      </div> 
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
+      </li>
+    </ol>
+
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col lg:flex-row lg:mb-10">
+        <%= image_tag "sun-city-team-luke.webp", class: "lg:w-1/2 lg:rounded-l-2xl", alt: "Luke Poulos, Founder, CEO & Chief Pilot"%>
+        <div class="bg-neutral-800 text-white lg:w-1/2 lg:rounded-r-2xl flex flex-col items-center">
+          <p class="text-2xl font-semibold pt-5">Luke Poulos</p>
+          <p class="italic font-serif">Founder & CEO</p>
+          <p class="px-5 py-5">
+            Luke Poulos, the CEO and founder of Sun City Aviation Academy, discovered his passion for teaching early in his aviation career. With over 20 years of experience and more than 4,000 flight hours, Luke is dedicated to sharing his knowledge. He holds several certifications including ATP, CFI, CFI-I, and MEI.
+            Luke's journey in aviation was inspired by his grandfather and by his father's medical teaching background. He's not only a pilot but also a proud father who taught his own children to fly of whom now have successful careers in aviation. This passion for teaching and Luke's diverse aviation experience drives our academy's mission. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row w-full lg:gap-10 relative">
+      <div class="lg:w-1/2 flex flex-col">
+        <%= image_tag "sun-city-team-joe.webp", class: "lg:rounded-t-2xl", alt: "Joe Cannizzaro, Director of Operations"%> 
+        <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center flex-grow">
+          <p class="text-2xl font-semibold pt-5">Joe Cannizzaro</p>
+          <p class="italic font-serif">Director of Operations</p>
+          <p class="px-5 py-5">
+            Joe spent the last 30 Years working in flight school operations, and flying professionally for both a Part 121 and Part 135 Operator. Joe has been an essential part of multiple flight schools throughout his 30 years, serving as a Chief pilot and Director of Operations. Joe has over 4,000 total flight hours and currently holds a ATP, CFI, CFI-I, and MEI certificates.
+          </p>
+        </div>
+      </div>
+      <div class="lg:w-1/2 flex flex-col">
+        <%= image_tag "sun-city-paul-750.webp", class: " lg:rounded-t-2xl", alt: "Paul Janecki, Chief Pilot"%>
+        <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center flex-grow">
+          <p class="text-2xl font-semibold pt-5">Paul Janecki</p>
+          <p class="italic font-serif">Chief Pilot</p>
+          <p class="px-5 py-5">
+            Paul, with 40+ years in aviation, brings vast expertise. He has 15,000+ flight instruction hours and Airframe and Powerplant and Inspection Authorization credentials. He holds a Bachelor's degree in aviation management. After college, he joined an internship at a flight school, gaining skills as an Airframe and Powerplant Technician while receiving professional flight training. This led to him earning ATP, CFI, CFI-I, and MEI certificates.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row w-full lg:gap-10 lg:mt-10 relative">
+      <div class="lg:w-1/2 flex flex-col">
+        <%= image_tag "sun-city-team-cris.webp", class: " lg:rounded-t-2xl", alt: "Cris Freilich, Director of Sales & Services"%>
+        <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center flex-grow">
+          <p class="text-2xl font-semibold pt-5">Cris Freilich</p>
+          <p class="italic font-serif">Director of Sales, Service, & Finance</p>
+          <p class="px-5 py-5">
+            Cris has a Bachelor's degree in business management with a background in finance, aviation, and marketing. Cris spent the last 10 years working as sales, service, and school director for several prominent fight schools in Florida. Throughout his time working at these flight schools, Cris' love and passion for aviation grew and has led him to complete his Private Pilot Certificate.
+          </p>
+        </div>
+      </div>
+      <div class="lg:w-1/2 flex flex-col">
+        <%= image_tag "sun-city-team-georgette.webp", class: "lg:rounded-t-2xl", alt: "Georgette Poulos, Office Manager"%> 
+        <div class="bg-neutral-800 text-white lg:rounded-b-2xl flex flex-col items-center flex-grow">
+          <p class="text-2xl font-semibold pt-5">Georgette Poulos</p>
+          <p class="italic font-serif">Office Manager</p>
+          <p class="px-5 py-5">
+            Georgette holds a bachelor's degree in Alternative Medicine and is a graduate of culinary school, but she is no stranger to aviation. Being married to a pilot for 28 years and having two pilots for children, she is well versed in the aviation field. Georgette is Sun City's office manager and is presently pursuing a bachelor's degree in aerospace management. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <ol class="items-center lg:flex flex-grow pb-5">
+      <li class="mb-6 lg:mb-0 mt-10 w-full"> <!-- Added 'w-full' class to the li element -->
+        <div class="flex items-center justify-center lg:justify-start">
+          <h2 class="text-3xl font-bold lg:pb-3 w-full text-center lg:text-end"> <!-- Added 'w-full' class to the h2 element -->
+            Flight Instructors and Staff
+          </h2>
+        </div>
+        <div class="hidden lg:flex w-full bg-neutral-200 h-0.5"></div>
+      </li>
+    </ol>
+
+    <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-amber.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Amber Gabel, Senior Flight Instructor"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Amber Gabel
+        </h3>
+        <p>Senior Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-jacob.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Jacob Case"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Jacob Case
+        </h3>
+        <p>Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-123abc2.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Jean Dorcelien"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Jean Dorcelien
+        </h3>
+        <p>Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-123abc4.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Ben Singley"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Ben Singley
+        </h3>
+        <p>Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-123abc5.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Nicolas McCaulsky"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Nicolas McCaulsky
+        </h3>
+        <p>Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-123abc6.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Gleb Sokolov"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Gleb Sokolov
+        </h3>
+        <p>Flight Instructor</p>
+      </div>
+      <div class="text-center text-slate-500 dark:text-slate-400">
+        <%= image_tag "sun-city-team-mafer.webp", class: "mx-auto mb-4 w-56 h-56 rounded-full", alt: "Mafer Caceres"%>
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
+            Mafer Caceres
+        </h3>
+        <p>Dispatch Administrator<br>Social Media Specialist</p>
+      </div>
     </div>  
   </div>
 </section>
 
-<section class="bg-white">
-  <div class="pb-8 px-4 mx-auto max-w-screen-xl text-center lg:pb-16 lg:px-6">
-      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-        <h2 class="mb-4 text-4xl tracking-tight font-bold text-slate-900 ">Our Instructors</h2>
-        <p class="font-light text-slate-500 sm:text-xl dark:text-slate-400">At SimpliFly, our dedicated instructors prioritize delivering top-notch flight training to students. They combine their extensive aviation expertise, passion for the field, and commitment to creating a safe and supportive learning atmosphere. By doing so, they enable students to reach their aspirations and develop into proficient pilots.</p>
-      </div> 
-
-      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "carsten.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Carsten Brady"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Carsten Brady
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "ally.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Ally Murphy"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Ally Murphy
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "zach.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Zach Figgins"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Zach Figgins
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "dan.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Dan Klim"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Dan Klim
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "takoda.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Takoda Timpauer"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Takoda Timpauer
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "parker.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Parker Reynolds"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Parker Reynolds
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "matt.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Matt Barcelos"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Matt Barcelos
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "anders.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Anders Jones"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Anders Jones
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "sal.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Sal Nasta"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Sal Nasta
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-        <div class="text-center text-slate-500 dark:text-slate-400">
-          <%= image_tag "doug.webp", class: "mx-auto mb-4 w-36 h-36 rounded-full", alt: "Doug Gillette"%>
-          <h3 class="mb-1 text-2xl font-bold tracking-tight text-slate-900 ">
-              Doug Gillette
-          </h3>
-          <p>Certified Flight Instructor</p>
-        </div>
-      </div>  
+<!--Affiliate section-->
+<section class="bg-slate-200">
+  <div class="flex flex-col items-center">
+    <div class="pt-10">
+      <h2 class="text-xl font-semibold italic text-center px-16">Sun City Aviation Academy is a partner affiliate with the following organizations</h2>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
+      <%= link_to stratus_path, class: "lg:w-1/4", target: :blank do %>
+        <%= image_tag  "stratus_logo.webp", alt: "Stratus Financial logo", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
+      <!--FSANA-->
+      <%= link_to "https://fsana.com", class: "lg:w-1/6 w-3/4", target: :blank do %>
+        <%= image_tag "fsana.webp", alt: "FSANA logo", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
+      <!--WAI-->
+      <%= link_to "https://www.wai.org", class: "lg:w-1/6 w-3/4", target: :blank do %>
+        <%= image_tag "wai.webp", alt: "Women in Aviation logo", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
+      <%= link_to "https://www.miramarpembrokepines.org", class: "lg:w-1/6 w-3/4", target: :blank do %>
+        <%= image_tag "mirarmar-coc.webp", alt: "Mirarmar Chamber of Commerce logo", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
+      <%= link_to "https://rightruddermarketing.com", class: "lg:w-1/6 w-3/4", target: :blank do %>
+        <%= image_tag "rrm.webp", alt: "Right Rudder Marketing logo", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
+    </div>
   </div>
 </section>
 
-<%= render "shared/cta_pilot_simple"%>
+
+<%= render "shared/visit_school"%>
+<%= render "shared/cta_were_experts"%>
+
 <%= render "shared/footer"%>
