@@ -40,6 +40,84 @@
 </section>
 
 
+<section class="bg-custom-50 py-10">
+
+    <div class="flex flex-col lg:flex-row">
+      <div class="lg:w-1/2 flex flex-col items-center justify-center">
+        <p class="text-3xl italic text-center pb-10 lg:pb-0">"Training professional, safe, proficient pilots "</p>
+      </div>
+      <div class="lg:w-1/2 flex flex-col justify-center">
+        <h2 class="font-semibold text-2xl text-center pb-10 px-5">Knowledgeable Experienced Flight Instructors</h2>
+        <p class="px-10">Our team makes safety our primary concern so you can the best pilot that you can be as well as the safest pilot that you can be.</p>
+        <p class="px-10 pt-5">Our Instructors are experienced, active aviation professionals with current involvement in airline, corporate and charter operations.</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row mt-10 mx-10 lg:mx-40 gap-5" x-data>
+      <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+        <p class="py-3">  
+          <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 80000, time: 1000}" x-intersect.once="() => {
+            start = current; 
+            const interval = Math.max(time / (target - start), 5); 
+            const step = (target - start) /  (time / interval);  
+            const handle = setInterval(() => {
+                if(current < target) 
+                    current += step
+                else {
+                    clearInterval(handle);
+                    current = target
+                }   
+                }, interval)
+            }">
+            <div class="card"x-text="Math.round(current).toLocaleString()"></div>+
+          </div>
+        </p>
+        <p class="pb-5">Hours of combined experience</p>
+      </div>
+      <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+        <p class="py-3">
+          <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 98, time: 2000}" x-intersect.once="() => {
+            start = current; 
+            const interval = Math.max(time / (target - start), 5); 
+            const step = (target - start) /  (time / interval);  
+            const handle = setInterval(() => {
+                if(current < target) 
+                    current += step
+                else {
+                    clearInterval(handle);
+                    current = target
+                }   
+                }, interval)
+            }">
+            <div class="card"x-text="Math.round(current)"></div>%
+          </div>
+        </p>
+        <p class="pb-5">Checkride pass rate</p>
+      </div>
+      <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+        <p class="py-3">
+          <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 200, time: 2000}" x-intersect.once="() => {
+            start = current; 
+            const interval = Math.max(time / (target - start), 5); 
+            const step = (target - start) /  (time / interval);  
+            const handle = setInterval(() => {
+                if(current < target) 
+                    current += step
+                else {
+                    clearInterval(handle);
+                    current = target
+                }   
+                }, interval)
+            }">
+            <div class="card"x-text="Math.round(current)"></div>+
+          </div>
+        </p>
+        <p class="pb-5">Students trained</p>
+      </div>
+    </div>
+  </section>
+
+
 <section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
 
