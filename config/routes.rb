@@ -112,7 +112,7 @@ Rails.application.routes.draw do
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
-  #get 'our-team', to: 'pages#our_team', as: :our_team
+  get 'our-team', to: 'pages#our_team', as: :our_team
   
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
