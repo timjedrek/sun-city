@@ -33,7 +33,8 @@ Rails.application.routes.draw do
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Camp form
-  get 'aerocamp', to: 'camps#new', as: :aerocamp
+  #get 'aerocamp', to: 'camps#new', as: :aerocamp
+  get 'experience-aviation', to: 'camps#new', as: :experience_aviation
   get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
 
   # Contact form
