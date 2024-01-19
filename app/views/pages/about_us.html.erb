@@ -51,11 +51,11 @@
     With a solid background in aviation, including Part 135 charter operations and Part 121 airline experience, he understands the importance of a strong foundation in flight training. He also knows firsthand how the guidance of a knowledgeable instructor can give students a competitive edge in the aviation industry.
 
      </p>
+     <button class="btn-primary my-1 px-7"><%= link_to " MEET LUKE ", 'discovery-flight',target: "_blank"%></button>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%=image_tag "sun-city-team-luke.webp", alt: "Student pilot taking a discovery flight", class: "lg:h-screen-2/3 lg:rounded-2xl lg:drop-shadow-2xl"%>
     
-    <button class="btn-primary my-5 px-7"><%= link_to " MEET LUKE ", 'discovery-flight',target: "_blank", class: "hover:text-white"%></button>
   </div>
 </section>
 
@@ -94,7 +94,7 @@
   </div>
 
   <div class="flex flex-col lg:flex-row mt-10 mx-10 lg:mx-40 gap-5" x-data>
-    <div class="lg:w-1/4 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+    <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
       <p class="py-3">
         <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 100, time: 800}" x-intersect.once="() => {
           start = current; 
@@ -114,7 +114,12 @@
       </p>
       <p class="pb-5">Safety record</p>
     </div>
-    <div class="lg:w-1/4 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+
+
+
+
+    
+    <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
       <p class="py-3">  
         <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 80000, time: 1000}" x-intersect.once="() => {
           start = current; 
@@ -132,9 +137,9 @@
           <div class="card"x-text="Math.round(current).toLocaleString()"></div>+
         </div>
       </p>
-      <p class="pb-5">Hours of combined experience</p>
+      <p class="pb-5 text-center">Hours of combined experience</p>
     </div>
-    <div class="lg:w-1/4 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+    <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
       <p class="py-3">
         <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 98, time: 2000}" x-intersect.once="() => {
           start = current; 
@@ -152,9 +157,9 @@
           <div class="card"x-text="Math.round(current)"></div>%
         </div>
       </p>
-      <p class="pb-5">Checkride pass rate</p>
+      <p class="pb-5 text-center">Checkride pass rate</p>
     </div>
-    <div class="lg:w-1/4 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
+    <div class="lg:w-1/3 lg:hover:scale-105 shadow-2xl transition-all duration-300 rounded-tl-3xl rounded-br-3xl  bg-black text-white flex flex-col items-center">
       <p class="py-3">
         <div class="flex flex-row font-bold text-5xl" x-data="{ current: 0, target: 200, time: 2000}" x-intersect.once="() => {
           start = current; 
