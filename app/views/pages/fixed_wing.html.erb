@@ -230,72 +230,7 @@
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Cessna 182 Seaplane</h3>
-    <p class="w-3/4 pb-5">
-      With its unique capability to operate on both land and water, the Cessna 182 amphibious seaplane opens up a world of exploration. Whether you're soaring through the skies or touching down on serene waterways, this aircraft offers an awesome flying experience.  Earning your seaplane rating is a significant achievement. It opens up a world of opportunities for recreational flying, remote area access, and even potential careers in fields like aerial tourism or bush flying.
-    </p>
-    <p class="w-3/4 pb-10">
-      This remarkable aircraft is equipped with Dual Garmin G5 Electronic Flight Displays, a Garmin 530W, and an MFD combo, providing you with advanced avionics for all your flying adventures, whether over land or water. Join us at Sun City Aviation Academy and set sail on the path to becoming a skilled and certified seaplane pilot.
-    </p>
-    <%= link_to "FLY THE SEAPLANE", seaplane_fleet_path, class: "btn-primary mb-10",  data: { turbo: false }%>
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <!--Slider--->
-    <div x-data="{
-      slide: 0,
-      images: [
-        '<%= image_url "sun-city-seaplane1.webp" %>',
-        '<%= image_url "sun-city-seaplane2.webp" %>',
-        '<%= image_url "sun-city-seaplane3.webp" %>'
-      ],
-      autoplay: null,
-      startAutoplay() {
-        this.autoplay = setInterval(() => {
-          this.nextSlide();
-        }, 10000);  //timer
-      },
-      stopAutoplay() {
-        clearInterval(this.autoplay);
-        this.autoplay = null;
-      },
-      nextSlide() {
-        this.slide = (this.slide + 1) % this.images.length;
-      },
-      prevSlide() {
-        this.slide = this.slide - 1 < 0 ? this.images.length - 1 : this.slide - 1;
-      }
-    }" x-init="startAutoplay()" id="slider" class="w-full lg:w-3/4">
-      <div x-show="images.length > 1" class="relative">
-    <template x-for="(image, index) in images" :key="index">
-      <img x-show="slide === index" :src="image" :alt="'Modern Tecnam Airplane ' + (index + 1)" class="w-full"
-        x-transition:enter="opacity-0 duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-        x-transition:leave="opacity-100 duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-        :class="{'hidden': index !== slide}" x-init="setTimeout(() => { $el.classList.remove('hidden'); }, 100)">
-    </template>
 
-        <button x-show="images.length > 1" x-on:mouseover="stopAutoplay()" x-on:mouseleave="startAutoplay()" x-on:click="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 rounded-md text-white bg-custom-50 hover:bg-amber-500 focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out mx-3">
-          <span class="sr-only">Previous</span>
-          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button x-show="images.length > 1" x-on:mouseover="stopAutoplay()" x-on:mouseleave="startAutoplay()" x-on:click="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 rounded-md text-white bg-custom-50 hover:bg-amber-500 focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out mx-3">
-          <span class="sr-only">Next</span>
-          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-        <div class="absolute bottom-0 left-0 w-full flex justify-center space-x-2 pb-2">
-          <template x-for="(image, index) in images" :key="index">
-            <button x-on:click="slide = index" :class="{'bg-custom-50': index === slide, 'bg-slate-50': index !== slide}" class="h-2 w-2 rounded-full"></button>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <%#= render "shared/cta_arch"%>
