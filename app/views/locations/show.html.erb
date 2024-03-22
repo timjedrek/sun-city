@@ -1,0 +1,266 @@
+<% title("#{@location['city']}, #{@location['state_short']} Flight School | Blue Skies Above") %>
+<% meta_description("Become a pilot at Blue Skies Above, located in Lanett, Alabama. Offering premier flight training to aspiring pilots in #{@location['city']} and surrounding areas. Our flight school provides comprehensive pilot training programs tailored to your aspirations and schedule. Whether you dream of piloting aircraft as a private pilot or pursuing a career in aviation, our experienced instructors will guide you every step of the way. Gain hands-on experience in our fleet of modern Cessna aircraft and master essential skills such as navigation, flight maneuvers, and aviation safety. From obtaining your private pilot certificate (PPL) to advancing to instrument ratings and commercial certificates, we provide the resources and expertise to help you achieve your aviation goals. Discover the joy of flight and join us at Blue Skies Above today!") %>
+<% meta_keywords("Flight School, #{@location['city']}, #{@location['state_short']}, #{@location['state']}, Pilot Training, Professional Flight Instruction, Learn to Fly, Cessna, Private Pilot Certificate, PPL, Instrument Rating, Commercial Certificate, Certified Flight Instructor, How to Become a Pilot, Pilot School, Aviation Training, Flight Lessons, Aircraft Training, Aviation Career, Flight Simulator Training, Flight Experience, Flight Academy, Aviation Education, Pilot Certification, Flight Training Program, Flight School Near Me, Aviation Courses") %>
+<%# Random header generator %>
+<% random_number = rand(1..10) %>
+<% header_image = case random_number
+                  when 1
+                    "blue-skies-above-clouds-instrument-cfii-training.webp"
+                  when 2
+                    "blue-skies-above-student-pilot-passing-cfi-checkride.webp"
+                  when 3
+                    "blue-skies-airliner-cockpit.webp"
+                  when 4
+                    "blue-skies-cessna-in-clouds.webp"
+                  when 5
+                    "blue-skies-flying-over-atlanta-katl-airport.webp"
+                  when 6
+                    "blue-skies-flying-over-opelika-sunset.webp"
+                  when 7
+                    "blue-skies-ifr-training-opelika.webp"
+                  when 8
+                    "blue-skies-ppl-private-pilot-checkride-pass.webp"
+                  when 9
+                    "blue-skies-pair-of-cessnas-7a3-lanett-municipal-airport.webp"
+                  when 10
+                    "blue-skies-team-of-cfis-and-commercial-pilots.webp"
+                  else
+                    "blue-skies-private-pilot-checkride-pass-600.webp"
+                  end %>
+
+<%# Start website content %>
+<%= render "shared/phone_banner"%>
+<%= render "shared/header"%>
+<div class="relative isolate overflow-hidden bg-gradient-to-b from-sky-100/20 lg:pt-20">
+  <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-sky-600/10 ring-1 ring-sky-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
+    <div class="mx-auto max-w-7xl px-6 pb-8 sm:pb-40 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+        <h1 class="mt-10 max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">Training <span class="text-custom-500">pilots</span> from <%= @location['city']%>, <%= @location['state_short']%> </h1>
+        <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+          
+          <h2 class="text-lg leading-8 text-gray-600">Flight School for <%= @location['city']%> in <%= @location['state']%> </h2>
+          
+          <h3 class="text-lg leading-8 text-gray-600">The flight school between Alabama and Georgia</h3>
+          <h4 class="text-lg leading-8 text-gray-600">Lanett Municipal Airport 7A3</h4>
+          
+          
+          <div class="mt-10 flex items-center gap-x-6">
+            
+            <%= link_to "Enroll Today", enroll_path, class: "btn-primary"%>
+            <%= link_to pilot_training_path, class: "text-sm font-semibold leading-6 text-gray-900" do%>
+              <div class="flex group ">
+                <div class="mr-3">Our Programs</div>
+                <div aria-hidden="true" class="group-hover:animate-bounce-right">→</div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <%= image_tag header_image, alt: "", class: "mt-10 sm:mt-16 lg:mt-0 xl:mt-0 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover  lg:max-w-none xl:row-span-2 xl:row-end-2 "%>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+  </div>
+</div>  
+
+
+<section class="bg-gradient-to-b from-sky-300 to-gray-100 relative pt-24 sm:pt-32 lg:pt-20">
+  <div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
+    <h2 class="text-lg font-semibold text-sky-600">Start Flying</h2>
+    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Are you ready to become a pilot?</p>
+    <p class="mx-auto mt-5 max-w-prose text-xl text-gray-700">Through our pilot training programs and dedicated instructors, we provide the guidance, resources, and support needed to become a pilot</p>
+    <div class="mt-20">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="pt-6">
+          <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+            <div class="-mt-6">
+              <div>
+                <span class="inline-flex items-center justify-center rounded-xl bg-sky-500 p-3 shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                  </svg>
+                </span>
+              </div>
+              <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Start a Conversation</h3>
+              <p class="mt-5 text-base leading-7 text-gray-600">The first step in pilot training is reaching out to a flight school.  Blue Skies Above welcomes you to the world of aviation.</p>
+              <div class="mt-5">
+                <%= button_to "Contact Us", contact_path, method: :get, data: {turbo: false}, class: "btn-primary"%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6">
+          <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+            <div class="-mt-6">
+              <div>
+                <span class="inline-flex items-center justify-center rounded-xl bg-sky-500 p-3 shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                  </svg>
+                </span>
+              </div>
+              <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Take Your First Flight Lesson</h3>
+              <p class="mt-5 text-base leading-7 text-gray-600">Also known as a discovery flight, take the controls of the aircraft and fly the plane.  See if becoming a pilot is right for you.</p>
+              <div class="mt-5">
+                <%= button_to "Schedule Lesson", discovery_flight_path, method: :get, data: {turbo: false}, class: "btn-primary"%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6">
+          <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+            <div class="-mt-6">
+              <div>
+                <span class="inline-flex items-center justify-center rounded-xl bg-sky-500 p-3 shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="fill-white w-8 h-8"><path d="m274-274-128-70 42-42 100 14 156-156-312-170 56-56 382 98 157-155q17-17 42.5-17t42.5 17q17 17 17 42.5T812-726L656-570l98 382-56 56-170-312-156 156 14 100-42 42-70-128Z"/></svg>
+                </span>
+              </div>
+              <h3 class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">Start Training</h3>
+              <p class="mt-5 text-base leading-7 text-gray-600">You've got the best flight school in Lanett, AL supporting you every step of the way.  We're experts in flight training.</p>
+              <div class="mt-5">
+                <%= button_to "Our Programs", pilot_training_path,  method: :get, data: {turbo: false}, class: "btn-primary"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="xl:mx-auto xl:max-w-7xl xl:px-8 py-10">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="flex flex-col items-center w-full lg:w-1/2">
+        <h3 class="text-2xl font-bold text-center tracking-tight pb-10">Fly above <%= @location['point_of_interest_2']%></h3>
+        <div class="max-w-lg">
+          <p class="pb-10">
+            Becoming a pilot gives you a whole new perspective. When you see the earth from thousands of feet in the air, and you fly above where you once were on the ground, you realize the vastness of the world and the endless possibilities that await you. <%= @location['point_of_interest_1']%> looks so different from thousands of feet in the air. At Blue Skies Above, we believe in empowering individuals to chase their dreams of flight. 
+          </p>
+          <p>
+            Whether you're a beginner or an experienced aviator, our expert instructors are here to guide you every step of the way. Take the first step towards your aviation journey by contacting us today to schedule a discovery flight or learn more about our training programs. Reach out to us now and let's go flying.
+          </p>
+        </div>
+      </div>
+      <%# <!-- Image section top and 1/2.  point of interest--> %>
+      <div class="flex flex-col items-center w-full lg:w-1/2">
+        <%# Debugging message in server %>
+        <%# puts @bing_url%>
+        <%# puts "view comment"%>
+        <%# if @bing_url.present? %>
+            <%#= image_tag @bing_url, alt: "Image of #{@location['point_of_interest_2']}", class: "aspect-[5/4] w-full object-cover xl:rounded-3xl" %>
+        <%# else %>
+          <%= image_tag "blue-skies-cessna-in-clouds.webp", alt: 'Image flying in the clouds', class: "aspect-[5/4] w-full object-cover xl:rounded-3xl" %>
+        <%#end%>
+      </div>
+    </div>
+    <%# Long bottom - pilots %>
+    <div class="xl:mx-auto xl:max-w-7xl xl:px-8 py-10">
+      <%= image_tag "blue-skies-over-auburn.webp", alt: "Student Pilot and CFI Flying Over Auburn Alabama", class: "aspect-[5/2] w-full object-cover xl:rounded-3xl"%>
+    </div>
+  </div>
+</section>
+
+
+<%# steps (1 of 3) %>
+<div class="bg-white">
+  <div class="flex flex-col border-b border-gray-200 lg:border-0">
+    <div class="relative">
+      <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block"></div>
+      <div class="relative bg-gray-100 lg:bg-transparent">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+          <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+            <div class="lg:pr-16">
+              <span class="tracking-wider lg:ml-2 mb-2">Step 1. </span>
+              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Contact <br>Blue Skies Above</h2>
+              <p class="mt-4 text-xl text-gray-600">Reaching out to a flight school to understand how the pilot training process works is the first step in your pilot training journey.</p>
+              <p class="mt-6 text-base leading-7 text-gray-600">Speaking with a real live team member helps demystify any questions you may have and gets you answers quickly.  Determine what your ambitions, goals, and timelines are in relation to flight training.  You've got the entire team here at Blue Skies Above to help you reach your goals.  Let's work together to come up with a plan for flight training that suits your needs.</p>
+              <div class="mt-6">
+                <%= link_to "Contact Us", contact_path,  data: {turbo: false}, class: "inline-block rounded-md border border-transparent bg-sky-600 px-8 py-3 font-medium text-white hover:bg-sky-700 hover:scale-105 duration-300"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-48 w-full sm:h-64 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
+        <%= image_tag "blue-skies-cessna-on-ramp.webp", alt: "Guy from Auburn, AL inside a cessna 172 in Lanett Municipal airport after calling Blue Skies Above", class: "h-full w-full object-cover object-left"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# steps (2 of 3) %>
+<div class="bg-white flex lg:flex-row flex-col-reverse">
+  <%# <!-- Image Container --> %>
+  <div class="lg:w-1/2 w-full h-full ">
+    
+    <%= image_tag "blue-skies-discovery-flight.webp", alt: "Mother and young daughter on a discovery flight flying over KATL Atlanta Georgia airport", class: "h-full w-full object-cover object-center"%>
+    
+  </div>
+
+  <%# <!-- Text Content Container --> %>
+  <div class="lg:w-1/2">
+    <div class="flex flex-col border-b border-gray-200 lg:border-0">
+      <div class="relative bg-gray-100 lg:bg-transparent">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl pt-24  lg:pt-48">
+            <div class="lg:pr-16">
+              <span class="tracking-wider ml-0 mb-2">Step 2. </span>
+              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Take a Discovery Flight</h2>
+              <p class="mt-4 text-xl text-gray-600">Also known as an introductory flight, a discovery flight is your first flight lesson.  Pair up with a certified flight instructor and you fly the plane.</p>
+              <p class="mt-6 text-base leading-7 text-gray-600">On a discovery flight, you'll spend 30 minutes to an hour in the air with a certified flight instructor.  You'll have the chance to fly the airplane on your own.  After you land, you'll have the opportunity to discuss with your instructor how to complete the flight training process. Complete a discovery flight to see if pilot training is a good fit for you.</p>
+              <div class="mt-6 pb-20">
+                <%= link_to "Schedule Flight", discovery_flight_path, data: {turbo: false}, class: "inline-block rounded-md border border-transparent bg-sky-600 px-8 py-3 font-medium text-white hover:bg-sky-700 hover:scale-105 duration-300"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# steps (3 of 3) %>
+<div class="bg-white">
+  <div class="flex flex-col border-b border-gray-200 lg:border-0">
+    <div class="relative">
+      <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block"></div>
+      <div class="relative bg-gray-100 lg:bg-transparent">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+          <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+            <div class="lg:pr-16">
+              <span class="tracking-wider lg:ml-2 mb-2">Step 3. </span>
+              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Start <br>Flight Training</h2>
+              <p class="mt-4 text-xl text-gray-600">You'll pair up and work with a CFI (Certified Flight Instructor) to start flight training.  Gain the necessary skills and knowledge to pass your written and practical exams.</p>
+              <p class="mt-6 text-base leading-7 text-gray-600">The first certificate pilots get is called the private pilot certificate, also known as the PPL or private pilot license.  Obtaining this certification involves passing multiple exams including the medical exam, the written exam, and the practical exam - commonly referred as the checkride.  You and your instructor will come up with a plan that fits your schedule to get this complete.  We're excited to be a part of your aviation journey.</p>
+              <div class="mt-6">
+                <%= link_to "Enroll Today", enroll_path, turbo: {data: false}, class: "inline-block rounded-md border border-transparent bg-sky-600 px-8 py-3 font-medium text-white hover:bg-sky-700 hover:scale-105 duration-300"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2">
+        <%= image_tag "blue-skies-flying-over-atlanta-katl-airport.webp", alt: "flying a cessna 172 from Blue Skies Above (Lanett, AL) over Hartsfield-Jackson Atlanta International Airport", class: "h-full w-full object-cover object-center"%>
+      </div>
+    </div>
+  </div>
+</div>
+<%# cta - previous partial %>
+<section class="w-full bg-sunset-flight bg-cover h-screen lg:h-screen bg-center flex justify-center items-center text-white">
+  <div class="flex flex-col justify-center items-center drop-shadow-2xl transform-gpu" x-data>
+    <h2 class="w-4/5 font-bold text-5xl lg:text-7xl">Fly above <span class="text-sky-500"><%= @location['city']%></span> and see <%= @location['state']%> from a whole new perspective.</h2>
+    <p class="w-4/5 py-5 lg:py-10 text-xl lg:text-2xl font-semibold">As the only flight school with a Cessna fleet in the area, we pride ourselves in training safe and highly proficient pilots.  Come see what everyone's talking about!  Visit Blue Skies Above and begin flight training today.</p>
+    <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-start" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+      <%=link_to contact_path, data: { turbo: false }, class: "mx-auto" do%>
+        <div class="btn-primary text-xl lg:text-3xl">
+          VISIT BLUE SKIES ABOVE
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/footer"%>
+
+
+  

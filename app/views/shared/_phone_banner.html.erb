@@ -1,0 +1,17 @@
+
+<%# PHONE BANNER %>
+<div class="sticky hover:scale-105 hover:brightness-105 duration-300 top-0 z-50 flex flex-col items-center gap-x-6 bg-gradient-to-r from-sky-400 via-sky-100 to-sky-400 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 shadow-2xl">
+  <div class="text-sm leading-6 text-sky-800 flex flex-col items-center w-full">
+    <%# Mobile view - link to call %>
+    <a href="tel:1-334-449-7600" class="lg:hidden text-center">
+      <strong class="font-semibold">1-334-449-7600</strong><br>Becoming a pilot is one call away
+    </a>
+    <%# Desktop view - link to contact us form %>
+    <%= link_to contact_path, class: "hidden lg:block" do %>
+      <strong class="font-semibold">1-334-449-7600</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Becoming a pilot is one call away
+    <% end %>
+  </div>
+  <div class="flex flex-1 justify-end">
+    
+  </div>
+</div>
