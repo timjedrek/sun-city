@@ -30,7 +30,7 @@ class Aviation < ApplicationRecord
       columnVals: {
         "lead_email": { "text": "#{self.email}",  "email": "#{self.email}" },
         "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
-        "long_text": "Generated from website camp form.
+        "long_text": "Generated from Aviation 101 form.
         Child name: #{self.attendee_first_name} #{self.attendee_last_name}
         Child age: #{self.attendee_age}
         Additional comments: #{self.comments}"
