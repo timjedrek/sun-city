@@ -5,10 +5,10 @@ class AviationMailer < ApplicationMailer
     @aviation = aviation
 
     if Rails.env.production?
-      mail(to: @aviation.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com", "georgette@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Aeroaviation Inquiry at Sun City Aviation Academy")
+      mail(to: @aviation.email, bcc: ["no-reply@suncityaviationacademy.com", "info@suncityaviation.com", "georgette@suncityaviation.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Aviation 101 Inquiry at Sun City Aviation Academy")
     else
       # remove client email when not in production
-      mail(to: @aviation.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Aeroaviation Inquiry at Sun City Aviation Academy")
+      mail(to: @aviation.email, bcc: ["no-reply@suncityaviationacademy.com"], reply_to: "info@suncityaviation.com",subject: "✈️ Aviation 101 Inquiry at Sun City Aviation Academy")
     end
   end
 end
