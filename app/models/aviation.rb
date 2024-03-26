@@ -32,7 +32,7 @@ class Aviation < ApplicationRecord
         "lead_phone": { "text": "#{self.phone}",  "phone": "#{self.phone}", "countryShortName": "US" },
         "long_text": "Generated from website camp form.
         Child name: #{self.attendee_first_name} #{self.attendee_last_name}
-        hild age: #{self.attendee_age}
+        Child age: #{self.attendee_age}
         Additional comments: #{self.comments}"
       }.to_json
     }
