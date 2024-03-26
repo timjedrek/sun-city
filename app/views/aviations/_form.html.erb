@@ -1,5 +1,5 @@
 <h4 class="text-center text-2xl font-bold pb-5">
-  Interested in Joining the <span class="text-custom-50">Experience Aviation Program</span>?
+  Interested in Joining the <span class="text-custom-50">Aviation 101 Program</span>?
 </h4>
 <p class="text-center px-5 italic text-neutral-700">
   Fill out the form below and we will get in contact with you shortly!
@@ -8,33 +8,18 @@
   * denotes required fields
 </p>
 
-<%= form_with(model: camp, class: "contents") do |form| %>
-  <% if camp.errors.any? %>
+<%= form_with(model: aviation, class: "contents") do |form| %>
+  <% if aviation.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2>Please fix the following <%= pluralize(camp.errors.count, "error") %>:</h2>
+      <h2>Please fix the following <%= pluralize(aviation.errors.count, "error") %>:</h2>
 
       <ul>
-        <% camp.errors.each do |error| %>
+        <% aviation.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="my-5" x-data="{ selectedDates: [] }">
-    <%= form.label "Intended Enrollment Date", class: "font-semibold text-xl capitalize" %><span class="text-sm">*</span>
-    <% camp_dates = ["3-28-2024 to 3-30-2024", "6-19-2024 to 6-22-2024", "8-1-2024 to 8-3-2024"] %>
-    <div class="grid lg:grid-cols-2 grid-cols-1 pt-2">
-      <% camp_dates.each do |date_range| %>
-        <div class="flex items-center">
-          <input type="checkbox" x-model="selectedDates" value="<%= date_range %>" class="text-custom-50">
-          <%= form.label date_range, class: "ml-2 text-neutral-700" %>
-        </div>
-      <% end %>
-    </div>
-    <%= form.hidden_field :camp_date, "x-bind:value": "selectedDates.join(', ')" %>
-  </div>
-
 
   <div class="mt-5">
     <p class="font-semibold text-xl">Attendee Information</p>
@@ -82,7 +67,7 @@
     <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <%= invisible_captcha :confirm_email, :camp %>
+  <%= invisible_captcha :confirm_email, :aviation %>
 
   <div class="my-5">
     <%= form.label :comments, class: "font-semibold text-sm text-neutral-600" %>

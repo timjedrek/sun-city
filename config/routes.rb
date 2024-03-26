@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-
     # 404/500 pages
     get 'errors/not_found'
     get 'errors/internal_server_error'
     match "/404", to: "errors#not_found", via: :all
     match "/500", to: "errors#internal_server_error", via: :all
-  
+
   devise_scope :admins do
     # Redirests signing out users back to sign-in
     get "admins", to: "devise/sessions#new"
@@ -16,10 +15,11 @@ Rails.application.routes.draw do
   root "pages#home"
 
 
-  post 'uploader/image', to: 'uploader#image' #add upload image to posts 
+  post 'uploader/image', to: 'uploader#image' #add upload image to posts
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
-  
+
+  resources :aviations
   resources :camps
   resources :discover_flights
   resources :messages
@@ -32,10 +32,14 @@ Rails.application.routes.draw do
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
-  # Camp form
+  # Camp form -> now called Experience Aviation
   #get 'aerocamp', to: 'camps#new', as: :aerocamp
   get 'experience-aviation', to: 'camps#new', as: :experience_aviation
-  get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+  get 'experience-aviation-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+
+  # Youth Ground form (Aviation 101)
+  get 'youth-aviation-classes', to: 'aviations#new', as: :youth_ground
+  get 'youth-aviation-class-confirmation', to: 'aviations#confirmation', as: :aviation_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
@@ -59,7 +63,6 @@ Rails.application.routes.draw do
   get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
-  get 'youth-aviation-classes', to: 'pages#youth_ground', as: :youth_ground
   get 'youth-aviation-programs', to: 'pages#youth', as: :youth
   get 'group-ground-school', to: 'pages#group_ground', as: :group_ground
   get 'about', to: 'pages#about_us', as: :about
@@ -101,20 +104,20 @@ Rails.application.routes.draw do
   get 'instrument-proficiency-check-ipc', to: 'pages#ipc'
   get 'airline-transport-pilot-license', to: 'pages#atp'
 
-  
+
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
   #get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
   #get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
   #get 'financing', to: 'pages#financing', as: :financing
-  #get 'pilot-training-pricing-calculator', to: 'pages#cost' 
+  #get 'pilot-training-pricing-calculator', to: 'pages#cost'
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
-  
+
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   get 'our-team', to: 'pages#our_team', as: :our_team
-  
+
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
   #get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
