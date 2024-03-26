@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :aviations
-
 
     # 404/500 pages
     get 'errors/not_found'
@@ -21,6 +19,7 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
 
+  resources :aviations
   resources :camps
   resources :discover_flights
   resources :messages
@@ -33,10 +32,14 @@ Rails.application.routes.draw do
   #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
-  # Camp form
+  # Camp form -> now called Experience Aviation
   #get 'aerocamp', to: 'camps#new', as: :aerocamp
   get 'experience-aviation', to: 'camps#new', as: :experience_aviation
-  get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+  get 'experience-aviation-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+
+  # Youth Ground form (Aviation 101)
+  get 'youth-aviation-classes', to: 'aviations#new', as: :youth_ground
+  get 'youth-aviation-class-confirmation', to: 'aviations#confirmation', as: :aviation_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
@@ -60,7 +63,6 @@ Rails.application.routes.draw do
   get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
-  get 'youth-aviation-classes', to: 'aviations#new', as: :youth_ground
   get 'youth-aviation-programs', to: 'pages#youth', as: :youth
   get 'group-ground-school', to: 'pages#group_ground', as: :group_ground
   get 'about', to: 'pages#about_us', as: :about
