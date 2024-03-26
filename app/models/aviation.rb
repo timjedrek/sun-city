@@ -4,7 +4,7 @@ class Aviation < ApplicationRecord
 
   validates :attendee_first_name, presence: true
   validates :attendee_last_name, presence: true
-  validates :attendee_age, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 8, less_than_or_equal_to: 18 }
+  validates :attendee_age, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 15, less_than_or_equal_to: 18 }
   validates :parent_first_name, presence: true
   validates :parent_last_name, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
