@@ -22,22 +22,22 @@
   <% end %>
 
   <div class="mt-5">
-    <p class="font-semibold text-xl">Attendee Information</p>
+    <p class="font-semibold text-xl">Student Information</p>
   </div>
   <div class="flex flex-col lg:flex-row lg:gap-5">
     <div class="my-5">
-      <%= form.label "Attendee First Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.label "Student First Name*", class: "font-semibold text-sm text-neutral-600" %>
       <%= form.text_field :attendee_first_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
     </div>
 
     <div class="mb-5 lg:my-5">
-      <%= form.label "Attendee Last Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.label "Student Last Name*", class: "font-semibold text-sm text-neutral-600" %>
       <%= form.text_field :attendee_last_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
     </div>
   </div>
 
   <div class="mb-5">
-    <%= form.label "Attendee Age*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.label "Student Age*", class: "font-semibold text-sm text-neutral-600" %>
     <%= form.number_field :attendee_age, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-28", min: 8, max: 18 %>
   </div>
 

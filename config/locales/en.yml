@@ -37,6 +37,10 @@ en:
     attributes:
       enrollment:
         location: "" 
+      aviation:
+        attendee_first_name: "Student's first name"
+        attendee_last_name: "Student's last name"
+        attendee_age: "Student's age"
     errors:
       models:
         enrollment:
