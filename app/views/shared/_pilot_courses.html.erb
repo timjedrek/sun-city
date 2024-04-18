@@ -52,7 +52,7 @@
               <p class="font-normal font-serif italic py-3">
                 <%= ppc_text %>
               </p>
-              <%= link_to private_pilot_path do%>
+              <%= link_to ppc_path do%>
                 <div class="hover:text-custom-50 duration-300 flex items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                   Start Today
                   <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-custom-50 h-4 ml-3 opacity-0" 
