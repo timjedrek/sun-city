@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
     # 404/500 pages
     get 'errors/not_found'
     get 'errors/internal_server_error'
@@ -20,6 +19,8 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
 
+  resources :aviations
+
   resources :camps
   resources :discover_flights
   resources :messages
@@ -32,10 +33,14 @@ Rails.application.routes.draw do
   get 'enroll-at-suncity', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
-  # Camp form
+  # Camp form -> now called Experience Aviation
   #get 'aerocamp', to: 'camps#new', as: :aerocamp
   get 'experience-aviation', to: 'camps#new', as: :experience_aviation
-  get 'aerocamp-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+  get 'experience-aviation-confirmation', to: 'camps#confirmation', as: :camp_confirmation
+
+  # Youth Ground form (Aviation 101)
+  get 'youth-aviation-classes', to: 'aviations#new', as: :youth_ground
+  get 'youth-aviation-class-confirmation', to: 'aviations#confirmation', as: :aviation_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
@@ -59,7 +64,6 @@ Rails.application.routes.draw do
   get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
-  get 'youth-aviation-classes', to: 'pages#youth_ground', as: :youth_ground
   get 'youth-aviation-programs', to: 'pages#youth', as: :youth
   get 'group-ground-school', to: 'pages#group_ground', as: :group_ground
   get 'about', to: 'pages#about_us', as: :about
@@ -72,7 +76,7 @@ Rails.application.routes.draw do
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'certified-flight-instructor-cfi', to: 'pages#cfi', as: :cfi
   get 'airline-transport-pilot-atp', to: 'pages#atp', as: :atp
-  get 'seaplane-pilot-training', to: 'pages#seaplane', as: :seaplane
+  #get 'seaplane-pilot-training', to: 'pages#seaplane', as: :seaplane
   get 'flight-review-bfr', to: 'pages#bfr', as: :bfr
   get 'instrument-proficiency-check-ipc', to: 'pages#ipc', as: :ipc
   get 'wingman-family-member-training', to: 'pages#wingman', as: :wingman
@@ -83,7 +87,7 @@ Rails.application.routes.draw do
   get 'cessna-172', to: 'pages#cessna172', as: :cessna172
   get 'beechcraft-duchess-multi-engine-airplane', to: 'pages#duchess', as: :duchess
   get 'redbird-flight-simulator', to: 'pages#redbird', as: :redbird
-  get 'airplane-single-engine-sea-ses', to: 'pages#seaplane_fleet', as: :seaplane_fleet
+  #get 'airplane-single-engine-sea-ses', to: 'pages#seaplane_fleet', as: :seaplane_fleet
 
   # Previous Site's Routes
   get 'aerocamp', to: 'camps#new'

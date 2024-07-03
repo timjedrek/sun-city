@@ -1,0 +1,81 @@
+<h4 class="text-center text-2xl font-bold pb-5">
+  Interested in Joining the <span class="text-custom-50">Aviation 101 Program</span>?
+</h4>
+<p class="text-center px-5 italic text-neutral-700">
+  Fill out the form below and we will get in contact with you shortly!
+</p>
+<p class="text-center px-5 pt-5 text-sm text-neutral-700">
+  * denotes required fields
+</p>
+
+<%= form_with(model: aviation, class: "contents") do |form| %>
+  <% if aviation.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2>Please fix the following <%= pluralize(aviation.errors.count, "error") %>:</h2>
+
+      <ul>
+        <% aviation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mt-5">
+    <p class="font-semibold text-xl">Student Information</p>
+  </div>
+  <div class="flex flex-col lg:flex-row lg:gap-5">
+    <div class="my-5">
+      <%= form.label "Student First Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :attendee_first_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="mb-5 lg:my-5">
+      <%= form.label "Student Last Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :attendee_last_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <%= form.label "Student Age*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.number_field :attendee_age, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-28", min: 15, max: 18 %>
+  </div>
+
+  <div class="mt-5">
+    <p class="font-semibold text-xl">Parent or Legal Guardian Information</p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row lg:gap-5">
+    <div class="my-5">
+      <%= form.label "Parent First Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :parent_first_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="mb-5 lg:my-5">
+      <%= form.label "Parent Last Name*", class: "font-semibold text-sm text-neutral-600" %>
+      <%= form.text_field :parent_last_name, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <%= form.label "Phone*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.text_field :phone, placeholder: "###-###-####", class: "placeholder:text-neutral-300 block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label "Email*", class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <%= invisible_captcha :confirm_email, :aviation %>
+
+  <div class="my-5">
+    <%= form.label :comments, class: "font-semibold text-sm text-neutral-600" %>
+    <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 focus:border-custom-50 focus:ring-custom-50 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+
+    <%= form.submit "SEND", class: "btn-primary" %>
+  </div>
+<% end %>

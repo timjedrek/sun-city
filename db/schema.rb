@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_03_014129) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_23_034601) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_014129) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "advance_trainings", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.text "comments"
+    t.string "certificate_sought"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "aviations", force: :cascade do |t|
+    t.string "attendee_first_name"
+    t.string "attendee_last_name"
+    t.integer "attendee_age"
+    t.string "phone"
+    t.string "email"
+    t.string "parent_first_name"
+    t.string "parent_last_name"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "book_downloads", force: :cascade do |t|
@@ -145,6 +169,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_014129) do
     t.string "lacrm_contact_id"
     t.string "lacrm_response_code"
     t.text "lacrm_response_body"
+    t.string "make"
+    t.string "model"
+    t.string "n_nummber"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -182,6 +209,45 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_014129) do
     t.string "learn_style"
     t.string "structure"
     t.text "guidance"
+  end
+
+  create_table "registration_forms", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "emergency_name"
+    t.string "emergency_phone"
+    t.string "emergency_email"
+    t.string "course"
+    t.integer "hours_planned"
+    t.text "goal"
+    t.string "financed"
+    t.float "total_time"
+    t.string "certificates_held"
+    t.boolean "committed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "availability"
+    t.text "time_details"
+  end
+
+  create_table "reimbursements", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.date "entry_date"
+    t.string "amount"
+    t.string "preferred_payment"
+    t.string "username"
+    t.string "upload"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status"
+    t.string "email"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

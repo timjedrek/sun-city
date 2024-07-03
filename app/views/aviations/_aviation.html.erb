@@ -1,0 +1,47 @@
+<div id="<%= dom_id aviation %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee first name:</strong>
+    <%= aviation.attendee_first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee last name:</strong>
+    <%= aviation.attendee_last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Attendee age:</strong>
+    <%= aviation.attendee_age %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= aviation.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= aviation.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Parent first name:</strong>
+    <%= aviation.parent_first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Parent last name:</strong>
+    <%= aviation.parent_last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= aviation.comments %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this aviation", aviation, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this aviation', edit_aviation_path(aviation), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

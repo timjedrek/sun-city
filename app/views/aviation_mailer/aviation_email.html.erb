@@ -1,0 +1,29 @@
+Dear <%=@aviation.parent_first_name%>, <br>
+<br>
+Thank you for inquiring about Aviation 101 on our website.  We'll reach out to your shortly with more details about what to expect.<br>
+<br>
+At Sun City Aviation Academy, we are committed to providing the best possible aviation education and training. We offer a variety of programs and courses designed to meet the needs of both aspiring pilots and experienced aviators.<br>
+<br>
+If you or your child(ren) are interested in pursuing training to become a pilot, we offer comprehensive training programs that will help you achieve your goals. Our programs cover everything from private pilot certification to advanced training in commercial aviation.<br>
+<br>
+Whatever your goals may be, we are confident that we can help you achieve them. If you have any questions about our programs, please don't hesitate to contact us.  We're looking forward to welcoming <%= @aviation.attendee_first_name%> to Aviation 101<br>
+<br>
+<br>
+The team at Sun City Aviation Academy<br>
+754-423-2159<br>
+info@suncityaviation.com<br>
+<br>
+  <b>-------- Your Form Submission Details --------</b><br>
+<br>
+  <u>Student Details</u><br>
+    First Name: <%=@aviation.attendee_first_name%><br>
+    Last Name: <%=@aviation.attendee_last_name%><br>
+    Age: <%=@aviation.attendee_age%><br>
+<br>
+  <u>Parent or Legal Guardian Details</u><br>
+    First Name: <%=@aviation.parent_first_name%><br>
+    Last Name: <%=@aviation.parent_last_name%><br>
+    Phone: <%=@aviation.phone%><br>
+    Email: <%=@aviation.email%><br>
+    Comments: <br>
+    <%=@aviation.comments%>
