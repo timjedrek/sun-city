@@ -1,295 +1,48 @@
-woodland-hills-alabama-flight-school:
-  city: "Woodland Hills"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Woodland Hills Park"
-  point_of_interest_2: "Talladega National Forest"
+pompano-beach-florida-flight-school:
+  city: "Pompano Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Butterfly World"
+  point_of_interest_2: "Pompano Beach"
 
-auburn-alabama-flight-school:
-  city: "Auburn"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Auburn University"
-  point_of_interest_2: "Chewacla State Park"
+fort-lauderdale-florida-flight-school:
+  city: "Fort Lauderdale"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Las Olas Boulevard"
+  point_of_interest_2: "Hugh Taylor Birch State Park"
 
-opelika-alabama-flight-school:
-  city: "Opelika"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Opelika Downtown Historic District"
-  point_of_interest_2: "Spring Villa"
+west-palm-beach-florida-flight-school:
+  city: "West Palm Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Palm Beach Zoo"
+  point_of_interest_2: "Clematis Street"
 
+boca-raton-florida-flight-school:
+  city: "Boca Raton"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Mizner Park"
+  point_of_interest_2: "Boca Raton Museum of Art"
 
-woodland-alabama-flight-school:
-  city: "Woodland"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Talladega National Forest"
-  point_of_interest_2: "John Tanner State Park"
+delray-beach-florida-flight-school:
+  city: "Delray Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Atlantic Avenue"
+  point_of_interest_2: "Wakoda Hatchee Preserve"
 
-notasulga-alabama-flight-school:
-  city: "Notasulga"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Historic Notasulga"
-  point_of_interest_2: "Washam Field"
+deerfield-beach-florida-flight-school:
+  city: "Deerfield Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Boca Raton Historical Society & Museum"
+  point_of_interest_2: "Hillsboro Beach"
 
-loachapoka-alabama-flight-school:
-  city: "Loachapoka"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Loachapoka Historic District"
-  point_of_interest_2: "Kiesel Park"
-
-
-tuskegee-alabama-flight-school:
-  city: "Tuskegee"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Tuskegee Airmen National Historic Site"
-  point_of_interest_2: "Tuskegee University"
-
-tallassee-alabama-flight-school:
-  city: "Tallassee"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Tallassee Falls"
-  point_of_interest_2: "East Tallassee Historic District"
-
-waverly-alabama-flight-school:
-  city: "Waverly"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Waverly Hall"
-  point_of_interest_2: "Waverly Mansion"
-
-camp-hill-alabama-flight-school:
-  city: "Camp Hill"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Camp Hill Historic District"
-  point_of_interest_2: "Lake Martin"
-
-dadeville-alabama-flight-school:
-  city: "Dadeville"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Tallapoosa County Courthouse"
-  point_of_interest_2: "Lake Martin"
-
-jacksons-gap-alabama-flight-school:
-  city: "Jackson's Gap"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Lake Martin"
-  point_of_interest_2: "Wind Creek State Park"
-
-alexander-city-alabama-flight-school:
-  city: "Alexander City"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Wind Creek State Park"
-  point_of_interest_2: "Charles E. Bailey Sportplex"
-
-new-site-alabama-flight-school:
-  city: "New Site"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Jordan Dam"
-  point_of_interest_2: "Lake Martin"
-
-daviston-alabama-flight-school:
-  city: "Daviston"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Wehadkee Creek"
-  point_of_interest_2: "Daviston Recreational Park"
-
-goodwater-alabama-flight-school:
-  city: "Goodwater"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Hatchett Creek"
-  point_of_interest_2: "Lay Lake"
-
-ashland-alabama-flight-school:
-  city: "Ashland"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Clay County Courthouse"
-  point_of_interest_2: "Ashland Historic Commercial District"
-
-wadley-alabama-flight-school:
-  city: "Wadley"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Horseshoe Bend National Military Park"
-  point_of_interest_2: "Horseshoe Bend Museum and Historic Site"
-
-lineville-alabama-flight-school:
-  city: "Lineville"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Cheaha State Park"
-  point_of_interest_2: "Duck Pond"
-
-wedowee-alabama-flight-school:
-  city: "Wedowee"
-  state: "Alabama"
-  state_short: "AL"
-  point_of_interest_1: "Lake Wedowee"
-  point_of_interest_2: "Wedowee Creek"
-
-ephesus-georgia-flight-school:
-  city: "Ephesus"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "West Point Lake"
-  point_of_interest_2: "Heard County Covered Bridge"
-
-centralhatchee-georgia-flight-school:
-  city: "Centralhatchee"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "McIntosh Reserve Park"
-  point_of_interest_2: "Blalock Lakes"
-
-riverside-georgia-flight-school:
-  city: "Riverside"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Chattahoochee River"
-  point_of_interest_2: "Hardley Creek Park"
-
-franklin-georgia-flight-school:
-  city: "Franklin"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Heard County Historical Center and Museum"
-  point_of_interest_2: "West Georgia Regional Airport"
-
-hogansville-georgia-flight-school:
-  city: "Hogansville"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Downtown Hogansville Historic District"
-  point_of_interest_2: "Joe Curry Little Theatre"
-
-lagrange-georgia-flight-school:
-  city: "LaGrange"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Hills and Dales Estate"
-  point_of_interest_2: "Callaway Stadium"
-
-greenville-georgia-flight-school:
-  city: "Greenville"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Hills Creek Park"
-  point_of_interest_2: "Meriwether Country Club"
-
-manchester-georgia-flight-school:
-  city: "Manchester"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Manchester Mill"
-  point_of_interest_2: "Dunaway Gardens"
-
-hamilton-georgia-flight-school:
-  city: "Hamilton"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Harris County Courthouse"
-  point_of_interest_2: "Rood Creek Park"
-
-waverly-hall-georgia-flight-school:
-  city: "Waverly Hall"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Warm Springs Historic District"
-  point_of_interest_2: "F.D. Roosevelt State Park"
-
-talbotton-georgia-flight-school:
-  city: "Talbotton"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Talbot County Courthouse"
-  point_of_interest_2: "Talbot County Jail"
-
-junction-city-georgia-flight-school:
-  city: "Junction City"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Junction City Historic District"
-  point_of_interest_2: "Eagle and Phenix Dam"
-
-geneva-georgia-flight-school:
-  city: "Geneva"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Lake Blackshear"
-  point_of_interest_2: "Plains Historic District"
-
-columbus-georgia-flight-school:
-  city: "Columbus"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "National Infantry Museum and Soldier Center"
-  point_of_interest_2: "Coca-Cola Space Science Center"
-
-bibb-city-georgia-flight-school:
-  city: "Bibb City"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Columbus Botanical Garden"
-  point_of_interest_2: "Coca-Cola Space Science Center"
-
-fort-moore-georgia-flight-school:
-  city: "Fort Moore"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "National Civil War Naval Museum"
-  point_of_interest_2: "Columbus Riverwalk"
-
-cusseta-georgia-flight-school:
-  city: "Cusseta"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Liberty Theater"
-  point_of_interest_2: "Columbus Museum"
-
-buena-vista-georgia-flight-school:
-  city: "Buena Vista"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Pasaquan"
-  point_of_interest_2: "Marion County Courthouse"
-
-richland-georgia-flight-school:
-  city: "Richland"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Chattahoochee State Park"
-  point_of_interest_2: "Pine Hill Plantation"
-
-lumpkin-georgia-flight-school:
-  city: "Lumpkin"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Providence Canyon State Park"
-  point_of_interest_2: "Stewart County Courthouse"
-
-georgetown-georgia-flight-school:
-  city: "Georgetown"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Wilder Park"
-  point_of_interest_2: "Georgetown Historic District"
-
-eufaula-georgia-flight-school:
-  city: "Eufaula"
-  state: "Georgia"
-  state_short: "GA"
-  point_of_interest_1: "Shorter Mansion"
-  point_of_interest_2: "Eufaula National Wildlife Refuge"
+boynton-beach-florida-flight-school:
+  city: "Boynton Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Boynton Beach Oceanfront Park"
+  point_of_interest_2: "Daggerwing Nature Center"
