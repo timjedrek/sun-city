@@ -65,4 +65,14 @@ SitemapGenerator::Sitemap.create do
   add '/flight-instrument-instructor'
   add '/instrument-proficiency-check-ipc'
   add '/airline-transport-pilot-license'
+
+  # Locations dynamic routes
+  add '/pilot-training/pompano-beach-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/fort-lauderdale-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/west-palm-beach-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/boca-raton-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/delray-beach-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/deerfield-beach-florida-flight-school', changefreq: 'weekly'
+  add '/pilot-training/boynton-beach-florida-flight-school', changefreq: 'weekly'
+
 end
