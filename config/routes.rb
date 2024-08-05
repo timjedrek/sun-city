@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :aviations
+
   resources :camps
   resources :discover_flights
   resources :messages
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
   resources :quiz_results
 
   # Enrollment form
-  #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
+  #get 'enroll-at-suncity', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Camp form -> now called Experience Aviation
@@ -115,8 +116,13 @@ Rails.application.routes.draw do
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   #get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
 
-  #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
+  get 'pilot-programs', to: 'pages#pilot_courses', as: :programs
   get 'our-team', to: 'pages#our_team', as: :our_team
+
+  # Dynamic Location pages
+  # get 'pilot-training', to: 'pages#pilot_programs'  ## HELLO -> this needs to be fixed with better copy.  This is st. louis images and and copy.  I just used an existing page for this.
+  get '/pilot-training', to: 'pages#pilot_courses'
+  get '/pilot-training/:location_slug', to: 'locations#show', as: :location
 
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing

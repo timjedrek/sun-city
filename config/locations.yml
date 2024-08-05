@@ -1,0 +1,188 @@
+pompano-beach-florida-flight-school:
+  city: "Pompano Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Butterfly World"
+  point_of_interest_2: "Pompano Beach"
+
+fort-lauderdale-florida-flight-school:
+  city: "Fort Lauderdale"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Las Olas Boulevard"
+  point_of_interest_2: "Hugh Taylor Birch State Park"
+
+west-palm-beach-florida-flight-school:
+  city: "West Palm Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Palm Beach Zoo"
+  point_of_interest_2: "Clematis Street"
+
+boca-raton-florida-flight-school:
+  city: "Boca Raton"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Mizner Park"
+  point_of_interest_2: "Boca Raton Museum of Art"
+
+delray-beach-florida-flight-school:
+  city: "Delray Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Atlantic Avenue"
+  point_of_interest_2: "Wakoda Hatchee Preserve"
+
+deerfield-beach-florida-flight-school:
+  city: "Deerfield Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Boca Raton Historical Society & Museum"
+  point_of_interest_2: "Hillsboro Beach"
+
+boynton-beach-florida-flight-school:
+  city: "Boynton Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Boynton Beach Oceanfront Park"
+  point_of_interest_2: "Daggerwing Nature Center"
+
+hollywood-florida-flight-school:
+  city: "Hollywood"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Hollywood Beach Broadwalk"
+  point_of_interest_2: "Anne Kolb Nature Center"
+
+fort-lauderdale-florida-flight-school:
+  city: "Fort Lauderdale"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Las Olas Boulevard"
+  point_of_interest_2: "Hugh Taylor Birch State Park"
+
+pembroke-pines-florida-flight-school:
+  city: "Pembroke Pines"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "C.B. Smith Park"
+  point_of_interest_2: "Pembroke Lakes Mall"
+
+miramar-florida-flight-school:
+  city: "Miramar"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Miramar Regional Park"
+  point_of_interest_2: "Monster Mini Golf"
+
+davie-florida-flight-school:
+  city: "Davie"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Flamingo Gardens"
+  point_of_interest_2: "Tree Tops Park"
+
+hialeah-florida-flight-school:
+  city: "Hialeah"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Amelia Earhart Park"
+  point_of_interest_2: "Hialeah Park Racing & Casino"
+
+miami-gardens-florida-flight-school:
+  city: "Miami Gardens"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Hard Rock Stadium"
+  point_of_interest_2: "Rolling Oaks Park"
+
+miami-florida-flight-school:
+  city: "Miami"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Miami Beach"
+  point_of_interest_2: "Vizcaya Museum & Gardens"
+
+sunrise-florida-flight-school:
+  city: "Sunrise"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Sawgrass Mills"
+  point_of_interest_2: "BB&T Center"
+
+plantation-florida-flight-school:
+  city: "Plantation"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Plantation Heritage Park"
+  point_of_interest_2: "Westfield Broward"
+
+aventura-florida-flight-school:
+  city: "Aventura"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Aventura Mall"
+  point_of_interest_2: "Founders Park"
+
+weston-florida-flight-school:
+  city: "Weston"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Weston Town Center"
+  point_of_interest_2: "Markham Park"
+
+lauderhill-florida-flight-school:
+  city: "Lauderhill"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Central Broward Regional Park"
+  point_of_interest_2: "Lauderhill Performing Arts Center"
+
+tamarac-florida-flight-school:
+  city: "Tamarac"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Tamarac Sports Complex"
+  point_of_interest_2: "Caporella Aquatic Complex"
+
+cooper-city-florida-flight-school:
+  city: "Cooper City"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Brian Piccolo Park"
+  point_of_interest_2: "Flamingo West Park"
+
+dania-beach-florida-flight-school:
+  city: "Dania Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Dania Beach Ocean Park"
+  point_of_interest_2: "The Casino at Dania Beach"
+
+north-miami-florida-flight-school:
+  city: "North Miami"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Oleta River State Park"
+  point_of_interest_2: "Museum of Contemporary Art"
+
+north-miami-beach-florida-flight-school:
+  city: "North Miami Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Greynolds Park"
+  point_of_interest_2: "Ancient Spanish Monastery"
+
+hallandale-beach-florida-flight-school:
+  city: "Hallandale Beach"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Gulfstream Park"
+  point_of_interest_2: "Hallandale Beach Oceanfront"
+
+oakland-park-florida-flight-school:
+  city: "Oakland Park"
+  state: "Florida"
+  state_short: "FL"
+  point_of_interest_1: "Funky Buddha Brewery"
+  point_of_interest_2: "Oakland Park Culinary Arts District"
