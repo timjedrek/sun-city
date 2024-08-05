@@ -1,5 +1,5 @@
-<% title("#{@location['city']}, #{@location['state_short']} Flight School | Blue Skies Above") %>
-<% meta_description("Become a pilot at Blue Skies Above, located in Lanett, Alabama. Offering premier flight training to aspiring pilots in #{@location['city']} and surrounding areas. Our flight school provides comprehensive pilot training programs tailored to your aspirations and schedule. Whether you dream of piloting aircraft as a private pilot or pursuing a career in aviation, our experienced instructors will guide you every step of the way. Gain hands-on experience in our fleet of modern Cessna aircraft and master essential skills such as navigation, flight maneuvers, and aviation safety. From obtaining your private pilot certificate (PPL) to advancing to instrument ratings and commercial certificates, we provide the resources and expertise to help you achieve your aviation goals. Discover the joy of flight and join us at Blue Skies Above today!") %>
+<% title("#{@location['city']}, #{@location['state_short']} Flight School | Sun City Aviation Academy") %>
+<% meta_description("Become a pilot at Sun City Aviation Academy located in Miami, Florida, specifically Pembroke Pines' North Perry Airport (KHWO). Offering premier flight training to aspiring pilots in #{@location['city']} and surrounding areas. At Sun City Aviation Academy, we offer extensive pilot training programs designed to fit your goals and schedule. Whether your aim is to fly as a private pilot or to build a career in aviation, our seasoned instructors are here to support you at every stage. Experience hands-on training in our fleet of modern Cessna aircraft and multi engine fleet, mastering navigation, flight maneuvers, and aviation safety. From earning your private pilot certificate (PPL) to advancing to instrument ratings and commercial certificates, we have the tools and knowledge to help you reach your aviation ambitions. Experience the joy of flight and join us today!") %>
 <% meta_keywords("Flight School, #{@location['city']}, #{@location['state_short']}, #{@location['state']}, Pilot Training, Professional Flight Instruction, Learn to Fly, Cessna, Private Pilot Certificate, PPL, Instrument Rating, Commercial Certificate, Certified Flight Instructor, How to Become a Pilot, Pilot School, Aviation Training, Flight Lessons, Aircraft Training, Aviation Career, Flight Simulator Training, Flight Experience, Flight Academy, Aviation Education, Pilot Certification, Flight Training Program, Flight School Near Me, Aviation Courses") %>
 <%# Random header generator %>
 <%= render "shared/header"%>
@@ -27,7 +27,7 @@
       <h1 class="font-bold text-5xl pt-10 text-center">Training Pilots from <br> <%= @location['city']%> in <%= @location['state']%></h1>
       <h2 class="font-semibold text-xl italic pt-5 pb-3 px-10 text-center">Pilot training courses to help you reach your goals</h2>
       <p class="p-text w-3/4 pb-5">
-        Sun City Aviation is the place to become a pilot in St. Louis, MO.  Offering training in both helicopters and airplanes, we can help you get your private pilot certificate and more.
+        Sun City Aviation is the place to become a pilot in South Florida Miami Area.  Offering the best training to become an airline pilot, we can help you get your private pilot certificate and more.
       </p>
       <div class="flex flex-col px-5 gap-3">
         <div class="flex flex-row ">
@@ -48,7 +48,7 @@
         </div>
         <div class="flex flex-row ">
           <div class="text-green-500 pr-2 font-extrabold">✓</div>
-          <h3 class="lg:px-10 pl-4 p-text text-left">Part 61 and part 141 FAA approved training center</h3>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Part 61 FAA approved training center</h3>
         </div>
       </div>
       <%= link_to "SEND US A MESSAGE", contact_path, data: { turbo: false }, class: "btn-primary my-6" %>
